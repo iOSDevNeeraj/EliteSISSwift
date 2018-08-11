@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ChapterStatusHeaderReusableView" customModule="EliteSISSwift" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="106"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chapter" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibb-3e-JkN">
+                    <rect key="frame" x="10" y="0.0" width="177.5" height="106"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Iu-E2-DfE">
+                    <rect key="frame" x="187.5" y="0.0" width="177.5" height="106"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.2877008915" green="0.58744770290000003" blue="0.99867731329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="8Iu-E2-DfE" secondAttribute="bottom" id="27g-et-kDo"/>
+                <constraint firstItem="8Iu-E2-DfE" firstAttribute="leading" secondItem="ibb-3e-JkN" secondAttribute="trailing" id="8gV-KZ-DvM"/>
+                <constraint firstItem="8Iu-E2-DfE" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Itj-xl-Pn9"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="ibb-3e-JkN" secondAttribute="bottom" id="brE-P0-ubq"/>
+                <constraint firstItem="ibb-3e-JkN" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="hRd-z5-7wv"/>
+                <constraint firstItem="ibb-3e-JkN" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="k0V-fL-iFH"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="8Iu-E2-DfE" secondAttribute="trailing" constant="10" id="rTX-y3-8W5"/>
+                <constraint firstItem="ibb-3e-JkN" firstAttribute="width" secondItem="8Iu-E2-DfE" secondAttribute="width" id="tV0-xK-Fti"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="lblChapter" destination="ibb-3e-JkN" id="pzL-Rt-3gc"/>
+                <outlet property="lblStatus" destination="8Iu-E2-DfE" id="U82-en-902"/>
+            </connections>
+            <point key="canvasLocation" x="33.5" y="305"/>
+        </view>
+    </objects>
+</document>

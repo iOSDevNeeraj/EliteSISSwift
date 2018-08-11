@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MenuTeacherInfoHeaderView" customModule="EliteSISSwift" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="108"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_teacher.png" translatesAutoresizingMaskIntoConstraints="NO" id="X02-2P-6sT">
+                    <rect key="frame" x="10" y="24" width="60" height="60"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="NNO-7M-flC"/>
+                        <constraint firstAttribute="height" constant="60" id="YO6-jr-z0q"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Miss Rupanshi" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4r4-Ck-9qU">
+                    <rect key="frame" x="78" y="24" width="281" height="14.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NA" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RIg-1V-6vE">
+                    <rect key="frame" x="78" y="43.5" width="277" height="14.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mother teacher of: Class 7th" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c4W-Az-9z8">
+                    <rect key="frame" x="78" y="63" width="277" height="14.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.17254901959999999" green="0.60392156860000001" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="4r4-Ck-9qU" firstAttribute="leading" secondItem="X02-2P-6sT" secondAttribute="trailing" constant="8" id="1Nd-A6-sla"/>
+                <constraint firstItem="X02-2P-6sT" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="3nn-zV-qrW"/>
+                <constraint firstItem="X02-2P-6sT" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="7qc-sj-kl2"/>
+                <constraint firstItem="RIg-1V-6vE" firstAttribute="top" secondItem="4r4-Ck-9qU" secondAttribute="bottom" constant="5" id="8JK-7j-gz1"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="RIg-1V-6vE" secondAttribute="trailing" constant="20" id="8SR-gZ-J9q"/>
+                <constraint firstItem="c4W-Az-9z8" firstAttribute="leading" secondItem="X02-2P-6sT" secondAttribute="trailing" constant="8" id="B0C-zs-duj"/>
+                <constraint firstItem="c4W-Az-9z8" firstAttribute="top" secondItem="RIg-1V-6vE" secondAttribute="bottom" constant="5" id="MEo-nj-0mo"/>
+                <constraint firstItem="4r4-Ck-9qU" firstAttribute="top" secondItem="X02-2P-6sT" secondAttribute="top" id="NPZ-5r-v8q"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="c4W-Az-9z8" secondAttribute="trailing" constant="20" id="O9H-3G-97m"/>
+                <constraint firstItem="RIg-1V-6vE" firstAttribute="leading" secondItem="X02-2P-6sT" secondAttribute="trailing" constant="8" id="WgH-4m-1rY"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="4r4-Ck-9qU" secondAttribute="trailing" constant="16" id="gdE-LE-y09"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="imgView" destination="X02-2P-6sT" id="rg2-qI-ZYv"/>
+                <outlet property="lblId" destination="RIg-1V-6vE" id="fWU-Dt-68x"/>
+                <outlet property="lblMotherClass" destination="c4W-Az-9z8" id="Zgn-B5-8p3"/>
+                <outlet property="lblName" destination="4r4-Ck-9qU" id="QhZ-Pr-voi"/>
+            </connections>
+            <point key="canvasLocation" x="34.5" y="313"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_teacher.png" width="48" height="48"/>
+    </resources>
+</document>

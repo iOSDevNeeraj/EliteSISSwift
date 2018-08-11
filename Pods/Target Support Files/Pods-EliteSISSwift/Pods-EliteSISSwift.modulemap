@@ -1,0 +1,6 @@
+framework module Pods_EliteSISSwift {
+  umbrella header "Pods-EliteSISSwift-umbrella.h"
+
+  export *
+  module * { export * }
+}

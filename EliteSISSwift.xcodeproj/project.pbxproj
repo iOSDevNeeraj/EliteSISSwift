@@ -1,0 +1,1766 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2B4556D720768FC900B9738D /* TeacherAssignmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4556D620768FC900B9738D /* TeacherAssignmentViewController.swift */; };
+		2B4556D92076927D00B9738D /* ic_search.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B4556D82076927800B9738D /* ic_search.png */; };
+		2B4556DC2076A18C00B9738D /* TeacherAssignmentDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4556DA2076A18C00B9738D /* TeacherAssignmentDetailTableViewCell.swift */; };
+		2B4556DD2076A18C00B9738D /* TeacherAssignmentDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B4556DB2076A18C00B9738D /* TeacherAssignmentDetailTableViewCell.xib */; };
+		2B4556DF2076A2D700B9738D /* ic_teacher.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B4556DE2076A2D200B9738D /* ic_teacher.png */; };
+		2B4556E12076A43D00B9738D /* ic_done.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B4556E02076A43800B9738D /* ic_done.png */; };
+		2B4556E32076A6B700B9738D /* TeacherAssignmentHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4556E22076A6B700B9738D /* TeacherAssignmentHeaderFooterView.swift */; };
+		2B4556E52076A6CF00B9738D /* TeacherAssignmentHeaderFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B4556E42076A6CF00B9738D /* TeacherAssignmentHeaderFooterView.xib */; };
+		2B6EBE7D209E1CAF00FB1C49 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6EBE7C209E1CAF00FB1C49 /* DatePickerViewController.swift */; };
+		2B6EBE80209E3A2000FB1C49 /* DateSelectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6EBE7E209E3A2000FB1C49 /* DateSelectionTableViewCell.swift */; };
+		2B6EBE81209E3A2000FB1C49 /* DateSelectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B6EBE7F209E3A2000FB1C49 /* DateSelectionTableViewCell.xib */; };
+		2B6EBE83209E444300FB1C49 /* CameraUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6EBE82209E444300FB1C49 /* CameraUtility.swift */; };
+		2B7EF5682089024B000E995A /* ChildCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7EF5662089024B000E995A /* ChildCollectionViewCell.swift */; };
+		2B7EF5692089024B000E995A /* ChildCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B7EF5672089024B000E995A /* ChildCollectionViewCell.xib */; };
+		2B7EF57020891102000E995A /* child1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2B7EF56C208910F9000E995A /* child1.jpeg */; };
+		2B7EF57120891102000E995A /* child2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2B7EF56D208910FD000E995A /* child2.jpeg */; };
+		2B7EF57320891140000E995A /* ChildViewDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7EF57220891140000E995A /* ChildViewDataModel.swift */; };
+		2B855D2F2098DD59000C1C2A /* DropDownTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B855D2D2098DD59000C1C2A /* DropDownTableViewCell.swift */; };
+		2B855D302098DD59000C1C2A /* DropDownTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B855D2E2098DD59000C1C2A /* DropDownTableViewCell.xib */; };
+		2B85F55F208C6BFD00D428EF /* FeeInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B85F55D208C6BFD00D428EF /* FeeInfoTableViewCell.swift */; };
+		2B85F560208C6BFD00D428EF /* FeeInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B85F55E208C6BFD00D428EF /* FeeInfoTableViewCell.xib */; };
+		2B85F563208C753200D428EF /* FeeInfoHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B85F561208C753200D428EF /* FeeInfoHeaderView.xib */; };
+		2B85F564208C753200D428EF /* FeeInfoHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B85F562208C753200D428EF /* FeeInfoHeaderView.swift */; };
+		2B85F567208C78E600D428EF /* FeeItemsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B85F565208C78E600D428EF /* FeeItemsTableViewCell.swift */; };
+		2B85F568208C78E600D428EF /* FeeItemsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B85F566208C78E600D428EF /* FeeItemsTableViewCell.xib */; };
+		2B85F56B208C843200D428EF /* FeeTotalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B85F569208C843200D428EF /* FeeTotalTableViewCell.swift */; };
+		2B85F56C208C843200D428EF /* FeeTotalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B85F56A208C843200D428EF /* FeeTotalTableViewCell.xib */; };
+		2B85F56E208CA08700D428EF /* FeeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B85F56D208CA08700D428EF /* FeeViewModel.swift */; };
+		2B85F571208CC68C00D428EF /* MenuParentInfoHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B85F56F208CC68C00D428EF /* MenuParentInfoHeaderView.xib */; };
+		2B85F572208CC68C00D428EF /* MenuParentInfoHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B85F570208CC68C00D428EF /* MenuParentInfoHeaderView.swift */; };
+		2B85F574208CC76000D428EF /* man.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2B85F573208CC76000D428EF /* man.jpeg */; };
+		2B942576206F5BFC00539DBC /* ClassInfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B942574206F5BFC00539DBC /* ClassInfoCollectionViewCell.swift */; };
+		2B942577206F5BFC00539DBC /* ClassInfoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B942575206F5BFC00539DBC /* ClassInfoCollectionViewCell.xib */; };
+		2B94257A206F65B300539DBC /* TeacherAssignmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B942578206F65B300539DBC /* TeacherAssignmentTableViewCell.swift */; };
+		2B94257B206F65B300539DBC /* TeacherAssignmentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B942579206F65B300539DBC /* TeacherAssignmentTableViewCell.xib */; };
+		2B94257D206F792200539DBC /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B94257C206F792200539DBC /* DateExtension.swift */; };
+		2B94257F206F7BF000539DBC /* AssignmentViewDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B94257E206F7BF000539DBC /* AssignmentViewDataModel.swift */; };
+		2B942581206F7C0100539DBC /* ClassViewDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B942580206F7C0100539DBC /* ClassViewDataModel.swift */; };
+		2BA6C6F920ADE9EB0002FFB9 /* UIBorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA6C6F820ADE9EB0002FFB9 /* UIBorderView.swift */; };
+		2BA6C6FB20ADF25A0002FFB9 /* AddAssignmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA6C6FA20ADF25A0002FFB9 /* AddAssignmentViewController.swift */; };
+		2BAAE9722077C46000A5CD78 /* StudentAttendanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAAE9712077C46000A5CD78 /* StudentAttendanceViewController.swift */; };
+		2BAAE9752077CB4100A5CD78 /* StudentAttendanceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAAE9732077CB4100A5CD78 /* StudentAttendanceTableViewCell.swift */; };
+		2BAAE9762077CB4100A5CD78 /* StudentAttendanceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BAAE9742077CB4100A5CD78 /* StudentAttendanceTableViewCell.xib */; };
+		2BAAE9782077CB6100A5CD78 /* StudentAttendanceHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAAE9772077CB6100A5CD78 /* StudentAttendanceHeaderFooterView.swift */; };
+		2BAAE97A2077CB7100A5CD78 /* StudentAttendanceHeaderFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BAAE9792077CB7100A5CD78 /* StudentAttendanceHeaderFooterView.xib */; };
+		2BAD73852075C8EE00972D50 /* AssignmentContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BAD73842075C8EE00972D50 /* AssignmentContainerViewController.swift */; };
+		2BD20876208B0E6200CD4ED5 /* FeeReminderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BD20874208B0E6100CD4ED5 /* FeeReminderTableViewCell.xib */; };
+		2BD20877208B0E6200CD4ED5 /* FeeReminderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD20875208B0E6100CD4ED5 /* FeeReminderTableViewCell.swift */; };
+		2BD2087A208B138500CD4ED5 /* ParentNoticeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BD20878208B138400CD4ED5 /* ParentNoticeTableViewCell.xib */; };
+		2BD2087B208B138500CD4ED5 /* ParentNoticeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD20879208B138400CD4ED5 /* ParentNoticeTableViewCell.swift */; };
+		2BD2087E208B1AFE00CD4ED5 /* EventNoticeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD2087C208B1AFD00CD4ED5 /* EventNoticeTableViewCell.swift */; };
+		2BD2087F208B1AFE00CD4ED5 /* EventNoticeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BD2087D208B1AFD00CD4ED5 /* EventNoticeTableViewCell.xib */; };
+		2BD20882208B20A600CD4ED5 /* ChildNoticeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD20880208B20A600CD4ED5 /* ChildNoticeTableViewCell.swift */; };
+		2BD20883208B20A600CD4ED5 /* ChildNoticeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BD20881208B20A600CD4ED5 /* ChildNoticeTableViewCell.xib */; };
+		2BD20886208B245700CD4ED5 /* UpcomingEventsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BD20884208B245700CD4ED5 /* UpcomingEventsTableViewCell.xib */; };
+		2BD20887208B245700CD4ED5 /* UpcomingEventsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD20885208B245700CD4ED5 /* UpcomingEventsTableViewCell.swift */; };
+		2BD2088A208B25EB00CD4ED5 /* EventCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD20888208B25EB00CD4ED5 /* EventCollectionViewCell.swift */; };
+		2BD2088B208B25EB00CD4ED5 /* EventCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BD20889208B25EB00CD4ED5 /* EventCollectionViewCell.xib */; };
+		2BD2088D208B29AC00CD4ED5 /* EventViewDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD2088C208B29AC00CD4ED5 /* EventViewDataModel.swift */; };
+		2BD2088F208B90FF00CD4ED5 /* FeeInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD2088E208B90FF00CD4ED5 /* FeeInformationViewController.swift */; };
+		2BF0A8A020B01A89001FA6A2 /* delete-sign.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BF0A89F20B01A82001FA6A2 /* delete-sign.png */; };
+		2BF0A8A220B01FF9001FA6A2 /* TeacherAssginementResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF0A8A120B01FF9001FA6A2 /* TeacherAssginementResponseModel.swift */; };
+		2BFB9E7B20789C0B004E09F0 /* ic_arrow_down.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BFB9E7A20789C06004E09F0 /* ic_arrow_down.png */; };
+		2BFB9E7D20789CAD004E09F0 /* StudentAttendanceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFB9E7C20789CAD004E09F0 /* StudentAttendanceViewModel.swift */; };
+		2BFB9E802078A615004E09F0 /* StudentProfileListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFB9E7F2078A615004E09F0 /* StudentProfileListingViewController.swift */; };
+		2BFB9E872078A69E004E09F0 /* StudentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFB9E852078A69E004E09F0 /* StudentCollectionViewCell.swift */; };
+		2BFB9E882078A69E004E09F0 /* StudentCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BFB9E862078A69E004E09F0 /* StudentCollectionViewCell.xib */; };
+		2BFB9E8A2078A730004E09F0 /* ic_face_female.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BFB9E892078A730004E09F0 /* ic_face_female.png */; };
+		2BFB9E8C2078A74D004E09F0 /* ic_face_male.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BFB9E8B2078A74D004E09F0 /* ic_face_male.png */; };
+		2BFB9E902078D917004E09F0 /* MenuTeacherInfoHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFB9E8E2078D916004E09F0 /* MenuTeacherInfoHeaderView.swift */; };
+		2BFB9E912078D917004E09F0 /* MenuTeacherInfoHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BFB9E8F2078D917004E09F0 /* MenuTeacherInfoHeaderView.xib */; };
+		3802E76B205BC8CE001BDF5F /* PinboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3802E76A205BC8CE001BDF5F /* PinboardViewController.swift */; };
+		3802E76F205BCB9D001BDF5F /* TodayDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3802E76E205BCB9D001BDF5F /* TodayDatasource.swift */; };
+		3802E771205BD2BB001BDF5F /* TodayPinboardDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3802E770205BD2BB001BDF5F /* TodayPinboardDataSource.swift */; };
+		3802E777205BD332001BDF5F /* UpcomingPinboardDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3802E776205BD332001BDF5F /* UpcomingPinboardDataSource.swift */; };
+		3802E779205BD34E001BDF5F /* PastPinboardDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3802E778205BD34E001BDF5F /* PastPinboardDatasource.swift */; };
+		3802E77B205BE7FA001BDF5F /* TeachersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3802E77A205BE7FA001BDF5F /* TeachersViewController.swift */; };
+		3802E77D205BF648001BDF5F /* TeacherProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3802E77C205BF648001BDF5F /* TeacherProfileViewController.swift */; };
+		381817E62040112A005EBA85 /* menuicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 381817E52040112A005EBA85 /* menuicon.png */; };
+		381817E82040230B005EBA85 /* iconarrowright.png in Resources */ = {isa = PBXBuildFile; fileRef = 381817E72040230B005EBA85 /* iconarrowright.png */; };
+		381817ED204029F3005EBA85 /* discussion_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 381817E9204029F2005EBA85 /* discussion_logo.png */; };
+		381817EE204029F3005EBA85 /* health_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 381817EA204029F2005EBA85 /* health_logo.png */; };
+		381817EF204029F3005EBA85 /* pinboard_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 381817EB204029F2005EBA85 /* pinboard_logo.png */; };
+		381817F0204029F3005EBA85 /* timetable_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 381817EC204029F2005EBA85 /* timetable_logo.png */; };
+		3820080A203D950100DF45C9 /* KDCircularProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38200809203D950000DF45C9 /* KDCircularProgress.swift */; };
+		38200810203DAB7600DF45C9 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3820080F203DAB7600DF45C9 /* DashboardViewController.swift */; };
+		382287CC203EE5EE00E6CF9B /* ic_lock.png in Resources */ = {isa = PBXBuildFile; fileRef = 382287CB203EE5EE00E6CF9B /* ic_lock.png */; };
+		382287CE203EE5F300E6CF9B /* ic_user.png in Resources */ = {isa = PBXBuildFile; fileRef = 382287CD203EE5F200E6CF9B /* ic_user.png */; };
+		38240196203EF2DD00604D92 /* childpng.png in Resources */ = {isa = PBXBuildFile; fileRef = 38240195203EF2DD00604D92 /* childpng.png */; };
+		382401AF203EF47A00604D92 /* fee.png in Resources */ = {isa = PBXBuildFile; fileRef = 38240197203EF47800604D92 /* fee.png */; };
+		382401B0203EF47A00604D92 /* logout.png in Resources */ = {isa = PBXBuildFile; fileRef = 38240198203EF47800604D92 /* logout.png */; };
+		382401B1203EF47A00604D92 /* pinboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 38240199203EF47800604D92 /* pinboard.png */; };
+		382401B2203EF47A00604D92 /* s_dashboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 3824019A203EF47900604D92 /* s_dashboard.png */; };
+		382401B3203EF47A00604D92 /* s_info.png in Resources */ = {isa = PBXBuildFile; fileRef = 3824019B203EF47900604D92 /* s_info.png */; };
+		382401B4203EF47A00604D92 /* s_profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 3824019C203EF47900604D92 /* s_profile.png */; };
+		382401B5203EF47A00604D92 /* teacher.png in Resources */ = {isa = PBXBuildFile; fileRef = 3824019D203EF47900604D92 /* teacher.png */; };
+		382401B6203EF47A00604D92 /* performance.png in Resources */ = {isa = PBXBuildFile; fileRef = 3824019E203EF47900604D92 /* performance.png */; };
+		382401B7203EF47A00604D92 /* calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = 3824019F203EF47900604D92 /* calendar.png */; };
+		382401B8203EF47A00604D92 /* compliance.png in Resources */ = {isa = PBXBuildFile; fileRef = 382401A0203EF47900604D92 /* compliance.png */; };
+		382401B9203EF47A00604D92 /* k_profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 382401A1203EF47900604D92 /* k_profile.png */; };
+		382401BA203EF47A00604D92 /* fee_defaulter.png in Resources */ = {isa = PBXBuildFile; fileRef = 382401A2203EF47900604D92 /* fee_defaulter.png */; };
+		382401BB203EF47A00604D92 /* profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 382401A3203EF47900604D92 /* profile.png */; };
+		382401BC203EF47A00604D92 /* progress.png in Resources */ = {isa = PBXBuildFile; fileRef = 382401A4203EF47900604D92 /* progress.png */; };
+		382401BD203EF47A00604D92 /* discussion.png in Resources */ = {isa = PBXBuildFile; fileRef = 382401A5203EF47900604D92 /* discussion.png */; };
+		382401BE203EF47A00604D92 /* dashboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 382401A6203EF47A00604D92 /* dashboard.png */; };
+		382401BF203EF47A00604D92 /* assessment.png in Resources */ = {isa = PBXBuildFile; fileRef = 382401A7203EF47A00604D92 /* assessment.png */; };
+		382401C0203EF47A00604D92 /* key.png in Resources */ = {isa = PBXBuildFile; fileRef = 382401A8203EF47A00604D92 /* key.png */; };
+		382401C1203EF47A00604D92 /* notification.png in Resources */ = {isa = PBXBuildFile; fileRef = 382401A9203EF47A00604D92 /* notification.png */; };
+		382401C2203EF47A00604D92 /* assignment.png in Resources */ = {isa = PBXBuildFile; fileRef = 382401AA203EF47A00604D92 /* assignment.png */; };
+		382401C3203EF47A00604D92 /* health.png in Resources */ = {isa = PBXBuildFile; fileRef = 382401AB203EF47A00604D92 /* health.png */; };
+		382401C4203EF47A00604D92 /* holiday.png in Resources */ = {isa = PBXBuildFile; fileRef = 382401AC203EF47A00604D92 /* holiday.png */; };
+		382401C5203EF47A00604D92 /* event.png in Resources */ = {isa = PBXBuildFile; fileRef = 382401AD203EF47A00604D92 /* event.png */; };
+		382401C6203EF47A00604D92 /* attendance.png in Resources */ = {isa = PBXBuildFile; fileRef = 382401AE203EF47A00604D92 /* attendance.png */; };
+		382FC547206E59C900B4E8E2 /* TeacherNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382FC546206E59C900B4E8E2 /* TeacherNavigationController.swift */; };
+		3854D662204816D0006DA7C0 /* TimetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3854D661204816D0006DA7C0 /* TimetableViewController.swift */; };
+		3869289020467E5B009DE58A /* AttendanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3869288F20467E5B009DE58A /* AttendanceViewController.swift */; };
+		386928B62046925B009DE58A /* FSCalendar+Deprecated.m in Sources */ = {isa = PBXBuildFile; fileRef = 386928952046925B009DE58A /* FSCalendar+Deprecated.m */; };
+		386928B72046925B009DE58A /* FSCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 386928972046925B009DE58A /* FSCalendar.m */; };
+		386928B82046925B009DE58A /* FSCalendarAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = 386928992046925B009DE58A /* FSCalendarAppearance.m */; };
+		386928B92046925B009DE58A /* FSCalendarCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3869289B2046925B009DE58A /* FSCalendarCalculator.m */; };
+		386928BA2046925B009DE58A /* FSCalendarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3869289D2046925B009DE58A /* FSCalendarCell.m */; };
+		386928BB2046925B009DE58A /* FSCalendarCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3869289F2046925B009DE58A /* FSCalendarCollectionView.m */; };
+		386928BC2046925B009DE58A /* FSCalendarCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 386928A12046925B009DE58A /* FSCalendarCollectionViewLayout.m */; };
+		386928BD2046925B009DE58A /* FSCalendarConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 386928A32046925B009DE58A /* FSCalendarConstants.m */; };
+		386928BE2046925B009DE58A /* FSCalendarDelegationFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 386928A52046925B009DE58A /* FSCalendarDelegationFactory.m */; };
+		386928BF2046925B009DE58A /* FSCalendarDelegationProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 386928A72046925B009DE58A /* FSCalendarDelegationProxy.m */; };
+		386928C02046925B009DE58A /* FSCalendarExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 386928AA2046925B009DE58A /* FSCalendarExtensions.m */; };
+		386928C12046925B009DE58A /* FSCalendarHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 386928AC2046925B009DE58A /* FSCalendarHeaderView.m */; };
+		386928C22046925B009DE58A /* FSCalendarScopeHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 386928AE2046925B009DE58A /* FSCalendarScopeHandle.m */; };
+		386928C32046925B009DE58A /* FSCalendarStickyHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 386928B02046925B009DE58A /* FSCalendarStickyHeader.m */; };
+		386928C42046925B009DE58A /* FSCalendarTransitionCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 386928B22046925B009DE58A /* FSCalendarTransitionCoordinator.m */; };
+		386928C52046925B009DE58A /* FSCalendarWeekdayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 386928B42046925B009DE58A /* FSCalendarWeekdayView.m */; };
+		386928C62046925B009DE58A /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 386928B52046925B009DE58A /* Info.plist */; };
+		386928C92046C27B009DE58A /* PerformanceScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 386928C82046C27B009DE58A /* PerformanceScoreViewController.swift */; };
+		388A3F26207CF078008DF915 /* ParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388A3F25207CF078008DF915 /* ParentViewController.swift */; };
+		388A3F2B207CF181008DF915 /* ParentDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388A3F2A207CF181008DF915 /* ParentDashboardViewController.swift */; };
+		388EA89C208DB6600040CC9B /* ParentProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388EA89B208DB6600040CC9B /* ParentProfileViewController.swift */; };
+		388EA8A1208DB9EB0040CC9B /* ParentComplaintViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388EA8A0208DB9EB0040CC9B /* ParentComplaintViewController.swift */; };
+		388EA8A3208DE4670040CC9B /* ParentChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388EA8A2208DE4670040CC9B /* ParentChatViewController.swift */; };
+		388FD16B206B735E00114043 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 388FD16A206B735B00114043 /* back.png */; };
+		389E110320739FD30003F005 /* FeeDefaulterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389E110220739FD30003F005 /* FeeDefaulterViewController.swift */; };
+		389E11062073A0A40003F005 /* FeeDefaulterHeaderViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389E11042073A0A40003F005 /* FeeDefaulterHeaderViewTableViewCell.swift */; };
+		389E11072073A0A40003F005 /* FeeDefaulterHeaderViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 389E11052073A0A40003F005 /* FeeDefaulterHeaderViewTableViewCell.xib */; };
+		389E110A2073A1630003F005 /* FeeDefaulterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 389E11082073A1630003F005 /* FeeDefaulterTableViewCell.swift */; };
+		389E110B2073A1630003F005 /* FeeDefaulterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 389E11092073A1630003F005 /* FeeDefaulterTableViewCell.xib */; };
+		389F116720AC43D700CB23FA /* LaunchImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 389F116220AC43D700CB23FA /* LaunchImage.png */; };
+		389F116B20AC43D700CB23FA /* LaunchImage-Portrait@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 389F116620AC43D700CB23FA /* LaunchImage-Portrait@2x.png */; };
+		389F117520AC4BEE00CB23FA /* Default-667h@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 389F117420AC4BEE00CB23FA /* Default-667h@2x.jpg */; };
+		389F117720AC4BF200CB23FA /* Default-736h@3x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 389F117620AC4BF200CB23FA /* Default-736h@3x.jpg */; };
+		389F117920AC501100CB23FA /* Default@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 389F117820AC501000CB23FA /* Default@2x.jpg */; };
+		389F117B20AC506A00CB23FA /* Default-568h@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 389F117A20AC506900CB23FA /* Default-568h@2x.jpg */; };
+		389F117D20AC50F600CB23FA /* Default-2436h@3x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 389F117C20AC50F600CB23FA /* Default-2436h@3x.jpg */; };
+		38A3B946206E38E8006F3785 /* TeacherDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A3B945206E38E8006F3785 /* TeacherDashboardViewController.swift */; };
+		38A3B948206E3919006F3785 /* TeacherDailyScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A3B947206E3919006F3785 /* TeacherDailyScheduleViewController.swift */; };
+		38A3B94A206E3973006F3785 /* TeacherPinboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38A3B949206E3973006F3785 /* TeacherPinboardViewController.swift */; };
+		38A52153209C560A0030DB8C /* circleEvent.png in Resources */ = {isa = PBXBuildFile; fileRef = 38A52152209C560A0030DB8C /* circleEvent.png */; };
+		38CBB06B2078F90100AD27D7 /* attendence_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 38CBB06A2078F90100AD27D7 /* attendence_logo.png */; };
+		38CBB06D2078F90800AD27D7 /* profile_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 38CBB06C2078F90800AD27D7 /* profile_logo.png */; };
+		38EE4CD12064D71C005B1915 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EE4CD02064D71C005B1915 /* ChangePasswordViewController.swift */; };
+		38EE4CD3206502D2005B1915 /* HolidayListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EE4CD2206502D2005B1915 /* HolidayListViewController.swift */; };
+		38EE4CD6206505BC005B1915 /* HolidaylistHeaderReusableviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EE4CD4206505BC005B1915 /* HolidaylistHeaderReusableviewTableViewCell.swift */; };
+		38EE4CD7206505BC005B1915 /* HolidaylistHeaderReusableviewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38EE4CD5206505BC005B1915 /* HolidaylistHeaderReusableviewTableViewCell.xib */; };
+		38EE4CDA20650775005B1915 /* HolidayListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EE4CD820650775005B1915 /* HolidayListTableViewCell.swift */; };
+		38EE4CDB20650775005B1915 /* HolidayListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38EE4CD920650775005B1915 /* HolidayListTableViewCell.xib */; };
+		38EE4CDD20650F6C005B1915 /* EventGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EE4CDC20650F6C005B1915 /* EventGalleryViewController.swift */; };
+		38FA1AB2203D69C200067620 /* ENSideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FA1AB0203D69C200067620 /* ENSideMenu.swift */; };
+		38FA1AB3203D69C200067620 /* ENSideMenuNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FA1AB1203D69C200067620 /* ENSideMenuNavigationController.swift */; };
+		38FA1AB8203D6A0A00067620 /* MyMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FA1AB4203D6A0A00067620 /* MyMenuTableViewController.swift */; };
+		38FA1ABA203D6A0A00067620 /* MyNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FA1AB6203D6A0A00067620 /* MyNavigationController.swift */; };
+		38FA1ABB203D6A0A00067620 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FA1AB7203D6A0A00067620 /* ViewController2.swift */; };
+		3BD87543A4944A67B4053FF3 /* Pods_EliteSISSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F8D43AFC5B896B534692136 /* Pods_EliteSISSwift.framework */; };
+		6A0914FD2065790E004A9382 /* StudentProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0914FC2065790E004A9382 /* StudentProfileViewController.swift */; };
+		6A091500206581A0004A9382 /* StudentGeneralInfoDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0914FF206581A0004A9382 /* StudentGeneralInfoDatasource.swift */; };
+		6A091502206581B6004A9382 /* StudentContactDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A091501206581B6004A9382 /* StudentContactDatasource.swift */; };
+		6A091504206581D2004A9382 /* StudentClassAppliedDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A091503206581D2004A9382 /* StudentClassAppliedDatasource.swift */; };
+		6A091506206581E6004A9382 /* StudentQualificationDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A091505206581E6004A9382 /* StudentQualificationDatasource.swift */; };
+		6A091508206581FA004A9382 /* StudentAddressDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A091507206581FA004A9382 /* StudentAddressDatasource.swift */; };
+		6A09150A20658216004A9382 /* StudentIdentityCardDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A09150920658216004A9382 /* StudentIdentityCardDatasource.swift */; };
+		6A1099F8204171DF00072ADB /* AssignmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1099F7204171DF00072ADB /* AssignmentViewController.swift */; };
+		6A1099FA2041767E00072ADB /* AssignmentHeaderReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1099F92041767E00072ADB /* AssignmentHeaderReusableView.swift */; };
+		6A1099FC2041769B00072ADB /* AssignmentHeaderReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A1099FB2041769B00072ADB /* AssignmentHeaderReusableView.xib */; };
+		6A1099FE204177C400072ADB /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1099FD204177C400072ADB /* PaddingLabel.swift */; };
+		6A109A0120417D3800072ADB /* AssignmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A1099FF20417D3800072ADB /* AssignmentTableViewCell.swift */; };
+		6A109A0220417D3800072ADB /* AssignmentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A109A0020417D3800072ADB /* AssignmentTableViewCell.xib */; };
+		6A4224B320810E5000214124 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4224B220810E5000214124 /* ForgotPasswordViewController.swift */; };
+		6A4224B520812A8300214124 /* ComplaintsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4224B420812A8300214124 /* ComplaintsListViewController.swift */; };
+		6A4224B720812ED500214124 /* ComplaintsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4224B620812ED500214124 /* ComplaintsHeaderView.swift */; };
+		6A4224B920812F3D00214124 /* ComplaintsHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A4224B820812F3D00214124 /* ComplaintsHeaderView.xib */; };
+		6A4224BC2081FDBF00214124 /* ComplaintsListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4224BA2081FDBF00214124 /* ComplaintsListTableViewCell.swift */; };
+		6A4224BD2081FDBF00214124 /* ComplaintsListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A4224BB2081FDBF00214124 /* ComplaintsListTableViewCell.xib */; };
+		6A4224BF2082078900214124 /* ComplaintDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4224BE2082078900214124 /* ComplaintDetailViewController.swift */; };
+		6A4224C220820A7B00214124 /* ComplaintHeadingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4224C020820A7B00214124 /* ComplaintHeadingTableViewCell.swift */; };
+		6A4224C320820A7B00214124 /* ComplaintHeadingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A4224C120820A7B00214124 /* ComplaintHeadingTableViewCell.xib */; };
+		6A4224C620821F4E00214124 /* ComplaintTextViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4224C420821F4E00214124 /* ComplaintTextViewTableViewCell.swift */; };
+		6A4224C720821F4E00214124 /* ComplaintTextViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A4224C520821F4E00214124 /* ComplaintTextViewTableViewCell.xib */; };
+		6A4224CA2082331D00214124 /* ParentDashboardHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4224C92082331D00214124 /* ParentDashboardHeaderView.swift */; };
+		6A4224CC2082333F00214124 /* ParentDashboardHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A4224CB2082333F00214124 /* ParentDashboardHeaderView.xib */; };
+		6A45682520642A0100937CE0 /* GeneralInfoDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A45682420642A0100937CE0 /* GeneralInfoDatasource.swift */; };
+		6A45682720642A1C00937CE0 /* ContactInfoDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A45682620642A1C00937CE0 /* ContactInfoDatasource.swift */; };
+		6A45682920642A3700937CE0 /* ClassAppliedDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A45682820642A3700937CE0 /* ClassAppliedDatasource.swift */; };
+		6A45682B20642A4D00937CE0 /* QualificationDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A45682A20642A4D00937CE0 /* QualificationDatasource.swift */; };
+		6A45682D20642A7000937CE0 /* AddressDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A45682C20642A7000937CE0 /* AddressDatasource.swift */; };
+		6A45682F20642A8800937CE0 /* IdentityCardDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A45682E20642A8800937CE0 /* IdentityCardDatasource.swift */; };
+		6A45683220642B9600937CE0 /* TextfieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A45683020642B9600937CE0 /* TextfieldTableViewCell.swift */; };
+		6A45683320642B9600937CE0 /* TextfieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A45683120642B9600937CE0 /* TextfieldTableViewCell.xib */; };
+		6A45683620642BB200937CE0 /* TextFieldWithCalendarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A45683420642BB200937CE0 /* TextFieldWithCalendarTableViewCell.swift */; };
+		6A45683720642BB200937CE0 /* TextFieldWithCalendarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A45683520642BB200937CE0 /* TextFieldWithCalendarTableViewCell.xib */; };
+		6A49EE71204714BE00055B3B /* ChapterStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A49EE70204714BE00055B3B /* ChapterStatusViewController.swift */; };
+		6A49EE73204715C900055B3B /* ChapterStatusHeaderReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A49EE72204715C900055B3B /* ChapterStatusHeaderReusableView.swift */; };
+		6A49EE75204715E200055B3B /* ChapterStatusHeaderReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A49EE74204715E200055B3B /* ChapterStatusHeaderReusableView.xib */; };
+		6A49EE782047171B00055B3B /* ChapterStatusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A49EE762047171B00055B3B /* ChapterStatusTableViewCell.swift */; };
+		6A49EE792047171B00055B3B /* ChapterStatusTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A49EE772047171B00055B3B /* ChapterStatusTableViewCell.xib */; };
+		6A49EE7B2047226300055B3B /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A49EE7A2047226300055B3B /* NotificationViewController.swift */; };
+		6A49EE7E204725A200055B3B /* NotificationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A49EE7C204725A200055B3B /* NotificationCollectionViewCell.swift */; };
+		6A49EE7F204725A200055B3B /* NotificationCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A49EE7D204725A200055B3B /* NotificationCollectionViewCell.xib */; };
+		6A49EE81204A9BA600055B3B /* HealthReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A49EE80204A9BA600055B3B /* HealthReportViewController.swift */; };
+		6A532D1E204BF261005DFF4E /* CosmosDistrib.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A532D1D204BF261005DFF4E /* CosmosDistrib.swift */; };
+		6A532D22204C271B005DFF4E /* ScoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A532D20204C271B005DFF4E /* ScoreTableViewCell.swift */; };
+		6A532D23204C271B005DFF4E /* ScoreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A532D21204C271B005DFF4E /* ScoreTableViewCell.xib */; };
+		6A532D27204F12AF005DFF4E /* AllDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A532D26204F12AF005DFF4E /* AllDatasource.swift */; };
+		6A532D29204F12C5005DFF4E /* MissedDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A532D28204F12C5005DFF4E /* MissedDatasource.swift */; };
+		6A532D2C204F1679005DFF4E /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A532D2A204F1679005DFF4E /* NotificationTableViewCell.swift */; };
+		6A532D2D204F1679005DFF4E /* NotificationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A532D2B204F1679005DFF4E /* NotificationTableViewCell.xib */; };
+		6A629D242067BB1600BCC75E /* TeachersHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A629D232067BB1600BCC75E /* TeachersHeaderView.swift */; };
+		6A629D262067BB6800BCC75E /* TeachersHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A629D252067BB6800BCC75E /* TeachersHeaderView.xib */; };
+		6A629D292067CA2200BCC75E /* TeachersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A629D272067CA2200BCC75E /* TeachersTableViewCell.swift */; };
+		6A629D2A2067CA2200BCC75E /* TeachersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A629D282067CA2200BCC75E /* TeachersTableViewCell.xib */; };
+		6A81E91F2069750300B14727 /* ReceiverTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A81E91D2069750300B14727 /* ReceiverTableViewCell.swift */; };
+		6A81E9202069750300B14727 /* ReceiverTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A81E91E2069750300B14727 /* ReceiverTableViewCell.xib */; };
+		6A81E92220697CE600B14727 /* ChatLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A81E92120697CE600B14727 /* ChatLabel.swift */; };
+		6A8D37F5206ABC40009FF210 /* GalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8D37F3206ABC40009FF210 /* GalleryCollectionViewCell.swift */; };
+		6A8D37F6206ABC40009FF210 /* GalleryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A8D37F4206ABC40009FF210 /* GalleryCollectionViewCell.xib */; };
+		6A8D37F8206AC54A009FF210 /* GalleryPhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8D37F7206AC54A009FF210 /* GalleryPhotosViewController.swift */; };
+		6A8D37FB206AC6EB009FF210 /* GalleryPhotosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8D37F9206AC6EB009FF210 /* GalleryPhotosCollectionViewCell.swift */; };
+		6A8D37FC206AC6EB009FF210 /* GalleryPhotosCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A8D37FA206AC6EB009FF210 /* GalleryPhotosCollectionViewCell.xib */; };
+		6A992B7B2068276700314CEA /* TeacherChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A992B7A2068276700314CEA /* TeacherChatViewController.swift */; };
+		6A992B7E2068294900314CEA /* SimpleLabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A992B7C2068294900314CEA /* SimpleLabelTableViewCell.swift */; };
+		6A992B7F2068294900314CEA /* SimpleLabelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6A992B7D2068294900314CEA /* SimpleLabelTableViewCell.xib */; };
+		6AA150CA203B2834007CBD99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA150C9203B2834007CBD99 /* AppDelegate.swift */; };
+		6AA150CF203B2834007CBD99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AA150CD203B2834007CBD99 /* Main.storyboard */; };
+		6AA150D1203B2834007CBD99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AA150D0203B2834007CBD99 /* Assets.xcassets */; };
+		6AA150D4203B2834007CBD99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AA150D2203B2834007CBD99 /* LaunchScreen.storyboard */; };
+		6AA150DD203B2948007CBD99 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA150DC203B2948007CBD99 /* LoginViewController.swift */; };
+		6AA150E0203B2B0E007CBD99 /* LogoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA150DE203B2B0E007CBD99 /* LogoTableViewCell.swift */; };
+		6AA150E1203B2B0E007CBD99 /* LogoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AA150DF203B2B0E007CBD99 /* LogoTableViewCell.xib */; };
+		6AA150E4203B342D007CBD99 /* LoginCredentialsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA150E2203B342D007CBD99 /* LoginCredentialsTableViewCell.swift */; };
+		6AA150E5203B342D007CBD99 /* LoginCredentialsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AA150E3203B342D007CBD99 /* LoginCredentialsTableViewCell.xib */; };
+		6AA150E8203B3E06007CBD99 /* ForgotPasswordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA150E6203B3E06007CBD99 /* ForgotPasswordTableViewCell.swift */; };
+		6AA150E9203B3E06007CBD99 /* ForgotPasswordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AA150E7203B3E06007CBD99 /* ForgotPasswordTableViewCell.xib */; };
+		6AA150EC203B42E8007CBD99 /* ButtonWithBgTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA150EA203B42E8007CBD99 /* ButtonWithBgTableViewCell.swift */; };
+		6AA150ED203B42E8007CBD99 /* ButtonWithBgTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AA150EB203B42E8007CBD99 /* ButtonWithBgTableViewCell.xib */; };
+		6AD679F4204475BF00E593B9 /* StudyProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD679F3204475BF00E593B9 /* StudyProgressViewController.swift */; };
+		6AD679F720447B5B00E593B9 /* StudyProgressTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD679F520447B5B00E593B9 /* StudyProgressTableViewCell.swift */; };
+		6AD679F820447B5B00E593B9 /* StudyProgressTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AD679F620447B5B00E593B9 /* StudyProgressTableViewCell.xib */; };
+		6ADD4201203DCEE100A26DE4 /* MenuHeadingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADD41FF203DCEE100A26DE4 /* MenuHeadingTableViewCell.swift */; };
+		6ADD4202203DCEE100A26DE4 /* MenuHeadingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6ADD4200203DCEE100A26DE4 /* MenuHeadingTableViewCell.xib */; };
+		6ADD4204203DDA3A00A26DE4 /* MenuStudentInfoHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADD4203203DDA3A00A26DE4 /* MenuStudentInfoHeaderView.swift */; };
+		6ADD4206203DDB6A00A26DE4 /* MenuStudentInfoHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6ADD4205203DDB6A00A26DE4 /* MenuStudentInfoHeaderView.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0F8D43AFC5B896B534692136 /* Pods_EliteSISSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EliteSISSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B4556D620768FC900B9738D /* TeacherAssignmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherAssignmentViewController.swift; sourceTree = "<group>"; };
+		2B4556D82076927800B9738D /* ic_search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_search.png; sourceTree = "<group>"; };
+		2B4556DA2076A18C00B9738D /* TeacherAssignmentDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherAssignmentDetailTableViewCell.swift; sourceTree = "<group>"; };
+		2B4556DB2076A18C00B9738D /* TeacherAssignmentDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeacherAssignmentDetailTableViewCell.xib; sourceTree = "<group>"; };
+		2B4556DE2076A2D200B9738D /* ic_teacher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_teacher.png; sourceTree = "<group>"; };
+		2B4556E02076A43800B9738D /* ic_done.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_done.png; sourceTree = "<group>"; };
+		2B4556E22076A6B700B9738D /* TeacherAssignmentHeaderFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherAssignmentHeaderFooterView.swift; sourceTree = "<group>"; };
+		2B4556E42076A6CF00B9738D /* TeacherAssignmentHeaderFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeacherAssignmentHeaderFooterView.xib; sourceTree = "<group>"; };
+		2B6EBE7C209E1CAF00FB1C49 /* DatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
+		2B6EBE7E209E3A2000FB1C49 /* DateSelectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSelectionTableViewCell.swift; sourceTree = "<group>"; };
+		2B6EBE7F209E3A2000FB1C49 /* DateSelectionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateSelectionTableViewCell.xib; sourceTree = "<group>"; };
+		2B6EBE82209E444300FB1C49 /* CameraUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraUtility.swift; sourceTree = "<group>"; };
+		2B7EF5662089024B000E995A /* ChildCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildCollectionViewCell.swift; sourceTree = "<group>"; };
+		2B7EF5672089024B000E995A /* ChildCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChildCollectionViewCell.xib; sourceTree = "<group>"; };
+		2B7EF56C208910F9000E995A /* child1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = child1.jpeg; sourceTree = "<group>"; };
+		2B7EF56D208910FD000E995A /* child2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = child2.jpeg; sourceTree = "<group>"; };
+		2B7EF57220891140000E995A /* ChildViewDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildViewDataModel.swift; sourceTree = "<group>"; };
+		2B855D2D2098DD59000C1C2A /* DropDownTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownTableViewCell.swift; sourceTree = "<group>"; };
+		2B855D2E2098DD59000C1C2A /* DropDownTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DropDownTableViewCell.xib; sourceTree = "<group>"; };
+		2B85F55D208C6BFD00D428EF /* FeeInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeeInfoTableViewCell.swift; sourceTree = "<group>"; };
+		2B85F55E208C6BFD00D428EF /* FeeInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeeInfoTableViewCell.xib; sourceTree = "<group>"; };
+		2B85F561208C753200D428EF /* FeeInfoHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeeInfoHeaderView.xib; sourceTree = "<group>"; };
+		2B85F562208C753200D428EF /* FeeInfoHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeeInfoHeaderView.swift; sourceTree = "<group>"; };
+		2B85F565208C78E600D428EF /* FeeItemsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeeItemsTableViewCell.swift; sourceTree = "<group>"; };
+		2B85F566208C78E600D428EF /* FeeItemsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeeItemsTableViewCell.xib; sourceTree = "<group>"; };
+		2B85F569208C843200D428EF /* FeeTotalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeeTotalTableViewCell.swift; sourceTree = "<group>"; };
+		2B85F56A208C843200D428EF /* FeeTotalTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeeTotalTableViewCell.xib; sourceTree = "<group>"; };
+		2B85F56D208CA08700D428EF /* FeeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeeViewModel.swift; sourceTree = "<group>"; };
+		2B85F56F208CC68C00D428EF /* MenuParentInfoHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuParentInfoHeaderView.xib; sourceTree = "<group>"; };
+		2B85F570208CC68C00D428EF /* MenuParentInfoHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuParentInfoHeaderView.swift; sourceTree = "<group>"; };
+		2B85F573208CC76000D428EF /* man.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = man.jpeg; sourceTree = "<group>"; };
+		2B942574206F5BFC00539DBC /* ClassInfoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassInfoCollectionViewCell.swift; sourceTree = "<group>"; };
+		2B942575206F5BFC00539DBC /* ClassInfoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClassInfoCollectionViewCell.xib; sourceTree = "<group>"; };
+		2B942578206F65B300539DBC /* TeacherAssignmentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherAssignmentTableViewCell.swift; sourceTree = "<group>"; };
+		2B942579206F65B300539DBC /* TeacherAssignmentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeacherAssignmentTableViewCell.xib; sourceTree = "<group>"; };
+		2B94257C206F792200539DBC /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		2B94257E206F7BF000539DBC /* AssignmentViewDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentViewDataModel.swift; sourceTree = "<group>"; };
+		2B942580206F7C0100539DBC /* ClassViewDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassViewDataModel.swift; sourceTree = "<group>"; };
+		2BA6C6F820ADE9EB0002FFB9 /* UIBorderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIBorderView.swift; sourceTree = "<group>"; };
+		2BA6C6FA20ADF25A0002FFB9 /* AddAssignmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAssignmentViewController.swift; sourceTree = "<group>"; };
+		2BAAE9712077C46000A5CD78 /* StudentAttendanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentAttendanceViewController.swift; sourceTree = "<group>"; };
+		2BAAE9732077CB4100A5CD78 /* StudentAttendanceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentAttendanceTableViewCell.swift; sourceTree = "<group>"; };
+		2BAAE9742077CB4100A5CD78 /* StudentAttendanceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StudentAttendanceTableViewCell.xib; sourceTree = "<group>"; };
+		2BAAE9772077CB6100A5CD78 /* StudentAttendanceHeaderFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentAttendanceHeaderFooterView.swift; sourceTree = "<group>"; };
+		2BAAE9792077CB7100A5CD78 /* StudentAttendanceHeaderFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StudentAttendanceHeaderFooterView.xib; sourceTree = "<group>"; };
+		2BAD73842075C8EE00972D50 /* AssignmentContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentContainerViewController.swift; sourceTree = "<group>"; };
+		2BD20874208B0E6100CD4ED5 /* FeeReminderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeeReminderTableViewCell.xib; sourceTree = "<group>"; };
+		2BD20875208B0E6100CD4ED5 /* FeeReminderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeeReminderTableViewCell.swift; sourceTree = "<group>"; };
+		2BD20878208B138400CD4ED5 /* ParentNoticeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ParentNoticeTableViewCell.xib; sourceTree = "<group>"; };
+		2BD20879208B138400CD4ED5 /* ParentNoticeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParentNoticeTableViewCell.swift; sourceTree = "<group>"; };
+		2BD2087C208B1AFD00CD4ED5 /* EventNoticeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventNoticeTableViewCell.swift; sourceTree = "<group>"; };
+		2BD2087D208B1AFD00CD4ED5 /* EventNoticeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventNoticeTableViewCell.xib; sourceTree = "<group>"; };
+		2BD20880208B20A600CD4ED5 /* ChildNoticeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildNoticeTableViewCell.swift; sourceTree = "<group>"; };
+		2BD20881208B20A600CD4ED5 /* ChildNoticeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChildNoticeTableViewCell.xib; sourceTree = "<group>"; };
+		2BD20884208B245700CD4ED5 /* UpcomingEventsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UpcomingEventsTableViewCell.xib; sourceTree = "<group>"; };
+		2BD20885208B245700CD4ED5 /* UpcomingEventsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpcomingEventsTableViewCell.swift; sourceTree = "<group>"; };
+		2BD20888208B25EB00CD4ED5 /* EventCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCollectionViewCell.swift; sourceTree = "<group>"; };
+		2BD20889208B25EB00CD4ED5 /* EventCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventCollectionViewCell.xib; sourceTree = "<group>"; };
+		2BD2088C208B29AC00CD4ED5 /* EventViewDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventViewDataModel.swift; sourceTree = "<group>"; };
+		2BD2088E208B90FF00CD4ED5 /* FeeInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeeInformationViewController.swift; sourceTree = "<group>"; };
+		2BDD397F20AF5F19009406E8 /* EliteSISSwift.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EliteSISSwift.entitlements; sourceTree = "<group>"; };
+		2BF0A89F20B01A82001FA6A2 /* delete-sign.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "delete-sign.png"; sourceTree = "<group>"; };
+		2BF0A8A120B01FF9001FA6A2 /* TeacherAssginementResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherAssginementResponseModel.swift; sourceTree = "<group>"; };
+		2BFB9E7A20789C06004E09F0 /* ic_arrow_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_arrow_down.png; sourceTree = "<group>"; };
+		2BFB9E7C20789CAD004E09F0 /* StudentAttendanceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentAttendanceViewModel.swift; sourceTree = "<group>"; };
+		2BFB9E7F2078A615004E09F0 /* StudentProfileListingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProfileListingViewController.swift; sourceTree = "<group>"; };
+		2BFB9E852078A69E004E09F0 /* StudentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentCollectionViewCell.swift; sourceTree = "<group>"; };
+		2BFB9E862078A69E004E09F0 /* StudentCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StudentCollectionViewCell.xib; sourceTree = "<group>"; };
+		2BFB9E892078A730004E09F0 /* ic_face_female.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_face_female.png; sourceTree = "<group>"; };
+		2BFB9E8B2078A74D004E09F0 /* ic_face_male.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_face_male.png; sourceTree = "<group>"; };
+		2BFB9E8E2078D916004E09F0 /* MenuTeacherInfoHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTeacherInfoHeaderView.swift; sourceTree = "<group>"; };
+		2BFB9E8F2078D917004E09F0 /* MenuTeacherInfoHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuTeacherInfoHeaderView.xib; sourceTree = "<group>"; };
+		3802E76A205BC8CE001BDF5F /* PinboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinboardViewController.swift; sourceTree = "<group>"; };
+		3802E76E205BCB9D001BDF5F /* TodayDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayDatasource.swift; sourceTree = "<group>"; };
+		3802E770205BD2BB001BDF5F /* TodayPinboardDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayPinboardDataSource.swift; sourceTree = "<group>"; };
+		3802E776205BD332001BDF5F /* UpcomingPinboardDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingPinboardDataSource.swift; sourceTree = "<group>"; };
+		3802E778205BD34E001BDF5F /* PastPinboardDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastPinboardDatasource.swift; sourceTree = "<group>"; };
+		3802E77A205BE7FA001BDF5F /* TeachersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeachersViewController.swift; sourceTree = "<group>"; };
+		3802E77C205BF648001BDF5F /* TeacherProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherProfileViewController.swift; sourceTree = "<group>"; };
+		381817E52040112A005EBA85 /* menuicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menuicon.png; sourceTree = "<group>"; };
+		381817E72040230B005EBA85 /* iconarrowright.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconarrowright.png; sourceTree = "<group>"; };
+		381817E9204029F2005EBA85 /* discussion_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = discussion_logo.png; sourceTree = "<group>"; };
+		381817EA204029F2005EBA85 /* health_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = health_logo.png; sourceTree = "<group>"; };
+		381817EB204029F2005EBA85 /* pinboard_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pinboard_logo.png; sourceTree = "<group>"; };
+		381817EC204029F2005EBA85 /* timetable_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = timetable_logo.png; sourceTree = "<group>"; };
+		38200809203D950000DF45C9 /* KDCircularProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KDCircularProgress.swift; sourceTree = "<group>"; };
+		3820080F203DAB7600DF45C9 /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DashboardViewController.swift; path = EliteSISSwift/DashboardViewController.swift; sourceTree = SOURCE_ROOT; };
+		382287CB203EE5EE00E6CF9B /* ic_lock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_lock.png; sourceTree = "<group>"; };
+		382287CD203EE5F200E6CF9B /* ic_user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_user.png; sourceTree = "<group>"; };
+		38240195203EF2DD00604D92 /* childpng.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = childpng.png; sourceTree = "<group>"; };
+		38240197203EF47800604D92 /* fee.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fee.png; sourceTree = "<group>"; };
+		38240198203EF47800604D92 /* logout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logout.png; sourceTree = "<group>"; };
+		38240199203EF47800604D92 /* pinboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pinboard.png; sourceTree = "<group>"; };
+		3824019A203EF47900604D92 /* s_dashboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = s_dashboard.png; sourceTree = "<group>"; };
+		3824019B203EF47900604D92 /* s_info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = s_info.png; sourceTree = "<group>"; };
+		3824019C203EF47900604D92 /* s_profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = s_profile.png; sourceTree = "<group>"; };
+		3824019D203EF47900604D92 /* teacher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = teacher.png; sourceTree = "<group>"; };
+		3824019E203EF47900604D92 /* performance.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = performance.png; sourceTree = "<group>"; };
+		3824019F203EF47900604D92 /* calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendar.png; sourceTree = "<group>"; };
+		382401A0203EF47900604D92 /* compliance.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = compliance.png; sourceTree = "<group>"; };
+		382401A1203EF47900604D92 /* k_profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = k_profile.png; sourceTree = "<group>"; };
+		382401A2203EF47900604D92 /* fee_defaulter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fee_defaulter.png; sourceTree = "<group>"; };
+		382401A3203EF47900604D92 /* profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile.png; sourceTree = "<group>"; };
+		382401A4203EF47900604D92 /* progress.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = progress.png; sourceTree = "<group>"; };
+		382401A5203EF47900604D92 /* discussion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = discussion.png; sourceTree = "<group>"; };
+		382401A6203EF47A00604D92 /* dashboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dashboard.png; sourceTree = "<group>"; };
+		382401A7203EF47A00604D92 /* assessment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = assessment.png; sourceTree = "<group>"; };
+		382401A8203EF47A00604D92 /* key.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = key.png; sourceTree = "<group>"; };
+		382401A9203EF47A00604D92 /* notification.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = notification.png; sourceTree = "<group>"; };
+		382401AA203EF47A00604D92 /* assignment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = assignment.png; sourceTree = "<group>"; };
+		382401AB203EF47A00604D92 /* health.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = health.png; sourceTree = "<group>"; };
+		382401AC203EF47A00604D92 /* holiday.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = holiday.png; sourceTree = "<group>"; };
+		382401AD203EF47A00604D92 /* event.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = event.png; sourceTree = "<group>"; };
+		382401AE203EF47A00604D92 /* attendance.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = attendance.png; sourceTree = "<group>"; };
+		382FC546206E59C900B4E8E2 /* TeacherNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherNavigationController.swift; sourceTree = "<group>"; };
+		3854D661204816D0006DA7C0 /* TimetableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimetableViewController.swift; sourceTree = "<group>"; };
+		3869288F20467E5B009DE58A /* AttendanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceViewController.swift; sourceTree = "<group>"; };
+		386928952046925B009DE58A /* FSCalendar+Deprecated.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FSCalendar+Deprecated.m"; sourceTree = "<group>"; };
+		386928962046925B009DE58A /* FSCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendar.h; sourceTree = "<group>"; };
+		386928972046925B009DE58A /* FSCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendar.m; sourceTree = "<group>"; };
+		386928982046925B009DE58A /* FSCalendarAppearance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarAppearance.h; sourceTree = "<group>"; };
+		386928992046925B009DE58A /* FSCalendarAppearance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarAppearance.m; sourceTree = "<group>"; };
+		3869289A2046925B009DE58A /* FSCalendarCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarCalculator.h; sourceTree = "<group>"; };
+		3869289B2046925B009DE58A /* FSCalendarCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarCalculator.m; sourceTree = "<group>"; };
+		3869289C2046925B009DE58A /* FSCalendarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarCell.h; sourceTree = "<group>"; };
+		3869289D2046925B009DE58A /* FSCalendarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarCell.m; sourceTree = "<group>"; };
+		3869289E2046925B009DE58A /* FSCalendarCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarCollectionView.h; sourceTree = "<group>"; };
+		3869289F2046925B009DE58A /* FSCalendarCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarCollectionView.m; sourceTree = "<group>"; };
+		386928A02046925B009DE58A /* FSCalendarCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarCollectionViewLayout.h; sourceTree = "<group>"; };
+		386928A12046925B009DE58A /* FSCalendarCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarCollectionViewLayout.m; sourceTree = "<group>"; };
+		386928A22046925B009DE58A /* FSCalendarConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarConstants.h; sourceTree = "<group>"; };
+		386928A32046925B009DE58A /* FSCalendarConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarConstants.m; sourceTree = "<group>"; };
+		386928A42046925B009DE58A /* FSCalendarDelegationFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarDelegationFactory.h; sourceTree = "<group>"; };
+		386928A52046925B009DE58A /* FSCalendarDelegationFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarDelegationFactory.m; sourceTree = "<group>"; };
+		386928A62046925B009DE58A /* FSCalendarDelegationProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarDelegationProxy.h; sourceTree = "<group>"; };
+		386928A72046925B009DE58A /* FSCalendarDelegationProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarDelegationProxy.m; sourceTree = "<group>"; };
+		386928A82046925B009DE58A /* FSCalendarDynamicHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarDynamicHeader.h; sourceTree = "<group>"; };
+		386928A92046925B009DE58A /* FSCalendarExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarExtensions.h; sourceTree = "<group>"; };
+		386928AA2046925B009DE58A /* FSCalendarExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarExtensions.m; sourceTree = "<group>"; };
+		386928AB2046925B009DE58A /* FSCalendarHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarHeaderView.h; sourceTree = "<group>"; };
+		386928AC2046925B009DE58A /* FSCalendarHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarHeaderView.m; sourceTree = "<group>"; };
+		386928AD2046925B009DE58A /* FSCalendarScopeHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarScopeHandle.h; sourceTree = "<group>"; };
+		386928AE2046925B009DE58A /* FSCalendarScopeHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarScopeHandle.m; sourceTree = "<group>"; };
+		386928AF2046925B009DE58A /* FSCalendarStickyHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarStickyHeader.h; sourceTree = "<group>"; };
+		386928B02046925B009DE58A /* FSCalendarStickyHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarStickyHeader.m; sourceTree = "<group>"; };
+		386928B12046925B009DE58A /* FSCalendarTransitionCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarTransitionCoordinator.h; sourceTree = "<group>"; };
+		386928B22046925B009DE58A /* FSCalendarTransitionCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarTransitionCoordinator.m; sourceTree = "<group>"; };
+		386928B32046925B009DE58A /* FSCalendarWeekdayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSCalendarWeekdayView.h; sourceTree = "<group>"; };
+		386928B42046925B009DE58A /* FSCalendarWeekdayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSCalendarWeekdayView.m; sourceTree = "<group>"; };
+		386928B52046925B009DE58A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		386928C720469282009DE58A /* BridgetoFSCalendar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgetoFSCalendar.h; sourceTree = "<group>"; };
+		386928C82046C27B009DE58A /* PerformanceScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformanceScoreViewController.swift; sourceTree = "<group>"; };
+		388A3F25207CF078008DF915 /* ParentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentViewController.swift; sourceTree = "<group>"; };
+		388A3F2A207CF181008DF915 /* ParentDashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentDashboardViewController.swift; sourceTree = "<group>"; };
+		388EA89B208DB6600040CC9B /* ParentProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentProfileViewController.swift; sourceTree = "<group>"; };
+		388EA8A0208DB9EB0040CC9B /* ParentComplaintViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentComplaintViewController.swift; sourceTree = "<group>"; };
+		388EA8A2208DE4670040CC9B /* ParentChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentChatViewController.swift; sourceTree = "<group>"; };
+		388FD16A206B735B00114043 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
+		389E110220739FD30003F005 /* FeeDefaulterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeeDefaulterViewController.swift; sourceTree = "<group>"; };
+		389E11042073A0A40003F005 /* FeeDefaulterHeaderViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeeDefaulterHeaderViewTableViewCell.swift; sourceTree = "<group>"; };
+		389E11052073A0A40003F005 /* FeeDefaulterHeaderViewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeeDefaulterHeaderViewTableViewCell.xib; sourceTree = "<group>"; };
+		389E11082073A1630003F005 /* FeeDefaulterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeeDefaulterTableViewCell.swift; sourceTree = "<group>"; };
+		389E11092073A1630003F005 /* FeeDefaulterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeeDefaulterTableViewCell.xib; sourceTree = "<group>"; };
+		389F116220AC43D700CB23FA /* LaunchImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchImage.png; sourceTree = "<group>"; };
+		389F116620AC43D700CB23FA /* LaunchImage-Portrait@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage-Portrait@2x.png"; sourceTree = "<group>"; };
+		389F117420AC4BEE00CB23FA /* Default-667h@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Default-667h@2x.jpg"; sourceTree = "<group>"; };
+		389F117620AC4BF200CB23FA /* Default-736h@3x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Default-736h@3x.jpg"; sourceTree = "<group>"; };
+		389F117820AC501000CB23FA /* Default@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Default@2x.jpg"; sourceTree = "<group>"; };
+		389F117A20AC506900CB23FA /* Default-568h@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Default-568h@2x.jpg"; sourceTree = "<group>"; };
+		389F117C20AC50F600CB23FA /* Default-2436h@3x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Default-2436h@3x.jpg"; sourceTree = "<group>"; };
+		38A3B945206E38E8006F3785 /* TeacherDashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherDashboardViewController.swift; sourceTree = "<group>"; };
+		38A3B947206E3919006F3785 /* TeacherDailyScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherDailyScheduleViewController.swift; sourceTree = "<group>"; };
+		38A3B949206E3973006F3785 /* TeacherPinboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherPinboardViewController.swift; sourceTree = "<group>"; };
+		38A52152209C560A0030DB8C /* circleEvent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circleEvent.png; sourceTree = "<group>"; };
+		38CBB06A2078F90100AD27D7 /* attendence_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = attendence_logo.png; sourceTree = "<group>"; };
+		38CBB06C2078F90800AD27D7 /* profile_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile_logo.png; sourceTree = "<group>"; };
+		38EE4CD02064D71C005B1915 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
+		38EE4CD2206502D2005B1915 /* HolidayListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidayListViewController.swift; sourceTree = "<group>"; };
+		38EE4CD4206505BC005B1915 /* HolidaylistHeaderReusableviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidaylistHeaderReusableviewTableViewCell.swift; sourceTree = "<group>"; };
+		38EE4CD5206505BC005B1915 /* HolidaylistHeaderReusableviewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HolidaylistHeaderReusableviewTableViewCell.xib; sourceTree = "<group>"; };
+		38EE4CD820650775005B1915 /* HolidayListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolidayListTableViewCell.swift; sourceTree = "<group>"; };
+		38EE4CD920650775005B1915 /* HolidayListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HolidayListTableViewCell.xib; sourceTree = "<group>"; };
+		38EE4CDC20650F6C005B1915 /* EventGalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventGalleryViewController.swift; sourceTree = "<group>"; };
+		38FA1AB0203D69C200067620 /* ENSideMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENSideMenu.swift; sourceTree = "<group>"; };
+		38FA1AB1203D69C200067620 /* ENSideMenuNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ENSideMenuNavigationController.swift; sourceTree = "<group>"; };
+		38FA1AB4203D6A0A00067620 /* MyMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyMenuTableViewController.swift; sourceTree = "<group>"; };
+		38FA1AB6203D6A0A00067620 /* MyNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyNavigationController.swift; sourceTree = "<group>"; };
+		38FA1AB7203D6A0A00067620 /* ViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
+		435C29694BA12C7CC3A8B71D /* Pods-EliteSISSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EliteSISSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-EliteSISSwift/Pods-EliteSISSwift.release.xcconfig"; sourceTree = "<group>"; };
+		6A0914FC2065790E004A9382 /* StudentProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProfileViewController.swift; sourceTree = "<group>"; };
+		6A0914FF206581A0004A9382 /* StudentGeneralInfoDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentGeneralInfoDatasource.swift; sourceTree = "<group>"; };
+		6A091501206581B6004A9382 /* StudentContactDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentContactDatasource.swift; sourceTree = "<group>"; };
+		6A091503206581D2004A9382 /* StudentClassAppliedDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentClassAppliedDatasource.swift; sourceTree = "<group>"; };
+		6A091505206581E6004A9382 /* StudentQualificationDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentQualificationDatasource.swift; sourceTree = "<group>"; };
+		6A091507206581FA004A9382 /* StudentAddressDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentAddressDatasource.swift; sourceTree = "<group>"; };
+		6A09150920658216004A9382 /* StudentIdentityCardDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentIdentityCardDatasource.swift; sourceTree = "<group>"; };
+		6A1099F7204171DF00072ADB /* AssignmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentViewController.swift; sourceTree = "<group>"; };
+		6A1099F92041767E00072ADB /* AssignmentHeaderReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentHeaderReusableView.swift; sourceTree = "<group>"; };
+		6A1099FB2041769B00072ADB /* AssignmentHeaderReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AssignmentHeaderReusableView.xib; sourceTree = "<group>"; };
+		6A1099FD204177C400072ADB /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
+		6A1099FF20417D3800072ADB /* AssignmentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentTableViewCell.swift; sourceTree = "<group>"; };
+		6A109A0020417D3800072ADB /* AssignmentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AssignmentTableViewCell.xib; sourceTree = "<group>"; };
+		6A4224B220810E5000214124 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		6A4224B420812A8300214124 /* ComplaintsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplaintsListViewController.swift; sourceTree = "<group>"; };
+		6A4224B620812ED500214124 /* ComplaintsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplaintsHeaderView.swift; sourceTree = "<group>"; };
+		6A4224B820812F3D00214124 /* ComplaintsHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ComplaintsHeaderView.xib; sourceTree = "<group>"; };
+		6A4224BA2081FDBF00214124 /* ComplaintsListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplaintsListTableViewCell.swift; sourceTree = "<group>"; };
+		6A4224BB2081FDBF00214124 /* ComplaintsListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ComplaintsListTableViewCell.xib; sourceTree = "<group>"; };
+		6A4224BE2082078900214124 /* ComplaintDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplaintDetailViewController.swift; sourceTree = "<group>"; };
+		6A4224C020820A7B00214124 /* ComplaintHeadingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplaintHeadingTableViewCell.swift; sourceTree = "<group>"; };
+		6A4224C120820A7B00214124 /* ComplaintHeadingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ComplaintHeadingTableViewCell.xib; sourceTree = "<group>"; };
+		6A4224C420821F4E00214124 /* ComplaintTextViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplaintTextViewTableViewCell.swift; sourceTree = "<group>"; };
+		6A4224C520821F4E00214124 /* ComplaintTextViewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ComplaintTextViewTableViewCell.xib; sourceTree = "<group>"; };
+		6A4224C92082331D00214124 /* ParentDashboardHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParentDashboardHeaderView.swift; sourceTree = "<group>"; };
+		6A4224CB2082333F00214124 /* ParentDashboardHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ParentDashboardHeaderView.xib; sourceTree = "<group>"; };
+		6A45682420642A0100937CE0 /* GeneralInfoDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralInfoDatasource.swift; sourceTree = "<group>"; };
+		6A45682620642A1C00937CE0 /* ContactInfoDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInfoDatasource.swift; sourceTree = "<group>"; };
+		6A45682820642A3700937CE0 /* ClassAppliedDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassAppliedDatasource.swift; sourceTree = "<group>"; };
+		6A45682A20642A4D00937CE0 /* QualificationDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QualificationDatasource.swift; sourceTree = "<group>"; };
+		6A45682C20642A7000937CE0 /* AddressDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressDatasource.swift; sourceTree = "<group>"; };
+		6A45682E20642A8800937CE0 /* IdentityCardDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentityCardDatasource.swift; sourceTree = "<group>"; };
+		6A45683020642B9600937CE0 /* TextfieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextfieldTableViewCell.swift; sourceTree = "<group>"; };
+		6A45683120642B9600937CE0 /* TextfieldTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextfieldTableViewCell.xib; sourceTree = "<group>"; };
+		6A45683420642BB200937CE0 /* TextFieldWithCalendarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithCalendarTableViewCell.swift; sourceTree = "<group>"; };
+		6A45683520642BB200937CE0 /* TextFieldWithCalendarTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldWithCalendarTableViewCell.xib; sourceTree = "<group>"; };
+		6A49EE70204714BE00055B3B /* ChapterStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterStatusViewController.swift; sourceTree = "<group>"; };
+		6A49EE72204715C900055B3B /* ChapterStatusHeaderReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterStatusHeaderReusableView.swift; sourceTree = "<group>"; };
+		6A49EE74204715E200055B3B /* ChapterStatusHeaderReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChapterStatusHeaderReusableView.xib; sourceTree = "<group>"; };
+		6A49EE762047171B00055B3B /* ChapterStatusTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterStatusTableViewCell.swift; sourceTree = "<group>"; };
+		6A49EE772047171B00055B3B /* ChapterStatusTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChapterStatusTableViewCell.xib; sourceTree = "<group>"; };
+		6A49EE7A2047226300055B3B /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		6A49EE7C204725A200055B3B /* NotificationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCollectionViewCell.swift; sourceTree = "<group>"; };
+		6A49EE7D204725A200055B3B /* NotificationCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationCollectionViewCell.xib; sourceTree = "<group>"; };
+		6A49EE80204A9BA600055B3B /* HealthReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthReportViewController.swift; sourceTree = "<group>"; };
+		6A532D1D204BF261005DFF4E /* CosmosDistrib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CosmosDistrib.swift; sourceTree = "<group>"; };
+		6A532D20204C271B005DFF4E /* ScoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreTableViewCell.swift; sourceTree = "<group>"; };
+		6A532D21204C271B005DFF4E /* ScoreTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScoreTableViewCell.xib; sourceTree = "<group>"; };
+		6A532D26204F12AF005DFF4E /* AllDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllDatasource.swift; sourceTree = "<group>"; };
+		6A532D28204F12C5005DFF4E /* MissedDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissedDatasource.swift; sourceTree = "<group>"; };
+		6A532D2A204F1679005DFF4E /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
+		6A532D2B204F1679005DFF4E /* NotificationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationTableViewCell.xib; sourceTree = "<group>"; };
+		6A629D232067BB1600BCC75E /* TeachersHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeachersHeaderView.swift; sourceTree = "<group>"; };
+		6A629D252067BB6800BCC75E /* TeachersHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeachersHeaderView.xib; sourceTree = "<group>"; };
+		6A629D272067CA2200BCC75E /* TeachersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeachersTableViewCell.swift; sourceTree = "<group>"; };
+		6A629D282067CA2200BCC75E /* TeachersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeachersTableViewCell.xib; sourceTree = "<group>"; };
+		6A81E91D2069750300B14727 /* ReceiverTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiverTableViewCell.swift; sourceTree = "<group>"; };
+		6A81E91E2069750300B14727 /* ReceiverTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReceiverTableViewCell.xib; sourceTree = "<group>"; };
+		6A81E92120697CE600B14727 /* ChatLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatLabel.swift; sourceTree = "<group>"; };
+		6A8D37F3206ABC40009FF210 /* GalleryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewCell.swift; sourceTree = "<group>"; };
+		6A8D37F4206ABC40009FF210 /* GalleryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryCollectionViewCell.xib; sourceTree = "<group>"; };
+		6A8D37F7206AC54A009FF210 /* GalleryPhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryPhotosViewController.swift; sourceTree = "<group>"; };
+		6A8D37F9206AC6EB009FF210 /* GalleryPhotosCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryPhotosCollectionViewCell.swift; sourceTree = "<group>"; };
+		6A8D37FA206AC6EB009FF210 /* GalleryPhotosCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GalleryPhotosCollectionViewCell.xib; sourceTree = "<group>"; };
+		6A992B7A2068276700314CEA /* TeacherChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherChatViewController.swift; sourceTree = "<group>"; };
+		6A992B7C2068294900314CEA /* SimpleLabelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleLabelTableViewCell.swift; sourceTree = "<group>"; };
+		6A992B7D2068294900314CEA /* SimpleLabelTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleLabelTableViewCell.xib; sourceTree = "<group>"; };
+		6AA150C6203B2834007CBD99 /* EliteSISSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EliteSISSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AA150C9203B2834007CBD99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6AA150CE203B2834007CBD99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6AA150D0203B2834007CBD99 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6AA150D3203B2834007CBD99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6AA150D5203B2834007CBD99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6AA150DC203B2948007CBD99 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		6AA150DE203B2B0E007CBD99 /* LogoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoTableViewCell.swift; sourceTree = "<group>"; };
+		6AA150DF203B2B0E007CBD99 /* LogoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogoTableViewCell.xib; sourceTree = "<group>"; };
+		6AA150E2203B342D007CBD99 /* LoginCredentialsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCredentialsTableViewCell.swift; sourceTree = "<group>"; };
+		6AA150E3203B342D007CBD99 /* LoginCredentialsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginCredentialsTableViewCell.xib; sourceTree = "<group>"; };
+		6AA150E6203B3E06007CBD99 /* ForgotPasswordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordTableViewCell.swift; sourceTree = "<group>"; };
+		6AA150E7203B3E06007CBD99 /* ForgotPasswordTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgotPasswordTableViewCell.xib; sourceTree = "<group>"; };
+		6AA150EA203B42E8007CBD99 /* ButtonWithBgTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonWithBgTableViewCell.swift; sourceTree = "<group>"; };
+		6AA150EB203B42E8007CBD99 /* ButtonWithBgTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonWithBgTableViewCell.xib; sourceTree = "<group>"; };
+		6AD679F3204475BF00E593B9 /* StudyProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyProgressViewController.swift; sourceTree = "<group>"; };
+		6AD679F520447B5B00E593B9 /* StudyProgressTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyProgressTableViewCell.swift; sourceTree = "<group>"; };
+		6AD679F620447B5B00E593B9 /* StudyProgressTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StudyProgressTableViewCell.xib; sourceTree = "<group>"; };
+		6ADD41FF203DCEE100A26DE4 /* MenuHeadingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuHeadingTableViewCell.swift; sourceTree = "<group>"; };
+		6ADD4200203DCEE100A26DE4 /* MenuHeadingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuHeadingTableViewCell.xib; sourceTree = "<group>"; };
+		6ADD4203203DDA3A00A26DE4 /* MenuStudentInfoHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuStudentInfoHeaderView.swift; sourceTree = "<group>"; };
+		6ADD4205203DDB6A00A26DE4 /* MenuStudentInfoHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuStudentInfoHeaderView.xib; sourceTree = "<group>"; };
+		EDF209812B85638AAA230DFE /* Pods-EliteSISSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EliteSISSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EliteSISSwift/Pods-EliteSISSwift.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6AA150C3203B2834007CBD99 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BD87543A4944A67B4053FF3 /* Pods_EliteSISSwift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2B94256F206F457800539DBC /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				2B942574206F5BFC00539DBC /* ClassInfoCollectionViewCell.swift */,
+				2B942575206F5BFC00539DBC /* ClassInfoCollectionViewCell.xib */,
+				2B942578206F65B300539DBC /* TeacherAssignmentTableViewCell.swift */,
+				2B942579206F65B300539DBC /* TeacherAssignmentTableViewCell.xib */,
+				2B94257C206F792200539DBC /* DateExtension.swift */,
+				2B94257E206F7BF000539DBC /* AssignmentViewDataModel.swift */,
+				2B942580206F7C0100539DBC /* ClassViewDataModel.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		2BAAE9702077C42F00A5CD78 /* Attendance */ = {
+			isa = PBXGroup;
+			children = (
+				2BAAE9712077C46000A5CD78 /* StudentAttendanceViewController.swift */,
+				2BAAE9732077CB4100A5CD78 /* StudentAttendanceTableViewCell.swift */,
+				2BAAE9742077CB4100A5CD78 /* StudentAttendanceTableViewCell.xib */,
+				2BAAE9772077CB6100A5CD78 /* StudentAttendanceHeaderFooterView.swift */,
+				2BAAE9792077CB7100A5CD78 /* StudentAttendanceHeaderFooterView.xib */,
+				2BFB9E7C20789CAD004E09F0 /* StudentAttendanceViewModel.swift */,
+			);
+			path = Attendance;
+			sourceTree = "<group>";
+		};
+		2BAD73832075C8CA00972D50 /* Assignment */ = {
+			isa = PBXGroup;
+			children = (
+				2BAD73842075C8EE00972D50 /* AssignmentContainerViewController.swift */,
+				2B4556D620768FC900B9738D /* TeacherAssignmentViewController.swift */,
+				2B4556DA2076A18C00B9738D /* TeacherAssignmentDetailTableViewCell.swift */,
+				2B4556DB2076A18C00B9738D /* TeacherAssignmentDetailTableViewCell.xib */,
+				2B4556E22076A6B700B9738D /* TeacherAssignmentHeaderFooterView.swift */,
+				2B4556E42076A6CF00B9738D /* TeacherAssignmentHeaderFooterView.xib */,
+				2BA6C6FA20ADF25A0002FFB9 /* AddAssignmentViewController.swift */,
+				2BF0A8A120B01FF9001FA6A2 /* TeacherAssginementResponseModel.swift */,
+			);
+			path = Assignment;
+			sourceTree = "<group>";
+		};
+		2BD20890208B9D3900CD4ED5 /* FeeInformationView */ = {
+			isa = PBXGroup;
+			children = (
+				2B85F562208C753200D428EF /* FeeInfoHeaderView.swift */,
+				2B85F561208C753200D428EF /* FeeInfoHeaderView.xib */,
+				2BD2088E208B90FF00CD4ED5 /* FeeInformationViewController.swift */,
+				2B85F55D208C6BFD00D428EF /* FeeInfoTableViewCell.swift */,
+				2B85F55E208C6BFD00D428EF /* FeeInfoTableViewCell.xib */,
+				2B85F565208C78E600D428EF /* FeeItemsTableViewCell.swift */,
+				2B85F566208C78E600D428EF /* FeeItemsTableViewCell.xib */,
+				2B85F569208C843200D428EF /* FeeTotalTableViewCell.swift */,
+				2B85F56A208C843200D428EF /* FeeTotalTableViewCell.xib */,
+				2B85F56D208CA08700D428EF /* FeeViewModel.swift */,
+			);
+			path = FeeInformationView;
+			sourceTree = "<group>";
+		};
+		2BFB9E7E2078A5FF004E09F0 /* Student Profile */ = {
+			isa = PBXGroup;
+			children = (
+				2BFB9E7F2078A615004E09F0 /* StudentProfileListingViewController.swift */,
+				2BFB9E852078A69E004E09F0 /* StudentCollectionViewCell.swift */,
+				2BFB9E862078A69E004E09F0 /* StudentCollectionViewCell.xib */,
+			);
+			path = "Student Profile";
+			sourceTree = "<group>";
+		};
+		2BFB9E8D2078D8F2004E09F0 /* Side Menu */ = {
+			isa = PBXGroup;
+			children = (
+				2BFB9E8E2078D916004E09F0 /* MenuTeacherInfoHeaderView.swift */,
+				2BFB9E8F2078D917004E09F0 /* MenuTeacherInfoHeaderView.xib */,
+			);
+			path = "Side Menu";
+			sourceTree = "<group>";
+		};
+		381817F120402A00005EBA85 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				389F116120AC43C900CB23FA /* launch images */,
+				38A52152209C560A0030DB8C /* circleEvent.png */,
+				2B85F573208CC76000D428EF /* man.jpeg */,
+				2B7EF56C208910F9000E995A /* child1.jpeg */,
+				2B7EF56D208910FD000E995A /* child2.jpeg */,
+				38CBB06C2078F90800AD27D7 /* profile_logo.png */,
+				38CBB06A2078F90100AD27D7 /* attendence_logo.png */,
+				2BFB9E8B2078A74D004E09F0 /* ic_face_male.png */,
+				2BFB9E892078A730004E09F0 /* ic_face_female.png */,
+				2BFB9E7A20789C06004E09F0 /* ic_arrow_down.png */,
+				2B4556D82076927800B9738D /* ic_search.png */,
+				388FD16A206B735B00114043 /* back.png */,
+				381817E9204029F2005EBA85 /* discussion_logo.png */,
+				381817EA204029F2005EBA85 /* health_logo.png */,
+				2BF0A89F20B01A82001FA6A2 /* delete-sign.png */,
+				2B4556E02076A43800B9738D /* ic_done.png */,
+				381817EB204029F2005EBA85 /* pinboard_logo.png */,
+				2B4556DE2076A2D200B9738D /* ic_teacher.png */,
+				381817EC204029F2005EBA85 /* timetable_logo.png */,
+				381817E72040230B005EBA85 /* iconarrowright.png */,
+				381817E52040112A005EBA85 /* menuicon.png */,
+				382401A7203EF47A00604D92 /* assessment.png */,
+				382401AA203EF47A00604D92 /* assignment.png */,
+				382401AE203EF47A00604D92 /* attendance.png */,
+				3824019F203EF47900604D92 /* calendar.png */,
+				382401A0203EF47900604D92 /* compliance.png */,
+				382401A6203EF47A00604D92 /* dashboard.png */,
+				382401A5203EF47900604D92 /* discussion.png */,
+				382401AD203EF47A00604D92 /* event.png */,
+				382401A2203EF47900604D92 /* fee_defaulter.png */,
+				38240197203EF47800604D92 /* fee.png */,
+				382401AB203EF47A00604D92 /* health.png */,
+				382401AC203EF47A00604D92 /* holiday.png */,
+				382401A1203EF47900604D92 /* k_profile.png */,
+				382401A8203EF47A00604D92 /* key.png */,
+				38240198203EF47800604D92 /* logout.png */,
+				382401A9203EF47A00604D92 /* notification.png */,
+				3824019E203EF47900604D92 /* performance.png */,
+				38240199203EF47800604D92 /* pinboard.png */,
+				382401A3203EF47900604D92 /* profile.png */,
+				382401A4203EF47900604D92 /* progress.png */,
+				3824019A203EF47900604D92 /* s_dashboard.png */,
+				3824019B203EF47900604D92 /* s_info.png */,
+				3824019C203EF47900604D92 /* s_profile.png */,
+				3824019D203EF47900604D92 /* teacher.png */,
+				38240195203EF2DD00604D92 /* childpng.png */,
+				382287CB203EE5EE00E6CF9B /* ic_lock.png */,
+				382287CD203EE5F200E6CF9B /* ic_user.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		386928942046925B009DE58A /* FSCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				386928952046925B009DE58A /* FSCalendar+Deprecated.m */,
+				386928962046925B009DE58A /* FSCalendar.h */,
+				386928972046925B009DE58A /* FSCalendar.m */,
+				386928982046925B009DE58A /* FSCalendarAppearance.h */,
+				386928992046925B009DE58A /* FSCalendarAppearance.m */,
+				3869289A2046925B009DE58A /* FSCalendarCalculator.h */,
+				3869289B2046925B009DE58A /* FSCalendarCalculator.m */,
+				3869289C2046925B009DE58A /* FSCalendarCell.h */,
+				3869289D2046925B009DE58A /* FSCalendarCell.m */,
+				3869289E2046925B009DE58A /* FSCalendarCollectionView.h */,
+				3869289F2046925B009DE58A /* FSCalendarCollectionView.m */,
+				386928A02046925B009DE58A /* FSCalendarCollectionViewLayout.h */,
+				386928A12046925B009DE58A /* FSCalendarCollectionViewLayout.m */,
+				386928A22046925B009DE58A /* FSCalendarConstants.h */,
+				386928A32046925B009DE58A /* FSCalendarConstants.m */,
+				386928A42046925B009DE58A /* FSCalendarDelegationFactory.h */,
+				386928A52046925B009DE58A /* FSCalendarDelegationFactory.m */,
+				386928A62046925B009DE58A /* FSCalendarDelegationProxy.h */,
+				386928A72046925B009DE58A /* FSCalendarDelegationProxy.m */,
+				386928A82046925B009DE58A /* FSCalendarDynamicHeader.h */,
+				386928A92046925B009DE58A /* FSCalendarExtensions.h */,
+				386928AA2046925B009DE58A /* FSCalendarExtensions.m */,
+				386928AB2046925B009DE58A /* FSCalendarHeaderView.h */,
+				386928AC2046925B009DE58A /* FSCalendarHeaderView.m */,
+				386928AD2046925B009DE58A /* FSCalendarScopeHandle.h */,
+				386928AE2046925B009DE58A /* FSCalendarScopeHandle.m */,
+				386928AF2046925B009DE58A /* FSCalendarStickyHeader.h */,
+				386928B02046925B009DE58A /* FSCalendarStickyHeader.m */,
+				386928B12046925B009DE58A /* FSCalendarTransitionCoordinator.h */,
+				386928B22046925B009DE58A /* FSCalendarTransitionCoordinator.m */,
+				386928B32046925B009DE58A /* FSCalendarWeekdayView.h */,
+				386928B42046925B009DE58A /* FSCalendarWeekdayView.m */,
+				386928B52046925B009DE58A /* Info.plist */,
+			);
+			path = FSCalendar;
+			sourceTree = "<group>";
+		};
+		386928CA2046C2B0009DE58A /* Graph */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Graph;
+			sourceTree = "<group>";
+		};
+		388A3F27207CF136008DF915 /* Parent Login */ = {
+			isa = PBXGroup;
+			children = (
+				388A3F2A207CF181008DF915 /* ParentDashboardViewController.swift */,
+			);
+			path = "Parent Login";
+			sourceTree = "<group>";
+		};
+		389F116120AC43C900CB23FA /* launch images */ = {
+			isa = PBXGroup;
+			children = (
+				389F117C20AC50F600CB23FA /* Default-2436h@3x.jpg */,
+				389F117A20AC506900CB23FA /* Default-568h@2x.jpg */,
+				389F117820AC501000CB23FA /* Default@2x.jpg */,
+				389F117620AC4BF200CB23FA /* Default-736h@3x.jpg */,
+				389F117420AC4BEE00CB23FA /* Default-667h@2x.jpg */,
+				389F116620AC43D700CB23FA /* LaunchImage-Portrait@2x.png */,
+				389F116220AC43D700CB23FA /* LaunchImage.png */,
+			);
+			path = "launch images";
+			sourceTree = "<group>";
+		};
+		38A3B944206E38A3006F3785 /* TeacherLogin */ = {
+			isa = PBXGroup;
+			children = (
+				38A3B945206E38E8006F3785 /* TeacherDashboardViewController.swift */,
+				38A3B947206E3919006F3785 /* TeacherDailyScheduleViewController.swift */,
+				38A3B949206E3973006F3785 /* TeacherPinboardViewController.swift */,
+				388EA89B208DB6600040CC9B /* ParentProfileViewController.swift */,
+				388EA8A2208DE4670040CC9B /* ParentChatViewController.swift */,
+			);
+			path = TeacherLogin;
+			sourceTree = "<group>";
+		};
+		38FA1AAF203D69C200067620 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				38200809203D950000DF45C9 /* KDCircularProgress.swift */,
+				38FA1AB0203D69C200067620 /* ENSideMenu.swift */,
+				38FA1AB1203D69C200067620 /* ENSideMenuNavigationController.swift */,
+				6A532D1D204BF261005DFF4E /* CosmosDistrib.swift */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		43417821210CC4AC008EDDB6 /* NotificationTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				6A532D2A204F1679005DFF4E /* NotificationTableViewCell.swift */,
+				6A532D2B204F1679005DFF4E /* NotificationTableViewCell.xib */,
+			);
+			path = NotificationTableViewCell;
+			sourceTree = "<group>";
+		};
+		43417822210CC4DD008EDDB6 /* TextfieldTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				6A45683020642B9600937CE0 /* TextfieldTableViewCell.swift */,
+				6A45683120642B9600937CE0 /* TextfieldTableViewCell.xib */,
+			);
+			path = TextfieldTableViewCell;
+			sourceTree = "<group>";
+		};
+		43417823210CC56B008EDDB6 /* TextFieldWithCalenderTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				6A45683420642BB200937CE0 /* TextFieldWithCalendarTableViewCell.swift */,
+				6A45683520642BB200937CE0 /* TextFieldWithCalendarTableViewCell.xib */,
+			);
+			path = TextFieldWithCalenderTableViewCell;
+			sourceTree = "<group>";
+		};
+		43417824210CC5B9008EDDB6 /* FeeDefaulterHeaderViewTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				389E11042073A0A40003F005 /* FeeDefaulterHeaderViewTableViewCell.swift */,
+				389E11052073A0A40003F005 /* FeeDefaulterHeaderViewTableViewCell.xib */,
+			);
+			path = FeeDefaulterHeaderViewTableViewCell;
+			sourceTree = "<group>";
+		};
+		43417825210CC5EC008EDDB6 /* FeeDefaulterTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				389E11082073A1630003F005 /* FeeDefaulterTableViewCell.swift */,
+				389E11092073A1630003F005 /* FeeDefaulterTableViewCell.xib */,
+			);
+			path = FeeDefaulterTableViewCell;
+			sourceTree = "<group>";
+		};
+		43417826210CC61A008EDDB6 /* HolidaylistHeaderReusableviewTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				38EE4CD4206505BC005B1915 /* HolidaylistHeaderReusableviewTableViewCell.swift */,
+				38EE4CD5206505BC005B1915 /* HolidaylistHeaderReusableviewTableViewCell.xib */,
+			);
+			path = HolidaylistHeaderReusableviewTableViewCell;
+			sourceTree = "<group>";
+		};
+		43417827210CC824008EDDB6 /* NotificationCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				6A49EE7C204725A200055B3B /* NotificationCollectionViewCell.swift */,
+				6A49EE7D204725A200055B3B /* NotificationCollectionViewCell.xib */,
+			);
+			path = NotificationCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		43417828210CC840008EDDB6 /* ScoreTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				6A532D20204C271B005DFF4E /* ScoreTableViewCell.swift */,
+				6A532D21204C271B005DFF4E /* ScoreTableViewCell.xib */,
+			);
+			path = ScoreTableViewCell;
+			sourceTree = "<group>";
+		};
+		43417829210CC859008EDDB6 /* ChapterStatusTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				6A49EE762047171B00055B3B /* ChapterStatusTableViewCell.swift */,
+				6A49EE772047171B00055B3B /* ChapterStatusTableViewCell.xib */,
+			);
+			path = ChapterStatusTableViewCell;
+			sourceTree = "<group>";
+		};
+		4341782A210CC878008EDDB6 /* ChapterStatusHeaderReusableView */ = {
+			isa = PBXGroup;
+			children = (
+				6A49EE72204715C900055B3B /* ChapterStatusHeaderReusableView.swift */,
+				6A49EE74204715E200055B3B /* ChapterStatusHeaderReusableView.xib */,
+			);
+			path = ChapterStatusHeaderReusableView;
+			sourceTree = "<group>";
+		};
+		4341782B210CC8A2008EDDB6 /* StudyProgressTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				6AD679F520447B5B00E593B9 /* StudyProgressTableViewCell.swift */,
+				6AD679F620447B5B00E593B9 /* StudyProgressTableViewCell.xib */,
+			);
+			path = StudyProgressTableViewCell;
+			sourceTree = "<group>";
+		};
+		4341782C210CC8CD008EDDB6 /* AssignmentTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				6A1099FF20417D3800072ADB /* AssignmentTableViewCell.swift */,
+				6A109A0020417D3800072ADB /* AssignmentTableViewCell.xib */,
+			);
+			path = AssignmentTableViewCell;
+			sourceTree = "<group>";
+		};
+		4341782D210CC8FD008EDDB6 /* AssignmentHeaderReusableView */ = {
+			isa = PBXGroup;
+			children = (
+				6A1099F92041767E00072ADB /* AssignmentHeaderReusableView.swift */,
+				6A1099FB2041769B00072ADB /* AssignmentHeaderReusableView.xib */,
+			);
+			path = AssignmentHeaderReusableView;
+			sourceTree = "<group>";
+		};
+		4341782E210CC977008EDDB6 /* MenuStudentInfoHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				6ADD4203203DDA3A00A26DE4 /* MenuStudentInfoHeaderView.swift */,
+				6ADD4205203DDB6A00A26DE4 /* MenuStudentInfoHeaderView.xib */,
+			);
+			path = MenuStudentInfoHeaderView;
+			sourceTree = "<group>";
+		};
+		4341782F210CC9CF008EDDB6 /* MenuHeadingTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				6ADD41FF203DCEE100A26DE4 /* MenuHeadingTableViewCell.swift */,
+				6ADD4200203DCEE100A26DE4 /* MenuHeadingTableViewCell.xib */,
+			);
+			path = MenuHeadingTableViewCell;
+			sourceTree = "<group>";
+		};
+		43417830210CC9F3008EDDB6 /* HolidayListTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				38EE4CD820650775005B1915 /* HolidayListTableViewCell.swift */,
+				38EE4CD920650775005B1915 /* HolidayListTableViewCell.xib */,
+			);
+			path = HolidayListTableViewCell;
+			sourceTree = "<group>";
+		};
+		43417831210CCA2D008EDDB6 /* SimpleLabelTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				6A992B7C2068294900314CEA /* SimpleLabelTableViewCell.swift */,
+				6A992B7D2068294900314CEA /* SimpleLabelTableViewCell.xib */,
+			);
+			path = SimpleLabelTableViewCell;
+			sourceTree = "<group>";
+		};
+		43417832210CCA54008EDDB6 /* DateSelectionTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				2B6EBE7E209E3A2000FB1C49 /* DateSelectionTableViewCell.swift */,
+				2B6EBE7F209E3A2000FB1C49 /* DateSelectionTableViewCell.xib */,
+			);
+			path = DateSelectionTableViewCell;
+			sourceTree = "<group>";
+		};
+		6A0914FE20658155004A9382 /* Student */ = {
+			isa = PBXGroup;
+			children = (
+				2B855D2D2098DD59000C1C2A /* DropDownTableViewCell.swift */,
+				2B855D2E2098DD59000C1C2A /* DropDownTableViewCell.xib */,
+				6A0914FC2065790E004A9382 /* StudentProfileViewController.swift */,
+				6A0914FF206581A0004A9382 /* StudentGeneralInfoDatasource.swift */,
+				6A091501206581B6004A9382 /* StudentContactDatasource.swift */,
+				6A091503206581D2004A9382 /* StudentClassAppliedDatasource.swift */,
+				6A091505206581E6004A9382 /* StudentQualificationDatasource.swift */,
+				6A091507206581FA004A9382 /* StudentAddressDatasource.swift */,
+				6A09150920658216004A9382 /* StudentIdentityCardDatasource.swift */,
+			);
+			path = Student;
+			sourceTree = "<group>";
+		};
+		6A4224C82082328800214124 /* Parent */ = {
+			isa = PBXGroup;
+			children = (
+				2BD20890208B9D3900CD4ED5 /* FeeInformationView */,
+				2B85F570208CC68C00D428EF /* MenuParentInfoHeaderView.swift */,
+				2B85F56F208CC68C00D428EF /* MenuParentInfoHeaderView.xib */,
+				2BD2088C208B29AC00CD4ED5 /* EventViewDataModel.swift */,
+				2BD20884208B245700CD4ED5 /* UpcomingEventsTableViewCell.xib */,
+				2BD20885208B245700CD4ED5 /* UpcomingEventsTableViewCell.swift */,
+				2BD20881208B20A600CD4ED5 /* ChildNoticeTableViewCell.xib */,
+				2BD20880208B20A600CD4ED5 /* ChildNoticeTableViewCell.swift */,
+				2BD2087D208B1AFD00CD4ED5 /* EventNoticeTableViewCell.xib */,
+				2BD2087C208B1AFD00CD4ED5 /* EventNoticeTableViewCell.swift */,
+				2BD20878208B138400CD4ED5 /* ParentNoticeTableViewCell.xib */,
+				2BD20879208B138400CD4ED5 /* ParentNoticeTableViewCell.swift */,
+				2BD20874208B0E6100CD4ED5 /* FeeReminderTableViewCell.xib */,
+				2BD20875208B0E6100CD4ED5 /* FeeReminderTableViewCell.swift */,
+				6A4224CB2082333F00214124 /* ParentDashboardHeaderView.xib */,
+				6A4224C92082331D00214124 /* ParentDashboardHeaderView.swift */,
+				2B7EF5672089024B000E995A /* ChildCollectionViewCell.xib */,
+				2B7EF5662089024B000E995A /* ChildCollectionViewCell.swift */,
+				2B7EF57220891140000E995A /* ChildViewDataModel.swift */,
+				2BD20888208B25EB00CD4ED5 /* EventCollectionViewCell.swift */,
+				2BD20889208B25EB00CD4ED5 /* EventCollectionViewCell.xib */,
+				388EA8A0208DB9EB0040CC9B /* ParentComplaintViewController.swift */,
+			);
+			path = Parent;
+			sourceTree = "<group>";
+		};
+		6A629D222067BA0200BCC75E /* Teachers */ = {
+			isa = PBXGroup;
+			children = (
+				2BFB9E8D2078D8F2004E09F0 /* Side Menu */,
+				2BFB9E7E2078A5FF004E09F0 /* Student Profile */,
+				2BAAE9702077C42F00A5CD78 /* Attendance */,
+				2BAD73832075C8CA00972D50 /* Assignment */,
+				2B94256F206F457800539DBC /* Dashboard */,
+				3802E77A205BE7FA001BDF5F /* TeachersViewController.swift */,
+				3802E77C205BF648001BDF5F /* TeacherProfileViewController.swift */,
+				6A45682420642A0100937CE0 /* GeneralInfoDatasource.swift */,
+				6A45682620642A1C00937CE0 /* ContactInfoDatasource.swift */,
+				6A45682820642A3700937CE0 /* ClassAppliedDatasource.swift */,
+				6A45682A20642A4D00937CE0 /* QualificationDatasource.swift */,
+				6A45682C20642A7000937CE0 /* AddressDatasource.swift */,
+				6A45682E20642A8800937CE0 /* IdentityCardDatasource.swift */,
+				6A629D232067BB1600BCC75E /* TeachersHeaderView.swift */,
+				6A629D252067BB6800BCC75E /* TeachersHeaderView.xib */,
+				6A629D272067CA2200BCC75E /* TeachersTableViewCell.swift */,
+				6A629D282067CA2200BCC75E /* TeachersTableViewCell.xib */,
+				6A992B7A2068276700314CEA /* TeacherChatViewController.swift */,
+				6A81E91D2069750300B14727 /* ReceiverTableViewCell.swift */,
+				6A81E91E2069750300B14727 /* ReceiverTableViewCell.xib */,
+				6A81E92120697CE600B14727 /* ChatLabel.swift */,
+				6A4224B420812A8300214124 /* ComplaintsListViewController.swift */,
+				6A4224B620812ED500214124 /* ComplaintsHeaderView.swift */,
+				6A4224B820812F3D00214124 /* ComplaintsHeaderView.xib */,
+				6A4224BA2081FDBF00214124 /* ComplaintsListTableViewCell.swift */,
+				6A4224BB2081FDBF00214124 /* ComplaintsListTableViewCell.xib */,
+				6A4224BE2082078900214124 /* ComplaintDetailViewController.swift */,
+				6A4224C020820A7B00214124 /* ComplaintHeadingTableViewCell.swift */,
+				6A4224C120820A7B00214124 /* ComplaintHeadingTableViewCell.xib */,
+				6A4224C420821F4E00214124 /* ComplaintTextViewTableViewCell.swift */,
+				6A4224C520821F4E00214124 /* ComplaintTextViewTableViewCell.xib */,
+			);
+			path = Teachers;
+			sourceTree = "<group>";
+		};
+		6A8D37F2206ABBF8009FF210 /* EventGallery */ = {
+			isa = PBXGroup;
+			children = (
+				38EE4CDC20650F6C005B1915 /* EventGalleryViewController.swift */,
+				6A8D37F3206ABC40009FF210 /* GalleryCollectionViewCell.swift */,
+				6A8D37F4206ABC40009FF210 /* GalleryCollectionViewCell.xib */,
+				6A8D37F7206AC54A009FF210 /* GalleryPhotosViewController.swift */,
+				6A8D37F9206AC6EB009FF210 /* GalleryPhotosCollectionViewCell.swift */,
+				6A8D37FA206AC6EB009FF210 /* GalleryPhotosCollectionViewCell.xib */,
+			);
+			path = EventGallery;
+			sourceTree = "<group>";
+		};
+		6AA150BD203B2833007CBD99 = {
+			isa = PBXGroup;
+			children = (
+				6AA150C8203B2834007CBD99 /* EliteSISSwift */,
+				38A3B944206E38A3006F3785 /* TeacherLogin */,
+				388A3F27207CF136008DF915 /* Parent Login */,
+				6A4224C82082328800214124 /* Parent */,
+				6AA150C7203B2834007CBD99 /* Products */,
+				CEE428F17475DF5C1A526496 /* Frameworks */,
+				BE8EEC34AB72319D92EDE48A /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		6AA150C7203B2834007CBD99 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6AA150C6203B2834007CBD99 /* EliteSISSwift.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6AA150C8203B2834007CBD99 /* EliteSISSwift */ = {
+			isa = PBXGroup;
+			children = (
+				2BDD397F20AF5F19009406E8 /* EliteSISSwift.entitlements */,
+				2BA6C6F820ADE9EB0002FFB9 /* UIBorderView.swift */,
+				386928CA2046C2B0009DE58A /* Graph */,
+				386928942046925B009DE58A /* FSCalendar */,
+				381817F120402A00005EBA85 /* Images */,
+				38FA1AAF203D69C200067620 /* Library */,
+				6AA150DB203B292F007CBD99 /* Login */,
+				6AA150C9203B2834007CBD99 /* AppDelegate.swift */,
+				3854D661204816D0006DA7C0 /* TimetableViewController.swift */,
+				3820080F203DAB7600DF45C9 /* DashboardViewController.swift */,
+				388A3F25207CF078008DF915 /* ParentViewController.swift */,
+				386928C82046C27B009DE58A /* PerformanceScoreViewController.swift */,
+				3869288F20467E5B009DE58A /* AttendanceViewController.swift */,
+				38FA1AB6203D6A0A00067620 /* MyNavigationController.swift */,
+				382FC546206E59C900B4E8E2 /* TeacherNavigationController.swift */,
+				38FA1AB4203D6A0A00067620 /* MyMenuTableViewController.swift */,
+				38FA1AB7203D6A0A00067620 /* ViewController2.swift */,
+				6A1099F7204171DF00072ADB /* AssignmentViewController.swift */,
+				6A1099FD204177C400072ADB /* PaddingLabel.swift */,
+				6AD679F3204475BF00E593B9 /* StudyProgressViewController.swift */,
+				6A49EE70204714BE00055B3B /* ChapterStatusViewController.swift */,
+				6A49EE80204A9BA600055B3B /* HealthReportViewController.swift */,
+				3802E76A205BC8CE001BDF5F /* PinboardViewController.swift */,
+				6A49EE7A2047226300055B3B /* NotificationViewController.swift */,
+				38EE4CD02064D71C005B1915 /* ChangePasswordViewController.swift */,
+				389E110220739FD30003F005 /* FeeDefaulterViewController.swift */,
+				38EE4CD2206502D2005B1915 /* HolidayListViewController.swift */,
+				2B6EBE7C209E1CAF00FB1C49 /* DatePickerViewController.swift */,
+				2B6EBE82209E444300FB1C49 /* CameraUtility.swift */,
+				3802E770205BD2BB001BDF5F /* TodayPinboardDataSource.swift */,
+				3802E776205BD332001BDF5F /* UpcomingPinboardDataSource.swift */,
+				3802E778205BD34E001BDF5F /* PastPinboardDatasource.swift */,
+				3802E76E205BCB9D001BDF5F /* TodayDatasource.swift */,
+				6A532D26204F12AF005DFF4E /* AllDatasource.swift */,
+				6A532D28204F12C5005DFF4E /* MissedDatasource.swift */,
+				6AA150CD203B2834007CBD99 /* Main.storyboard */,
+				6AA150D0203B2834007CBD99 /* Assets.xcassets */,
+				6AA150D2203B2834007CBD99 /* LaunchScreen.storyboard */,
+				6AA150D5203B2834007CBD99 /* Info.plist */,
+				4341782F210CC9CF008EDDB6 /* MenuHeadingTableViewCell */,
+				4341782E210CC977008EDDB6 /* MenuStudentInfoHeaderView */,
+				4341782D210CC8FD008EDDB6 /* AssignmentHeaderReusableView */,
+				4341782C210CC8CD008EDDB6 /* AssignmentTableViewCell */,
+				4341782B210CC8A2008EDDB6 /* StudyProgressTableViewCell */,
+				386928C720469282009DE58A /* BridgetoFSCalendar.h */,
+				4341782A210CC878008EDDB6 /* ChapterStatusHeaderReusableView */,
+				43417829210CC859008EDDB6 /* ChapterStatusTableViewCell */,
+				43417828210CC840008EDDB6 /* ScoreTableViewCell */,
+				43417827210CC824008EDDB6 /* NotificationCollectionViewCell */,
+				43417821210CC4AC008EDDB6 /* NotificationTableViewCell */,
+				43417822210CC4DD008EDDB6 /* TextfieldTableViewCell */,
+				43417823210CC56B008EDDB6 /* TextFieldWithCalenderTableViewCell */,
+				43417824210CC5B9008EDDB6 /* FeeDefaulterHeaderViewTableViewCell */,
+				43417825210CC5EC008EDDB6 /* FeeDefaulterTableViewCell */,
+				43417830210CC9F3008EDDB6 /* HolidayListTableViewCell */,
+				43417826210CC61A008EDDB6 /* HolidaylistHeaderReusableviewTableViewCell */,
+				6A8D37F2206ABBF8009FF210 /* EventGallery */,
+				6A629D222067BA0200BCC75E /* Teachers */,
+				6A0914FE20658155004A9382 /* Student */,
+				43417831210CCA2D008EDDB6 /* SimpleLabelTableViewCell */,
+				43417832210CCA54008EDDB6 /* DateSelectionTableViewCell */,
+			);
+			path = EliteSISSwift;
+			sourceTree = "<group>";
+		};
+		6AA150DB203B292F007CBD99 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				6AA150DC203B2948007CBD99 /* LoginViewController.swift */,
+				6AA150DE203B2B0E007CBD99 /* LogoTableViewCell.swift */,
+				6AA150DF203B2B0E007CBD99 /* LogoTableViewCell.xib */,
+				6AA150E2203B342D007CBD99 /* LoginCredentialsTableViewCell.swift */,
+				6AA150E3203B342D007CBD99 /* LoginCredentialsTableViewCell.xib */,
+				6AA150E6203B3E06007CBD99 /* ForgotPasswordTableViewCell.swift */,
+				6AA150E7203B3E06007CBD99 /* ForgotPasswordTableViewCell.xib */,
+				6AA150EA203B42E8007CBD99 /* ButtonWithBgTableViewCell.swift */,
+				6AA150EB203B42E8007CBD99 /* ButtonWithBgTableViewCell.xib */,
+				6A4224B220810E5000214124 /* ForgotPasswordViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		BE8EEC34AB72319D92EDE48A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EDF209812B85638AAA230DFE /* Pods-EliteSISSwift.debug.xcconfig */,
+				435C29694BA12C7CC3A8B71D /* Pods-EliteSISSwift.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CEE428F17475DF5C1A526496 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0F8D43AFC5B896B534692136 /* Pods_EliteSISSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6AA150C5203B2834007CBD99 /* EliteSISSwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6AA150D8203B2834007CBD99 /* Build configuration list for PBXNativeTarget "EliteSISSwift" */;
+			buildPhases = (
+				9CF71CC80A94BE8595BEC0A4 /* [CP] Check Pods Manifest.lock */,
+				6AA150C2203B2834007CBD99 /* Sources */,
+				6AA150C3203B2834007CBD99 /* Frameworks */,
+				6AA150C4203B2834007CBD99 /* Resources */,
+				4F229DB1DFF6F2141EAC4348 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EliteSISSwift;
+			productName = EliteSISSwift;
+			productReference = 6AA150C6203B2834007CBD99 /* EliteSISSwift.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6AA150BE203B2834007CBD99 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0910;
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = "Kunal Das";
+				TargetAttributes = {
+					6AA150C5203B2834007CBD99 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 6AA150C1203B2834007CBD99 /* Build configuration list for PBXProject "EliteSISSwift" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6AA150BD203B2833007CBD99;
+			productRefGroup = 6AA150C7203B2834007CBD99 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6AA150C5203B2834007CBD99 /* EliteSISSwift */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6AA150C4203B2834007CBD99 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				389E11072073A0A40003F005 /* FeeDefaulterHeaderViewTableViewCell.xib in Resources */,
+				389F117720AC4BF200CB23FA /* Default-736h@3x.jpg in Resources */,
+				2BFB9E882078A69E004E09F0 /* StudentCollectionViewCell.xib in Resources */,
+				6A532D23204C271B005DFF4E /* ScoreTableViewCell.xib in Resources */,
+				6A49EE792047171B00055B3B /* ChapterStatusTableViewCell.xib in Resources */,
+				2B4556DD2076A18C00B9738D /* TeacherAssignmentDetailTableViewCell.xib in Resources */,
+				382401C2203EF47A00604D92 /* assignment.png in Resources */,
+				2B6EBE81209E3A2000FB1C49 /* DateSelectionTableViewCell.xib in Resources */,
+				382401BA203EF47A00604D92 /* fee_defaulter.png in Resources */,
+				6A8D37FC206AC6EB009FF210 /* GalleryPhotosCollectionViewCell.xib in Resources */,
+				6AD679F820447B5B00E593B9 /* StudyProgressTableViewCell.xib in Resources */,
+				38EE4CD7206505BC005B1915 /* HolidaylistHeaderReusableviewTableViewCell.xib in Resources */,
+				382401B4203EF47A00604D92 /* s_profile.png in Resources */,
+				381817EF204029F3005EBA85 /* pinboard_logo.png in Resources */,
+				2B7EF57020891102000E995A /* child1.jpeg in Resources */,
+				6A109A0220417D3800072ADB /* AssignmentTableViewCell.xib in Resources */,
+				2BD20883208B20A600CD4ED5 /* ChildNoticeTableViewCell.xib in Resources */,
+				2B7EF57120891102000E995A /* child2.jpeg in Resources */,
+				382287CE203EE5F300E6CF9B /* ic_user.png in Resources */,
+				388FD16B206B735E00114043 /* back.png in Resources */,
+				2B85F568208C78E600D428EF /* FeeItemsTableViewCell.xib in Resources */,
+				6AA150D4203B2834007CBD99 /* LaunchScreen.storyboard in Resources */,
+				2B85F574208CC76000D428EF /* man.jpeg in Resources */,
+				382401B9203EF47A00604D92 /* k_profile.png in Resources */,
+				382401B0203EF47A00604D92 /* logout.png in Resources */,
+				389F116720AC43D700CB23FA /* LaunchImage.png in Resources */,
+				386928C62046925B009DE58A /* Info.plist in Resources */,
+				2BF0A8A020B01A89001FA6A2 /* delete-sign.png in Resources */,
+				2B7EF5692089024B000E995A /* ChildCollectionViewCell.xib in Resources */,
+				382401C6203EF47A00604D92 /* attendance.png in Resources */,
+				382401C4203EF47A00604D92 /* holiday.png in Resources */,
+				2BAAE9762077CB4100A5CD78 /* StudentAttendanceTableViewCell.xib in Resources */,
+				2B4556DF2076A2D700B9738D /* ic_teacher.png in Resources */,
+				389F117920AC501100CB23FA /* Default@2x.jpg in Resources */,
+				382401C3203EF47A00604D92 /* health.png in Resources */,
+				2BFB9E8A2078A730004E09F0 /* ic_face_female.png in Resources */,
+				382401AF203EF47A00604D92 /* fee.png in Resources */,
+				2B4556E12076A43D00B9738D /* ic_done.png in Resources */,
+				382401BF203EF47A00604D92 /* assessment.png in Resources */,
+				38240196203EF2DD00604D92 /* childpng.png in Resources */,
+				6AA150E9203B3E06007CBD99 /* ForgotPasswordTableViewCell.xib in Resources */,
+				2B4556E52076A6CF00B9738D /* TeacherAssignmentHeaderFooterView.xib in Resources */,
+				389F116B20AC43D700CB23FA /* LaunchImage-Portrait@2x.png in Resources */,
+				6A532D2D204F1679005DFF4E /* NotificationTableViewCell.xib in Resources */,
+				38A52153209C560A0030DB8C /* circleEvent.png in Resources */,
+				389F117B20AC506A00CB23FA /* Default-568h@2x.jpg in Resources */,
+				6A49EE7F204725A200055B3B /* NotificationCollectionViewCell.xib in Resources */,
+				6A4224CC2082333F00214124 /* ParentDashboardHeaderView.xib in Resources */,
+				2B85F563208C753200D428EF /* FeeInfoHeaderView.xib in Resources */,
+				38CBB06B2078F90100AD27D7 /* attendence_logo.png in Resources */,
+				2B85F56C208C843200D428EF /* FeeTotalTableViewCell.xib in Resources */,
+				382401C1203EF47A00604D92 /* notification.png in Resources */,
+				2B85F560208C6BFD00D428EF /* FeeInfoTableViewCell.xib in Resources */,
+				382287CC203EE5EE00E6CF9B /* ic_lock.png in Resources */,
+				38CBB06D2078F90800AD27D7 /* profile_logo.png in Resources */,
+				6A4224C720821F4E00214124 /* ComplaintTextViewTableViewCell.xib in Resources */,
+				2BD20886208B245700CD4ED5 /* UpcomingEventsTableViewCell.xib in Resources */,
+				382401B3203EF47A00604D92 /* s_info.png in Resources */,
+				2B94257B206F65B300539DBC /* TeacherAssignmentTableViewCell.xib in Resources */,
+				6A1099FC2041769B00072ADB /* AssignmentHeaderReusableView.xib in Resources */,
+				381817E82040230B005EBA85 /* iconarrowright.png in Resources */,
+				381817ED204029F3005EBA85 /* discussion_logo.png in Resources */,
+				2BD2088B208B25EB00CD4ED5 /* EventCollectionViewCell.xib in Resources */,
+				382401B2203EF47A00604D92 /* s_dashboard.png in Resources */,
+				6A81E9202069750300B14727 /* ReceiverTableViewCell.xib in Resources */,
+				38EE4CDB20650775005B1915 /* HolidayListTableViewCell.xib in Resources */,
+				6A4224C320820A7B00214124 /* ComplaintHeadingTableViewCell.xib in Resources */,
+				2BD2087F208B1AFE00CD4ED5 /* EventNoticeTableViewCell.xib in Resources */,
+				382401B5203EF47A00604D92 /* teacher.png in Resources */,
+				382401BB203EF47A00604D92 /* profile.png in Resources */,
+				6ADD4202203DCEE100A26DE4 /* MenuHeadingTableViewCell.xib in Resources */,
+				389F117520AC4BEE00CB23FA /* Default-667h@2x.jpg in Resources */,
+				6A8D37F6206ABC40009FF210 /* GalleryCollectionViewCell.xib in Resources */,
+				382401BE203EF47A00604D92 /* dashboard.png in Resources */,
+				382401B6203EF47A00604D92 /* performance.png in Resources */,
+				6A4224B920812F3D00214124 /* ComplaintsHeaderView.xib in Resources */,
+				2BAAE97A2077CB7100A5CD78 /* StudentAttendanceHeaderFooterView.xib in Resources */,
+				6AA150ED203B42E8007CBD99 /* ButtonWithBgTableViewCell.xib in Resources */,
+				2B855D302098DD59000C1C2A /* DropDownTableViewCell.xib in Resources */,
+				2BFB9E912078D917004E09F0 /* MenuTeacherInfoHeaderView.xib in Resources */,
+				6AA150D1203B2834007CBD99 /* Assets.xcassets in Resources */,
+				6AA150E1203B2B0E007CBD99 /* LogoTableViewCell.xib in Resources */,
+				6ADD4206203DDB6A00A26DE4 /* MenuStudentInfoHeaderView.xib in Resources */,
+				382401BC203EF47A00604D92 /* progress.png in Resources */,
+				2BD2087A208B138500CD4ED5 /* ParentNoticeTableViewCell.xib in Resources */,
+				382401BD203EF47A00604D92 /* discussion.png in Resources */,
+				2BD20876208B0E6200CD4ED5 /* FeeReminderTableViewCell.xib in Resources */,
+				6A629D2A2067CA2200BCC75E /* TeachersTableViewCell.xib in Resources */,
+				6A45683320642B9600937CE0 /* TextfieldTableViewCell.xib in Resources */,
+				2B85F571208CC68C00D428EF /* MenuParentInfoHeaderView.xib in Resources */,
+				2B4556D92076927D00B9738D /* ic_search.png in Resources */,
+				6A45683720642BB200937CE0 /* TextFieldWithCalendarTableViewCell.xib in Resources */,
+				381817F0204029F3005EBA85 /* timetable_logo.png in Resources */,
+				381817E62040112A005EBA85 /* menuicon.png in Resources */,
+				6A629D262067BB6800BCC75E /* TeachersHeaderView.xib in Resources */,
+				6A49EE75204715E200055B3B /* ChapterStatusHeaderReusableView.xib in Resources */,
+				6AA150E5203B342D007CBD99 /* LoginCredentialsTableViewCell.xib in Resources */,
+				381817EE204029F3005EBA85 /* health_logo.png in Resources */,
+				2BFB9E8C2078A74D004E09F0 /* ic_face_male.png in Resources */,
+				6AA150CF203B2834007CBD99 /* Main.storyboard in Resources */,
+				2B942577206F5BFC00539DBC /* ClassInfoCollectionViewCell.xib in Resources */,
+				389E110B2073A1630003F005 /* FeeDefaulterTableViewCell.xib in Resources */,
+				6A992B7F2068294900314CEA /* SimpleLabelTableViewCell.xib in Resources */,
+				2BFB9E7B20789C0B004E09F0 /* ic_arrow_down.png in Resources */,
+				382401B8203EF47A00604D92 /* compliance.png in Resources */,
+				382401B1203EF47A00604D92 /* pinboard.png in Resources */,
+				382401C0203EF47A00604D92 /* key.png in Resources */,
+				382401C5203EF47A00604D92 /* event.png in Resources */,
+				389F117D20AC50F600CB23FA /* Default-2436h@3x.jpg in Resources */,
+				382401B7203EF47A00604D92 /* calendar.png in Resources */,
+				6A4224BD2081FDBF00214124 /* ComplaintsListTableViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4F229DB1DFF6F2141EAC4348 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-EliteSISSwift/Pods-EliteSISSwift-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ALLoadingView/ALLoadingView.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/CarbonKit/CarbonKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+				"${BUILT_PRODUCTS_DIR}/DateToolsSwift/DateToolsSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework",
+				"${BUILT_PRODUCTS_DIR}/DropDownMenuKit/DropDownMenuKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftHash/SwiftHash.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/WRCalendarView/WRCalendarView.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ALLoadingView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CarbonKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DateToolsSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DropDown.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DropDownMenuKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftHash.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/WRCalendarView.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EliteSISSwift/Pods-EliteSISSwift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9CF71CC80A94BE8595BEC0A4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EliteSISSwift-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6AA150C2203B2834007CBD99 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A4224CA2082331D00214124 /* ParentDashboardHeaderView.swift in Sources */,
+				386928BC2046925B009DE58A /* FSCalendarCollectionViewLayout.m in Sources */,
+				3802E779205BD34E001BDF5F /* PastPinboardDatasource.swift in Sources */,
+				6A4224B720812ED500214124 /* ComplaintsHeaderView.swift in Sources */,
+				2B6EBE80209E3A2000FB1C49 /* DateSelectionTableViewCell.swift in Sources */,
+				6A8D37F8206AC54A009FF210 /* GalleryPhotosViewController.swift in Sources */,
+				2BA6C6FB20ADF25A0002FFB9 /* AddAssignmentViewController.swift in Sources */,
+				6A45682D20642A7000937CE0 /* AddressDatasource.swift in Sources */,
+				6A49EE7E204725A200055B3B /* NotificationCollectionViewCell.swift in Sources */,
+				2B85F56B208C843200D428EF /* FeeTotalTableViewCell.swift in Sources */,
+				2B4556DC2076A18C00B9738D /* TeacherAssignmentDetailTableViewCell.swift in Sources */,
+				2B85F567208C78E600D428EF /* FeeItemsTableViewCell.swift in Sources */,
+				6A4224BC2081FDBF00214124 /* ComplaintsListTableViewCell.swift in Sources */,
+				6A4224B520812A8300214124 /* ComplaintsListViewController.swift in Sources */,
+				6AA150DD203B2948007CBD99 /* LoginViewController.swift in Sources */,
+				386928C22046925B009DE58A /* FSCalendarScopeHandle.m in Sources */,
+				2BD20877208B0E6200CD4ED5 /* FeeReminderTableViewCell.swift in Sources */,
+				6A45682F20642A8800937CE0 /* IdentityCardDatasource.swift in Sources */,
+				2BFB9E7D20789CAD004E09F0 /* StudentAttendanceViewModel.swift in Sources */,
+				386928C42046925B009DE58A /* FSCalendarTransitionCoordinator.m in Sources */,
+				2B85F55F208C6BFD00D428EF /* FeeInfoTableViewCell.swift in Sources */,
+				6A1099F8204171DF00072ADB /* AssignmentViewController.swift in Sources */,
+				38EE4CDD20650F6C005B1915 /* EventGalleryViewController.swift in Sources */,
+				6A091508206581FA004A9382 /* StudentAddressDatasource.swift in Sources */,
+				2BD2087E208B1AFE00CD4ED5 /* EventNoticeTableViewCell.swift in Sources */,
+				6A091506206581E6004A9382 /* StudentQualificationDatasource.swift in Sources */,
+				2B942576206F5BFC00539DBC /* ClassInfoCollectionViewCell.swift in Sources */,
+				3802E777205BD332001BDF5F /* UpcomingPinboardDataSource.swift in Sources */,
+				3802E76B205BC8CE001BDF5F /* PinboardViewController.swift in Sources */,
+				38A3B948206E3919006F3785 /* TeacherDailyScheduleViewController.swift in Sources */,
+				6A49EE7B2047226300055B3B /* NotificationViewController.swift in Sources */,
+				388A3F26207CF078008DF915 /* ParentViewController.swift in Sources */,
+				3854D662204816D0006DA7C0 /* TimetableViewController.swift in Sources */,
+				6A4224BF2082078900214124 /* ComplaintDetailViewController.swift in Sources */,
+				2B85F564208C753200D428EF /* FeeInfoHeaderView.swift in Sources */,
+				6A4224B320810E5000214124 /* ForgotPasswordViewController.swift in Sources */,
+				2B6EBE83209E444300FB1C49 /* CameraUtility.swift in Sources */,
+				386928B72046925B009DE58A /* FSCalendar.m in Sources */,
+				3802E76F205BCB9D001BDF5F /* TodayDatasource.swift in Sources */,
+				386928C92046C27B009DE58A /* PerformanceScoreViewController.swift in Sources */,
+				2BD2088A208B25EB00CD4ED5 /* EventCollectionViewCell.swift in Sources */,
+				2BD2088D208B29AC00CD4ED5 /* EventViewDataModel.swift in Sources */,
+				2B7EF57320891140000E995A /* ChildViewDataModel.swift in Sources */,
+				2BAAE9782077CB6100A5CD78 /* StudentAttendanceHeaderFooterView.swift in Sources */,
+				6A45682920642A3700937CE0 /* ClassAppliedDatasource.swift in Sources */,
+				6AA150E0203B2B0E007CBD99 /* LogoTableViewCell.swift in Sources */,
+				2B85F56E208CA08700D428EF /* FeeViewModel.swift in Sources */,
+				6A8D37F5206ABC40009FF210 /* GalleryCollectionViewCell.swift in Sources */,
+				382FC547206E59C900B4E8E2 /* TeacherNavigationController.swift in Sources */,
+				386928B82046925B009DE58A /* FSCalendarAppearance.m in Sources */,
+				6A45683620642BB200937CE0 /* TextFieldWithCalendarTableViewCell.swift in Sources */,
+				6AA150E4203B342D007CBD99 /* LoginCredentialsTableViewCell.swift in Sources */,
+				6A49EE71204714BE00055B3B /* ChapterStatusViewController.swift in Sources */,
+				2BD20887208B245700CD4ED5 /* UpcomingEventsTableViewCell.swift in Sources */,
+				386928BF2046925B009DE58A /* FSCalendarDelegationProxy.m in Sources */,
+				6A49EE782047171B00055B3B /* ChapterStatusTableViewCell.swift in Sources */,
+				6A532D1E204BF261005DFF4E /* CosmosDistrib.swift in Sources */,
+				386928C52046925B009DE58A /* FSCalendarWeekdayView.m in Sources */,
+				388EA89C208DB6600040CC9B /* ParentProfileViewController.swift in Sources */,
+				6A45683220642B9600937CE0 /* TextfieldTableViewCell.swift in Sources */,
+				6A81E92220697CE600B14727 /* ChatLabel.swift in Sources */,
+				38A3B94A206E3973006F3785 /* TeacherPinboardViewController.swift in Sources */,
+				2BD20882208B20A600CD4ED5 /* ChildNoticeTableViewCell.swift in Sources */,
+				3820080A203D950100DF45C9 /* KDCircularProgress.swift in Sources */,
+				38A3B946206E38E8006F3785 /* TeacherDashboardViewController.swift in Sources */,
+				6A091502206581B6004A9382 /* StudentContactDatasource.swift in Sources */,
+				6A45682520642A0100937CE0 /* GeneralInfoDatasource.swift in Sources */,
+				386928C32046925B009DE58A /* FSCalendarStickyHeader.m in Sources */,
+				6AA150CA203B2834007CBD99 /* AppDelegate.swift in Sources */,
+				6A1099FE204177C400072ADB /* PaddingLabel.swift in Sources */,
+				2B4556D720768FC900B9738D /* TeacherAssignmentViewController.swift in Sources */,
+				2BAAE9752077CB4100A5CD78 /* StudentAttendanceTableViewCell.swift in Sources */,
+				6AA150E8203B3E06007CBD99 /* ForgotPasswordTableViewCell.swift in Sources */,
+				6A091504206581D2004A9382 /* StudentClassAppliedDatasource.swift in Sources */,
+				6ADD4204203DDA3A00A26DE4 /* MenuStudentInfoHeaderView.swift in Sources */,
+				2B94257A206F65B300539DBC /* TeacherAssignmentTableViewCell.swift in Sources */,
+				6A45682720642A1C00937CE0 /* ContactInfoDatasource.swift in Sources */,
+				6A629D292067CA2200BCC75E /* TeachersTableViewCell.swift in Sources */,
+				6A49EE73204715C900055B3B /* ChapterStatusHeaderReusableView.swift in Sources */,
+				6A109A0120417D3800072ADB /* AssignmentTableViewCell.swift in Sources */,
+				38FA1ABB203D6A0A00067620 /* ViewController2.swift in Sources */,
+				38EE4CDA20650775005B1915 /* HolidayListTableViewCell.swift in Sources */,
+				3802E77D205BF648001BDF5F /* TeacherProfileViewController.swift in Sources */,
+				6A091500206581A0004A9382 /* StudentGeneralInfoDatasource.swift in Sources */,
+				2B85F572208CC68C00D428EF /* MenuParentInfoHeaderView.swift in Sources */,
+				2B94257F206F7BF000539DBC /* AssignmentViewDataModel.swift in Sources */,
+				38200810203DAB7600DF45C9 /* DashboardViewController.swift in Sources */,
+				3802E77B205BE7FA001BDF5F /* TeachersViewController.swift in Sources */,
+				6A8D37FB206AC6EB009FF210 /* GalleryPhotosCollectionViewCell.swift in Sources */,
+				2B855D2F2098DD59000C1C2A /* DropDownTableViewCell.swift in Sources */,
+				6A532D2C204F1679005DFF4E /* NotificationTableViewCell.swift in Sources */,
+				38FA1AB2203D69C200067620 /* ENSideMenu.swift in Sources */,
+				2BFB9E902078D917004E09F0 /* MenuTeacherInfoHeaderView.swift in Sources */,
+				386928BD2046925B009DE58A /* FSCalendarConstants.m in Sources */,
+				388EA8A3208DE4670040CC9B /* ParentChatViewController.swift in Sources */,
+				6A992B7B2068276700314CEA /* TeacherChatViewController.swift in Sources */,
+				388A3F2B207CF181008DF915 /* ParentDashboardViewController.swift in Sources */,
+				386928BB2046925B009DE58A /* FSCalendarCollectionView.m in Sources */,
+				386928BA2046925B009DE58A /* FSCalendarCell.m in Sources */,
+				38EE4CD12064D71C005B1915 /* ChangePasswordViewController.swift in Sources */,
+				2BD2088F208B90FF00CD4ED5 /* FeeInformationViewController.swift in Sources */,
+				386928B62046925B009DE58A /* FSCalendar+Deprecated.m in Sources */,
+				6ADD4201203DCEE100A26DE4 /* MenuHeadingTableViewCell.swift in Sources */,
+				388EA8A1208DB9EB0040CC9B /* ParentComplaintViewController.swift in Sources */,
+				6A532D22204C271B005DFF4E /* ScoreTableViewCell.swift in Sources */,
+				38EE4CD6206505BC005B1915 /* HolidaylistHeaderReusableviewTableViewCell.swift in Sources */,
+				389E110320739FD30003F005 /* FeeDefaulterViewController.swift in Sources */,
+				2BFB9E802078A615004E09F0 /* StudentProfileListingViewController.swift in Sources */,
+				6A1099FA2041767E00072ADB /* AssignmentHeaderReusableView.swift in Sources */,
+				3802E771205BD2BB001BDF5F /* TodayPinboardDataSource.swift in Sources */,
+				6A532D27204F12AF005DFF4E /* AllDatasource.swift in Sources */,
+				389E11062073A0A40003F005 /* FeeDefaulterHeaderViewTableViewCell.swift in Sources */,
+				6A49EE81204A9BA600055B3B /* HealthReportViewController.swift in Sources */,
+				38FA1ABA203D6A0A00067620 /* MyNavigationController.swift in Sources */,
+				38EE4CD3206502D2005B1915 /* HolidayListViewController.swift in Sources */,
+				6AD679F720447B5B00E593B9 /* StudyProgressTableViewCell.swift in Sources */,
+				2BF0A8A220B01FF9001FA6A2 /* TeacherAssginementResponseModel.swift in Sources */,
+				6A4224C620821F4E00214124 /* ComplaintTextViewTableViewCell.swift in Sources */,
+				2BA6C6F920ADE9EB0002FFB9 /* UIBorderView.swift in Sources */,
+				6A629D242067BB1600BCC75E /* TeachersHeaderView.swift in Sources */,
+				6A0914FD2065790E004A9382 /* StudentProfileViewController.swift in Sources */,
+				2BAD73852075C8EE00972D50 /* AssignmentContainerViewController.swift in Sources */,
+				386928B92046925B009DE58A /* FSCalendarCalculator.m in Sources */,
+				2B94257D206F792200539DBC /* DateExtension.swift in Sources */,
+				38FA1AB8203D6A0A00067620 /* MyMenuTableViewController.swift in Sources */,
+				386928C02046925B009DE58A /* FSCalendarExtensions.m in Sources */,
+				2B4556E32076A6B700B9738D /* TeacherAssignmentHeaderFooterView.swift in Sources */,
+				6A81E91F2069750300B14727 /* ReceiverTableViewCell.swift in Sources */,
+				6A532D29204F12C5005DFF4E /* MissedDatasource.swift in Sources */,
+				389E110A2073A1630003F005 /* FeeDefaulterTableViewCell.swift in Sources */,
+				6AA150EC203B42E8007CBD99 /* ButtonWithBgTableViewCell.swift in Sources */,
+				2B942581206F7C0100539DBC /* ClassViewDataModel.swift in Sources */,
+				386928BE2046925B009DE58A /* FSCalendarDelegationFactory.m in Sources */,
+				38FA1AB3203D69C200067620 /* ENSideMenuNavigationController.swift in Sources */,
+				6A45682B20642A4D00937CE0 /* QualificationDatasource.swift in Sources */,
+				2BFB9E872078A69E004E09F0 /* StudentCollectionViewCell.swift in Sources */,
+				6A09150A20658216004A9382 /* StudentIdentityCardDatasource.swift in Sources */,
+				6AD679F4204475BF00E593B9 /* StudyProgressViewController.swift in Sources */,
+				2BD2087B208B138500CD4ED5 /* ParentNoticeTableViewCell.swift in Sources */,
+				2B6EBE7D209E1CAF00FB1C49 /* DatePickerViewController.swift in Sources */,
+				6A992B7E2068294900314CEA /* SimpleLabelTableViewCell.swift in Sources */,
+				2BAAE9722077C46000A5CD78 /* StudentAttendanceViewController.swift in Sources */,
+				386928C12046925B009DE58A /* FSCalendarHeaderView.m in Sources */,
+				6A4224C220820A7B00214124 /* ComplaintHeadingTableViewCell.swift in Sources */,
+				2B7EF5682089024B000E995A /* ChildCollectionViewCell.swift in Sources */,
+				3869289020467E5B009DE58A /* AttendanceViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		6AA150CD203B2834007CBD99 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6AA150CE203B2834007CBD99 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6AA150D2203B2834007CBD99 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6AA150D3203B2834007CBD99 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6AA150D6203B2834007CBD99 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6AA150D7203B2834007CBD99 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6AA150D9203B2834007CBD99 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EDF209812B85638AAA230DFE /* Pods-EliteSISSwift.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CODE_SIGN_ENTITLEMENTS = EliteSISSwift/EliteSISSwift.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				INFOPLIST_FILE = EliteSISSwift/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = RLogixx.EliteSISSwift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = EliteSISSwift/BridgetoFSCalendar.h;
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6AA150DA203B2834007CBD99 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 435C29694BA12C7CC3A8B71D /* Pods-EliteSISSwift.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CODE_SIGN_ENTITLEMENTS = EliteSISSwift/EliteSISSwift.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				INFOPLIST_FILE = EliteSISSwift/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = RLogixx.EliteSISSwift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = EliteSISSwift/BridgetoFSCalendar.h;
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6AA150C1203B2834007CBD99 /* Build configuration list for PBXProject "EliteSISSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6AA150D6203B2834007CBD99 /* Debug */,
+				6AA150D7203B2834007CBD99 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6AA150D8203B2834007CBD99 /* Build configuration list for PBXNativeTarget "EliteSISSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6AA150D9203B2834007CBD99 /* Debug */,
+				6AA150DA203B2834007CBD99 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6AA150BE203B2834007CBD99 /* Project object */;
+}

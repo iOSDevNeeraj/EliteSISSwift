@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="91" id="KGk-i7-Jjw" customClass="TextFieldWithCalendarTableViewCell" customModule="EliteSISSwift" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="91"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="90.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D6Y-Kg-bmS">
+                        <rect key="frame" x="0.0" y="89" width="320" height="1"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="zVC-J6-kbJ"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vn4-7m-bp3">
+                        <rect key="frame" x="0.0" y="5" width="320" height="84"/>
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Vn4-7m-bp3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="NWY-Lx-4aY"/>
+                    <constraint firstAttribute="trailing" secondItem="D6Y-Kg-bmS" secondAttribute="trailing" id="QYX-0x-P3K"/>
+                    <constraint firstAttribute="trailing" secondItem="Vn4-7m-bp3" secondAttribute="trailing" id="VyO-Ga-Nwb"/>
+                    <constraint firstItem="D6Y-Kg-bmS" firstAttribute="top" secondItem="Vn4-7m-bp3" secondAttribute="bottom" id="Wsu-HY-FLr"/>
+                    <constraint firstItem="Vn4-7m-bp3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="ao2-0q-HeX"/>
+                    <constraint firstItem="D6Y-Kg-bmS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="lHn-1d-Unu"/>
+                    <constraint firstAttribute="bottom" secondItem="D6Y-Kg-bmS" secondAttribute="bottom" id="tAO-wk-H1Z"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="textfield" destination="Vn4-7m-bp3" id="PHc-5g-hZf"/>
+            </connections>
+            <point key="canvasLocation" x="57" y="122.5"/>
+        </tableViewCell>
+    </objects>
+</document>
