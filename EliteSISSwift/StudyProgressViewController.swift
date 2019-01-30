@@ -32,6 +32,7 @@ class StudyProgressViewController: UIViewController, UITableViewDelegate,UITable
         tblViewStudyProgress.separatorStyle = .none
         
         let selectedLogin = UserDefaults.standard.string(forKey: Constants.ServerKey.selectedLogin)
+        
         if  selectedLogin == LoginUserType.STUDENT.rawValue
         {
             self.callForGetPerformanceListForStudents()
