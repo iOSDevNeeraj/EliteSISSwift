@@ -2,14 +2,14 @@
 //  NotificationViewController.swift
 //  EliteSISSwift
 //
-//  Created by Kunal Das on 28/02/18.
-//  Copyright © 2018 Kunal Das. All rights reserved.
+//  Created by Vivek Garg on 28/02/18.
+//  Copyright © 2018 Vivek Garg. All rights reserved.
 //
 
 import UIKit
 
 class NotificationViewController: UIViewController,UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
-
+    
     @IBOutlet weak var segmentedControlNotification: UISegmentedControl!
     @IBOutlet weak var collectionViewNotifications: UICollectionView!
     var todayDatasource = TodayDatasource()
@@ -20,11 +20,9 @@ class NotificationViewController: UIViewController,UICollectionViewDataSource, U
         super.viewDidLoad()
         collectionViewNotifications.dataSource = self
         collectionViewNotifications.delegate = self
-        collectionViewNotifications.register(UINib(nibName:"NotificationCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "NotificationCollectionViewCell")
+        collectionViewNotifications.register(UINib(nibName:Constants.Nib.NibIdentifier.notificationCollectionViewCell, bundle: nil), forCellWithReuseIdentifier: Constants.Nib.ReusableIdentifier.notificationCollectionViewCell)
         
         segmentedControlNotification.addTarget(self, action: #selector(changeCollectionViewCell(segmentedControl:)), for: .valueChanged)
-        
-        // Do any additional setup after loading the view.
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -49,10 +47,8 @@ class NotificationViewController: UIViewController,UICollectionViewDataSource, U
         
     }
     
-   
-    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "NotificationCollectionViewCell", for: indexPath) as! NotificationCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.Nib.ReusableIdentifier.notificationCollectionViewCell, for: indexPath) as! NotificationCollectionViewCell
         
         switch indexPath.row {
         case 0:
@@ -71,53 +67,49 @@ class NotificationViewController: UIViewController,UICollectionViewDataSource, U
             return cell
         }
         
-        
     }
     
     @objc func changeCollectionViewCell(segmentedControl:UISegmentedControl) {
         collectionViewNotifications.scrollToItem(at: IndexPath(item: segmentedControl.selectedSegmentIndex, section: 0), at: .centeredHorizontally, animated: true)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
     @IBAction func showMenu(_ sender: Any) {
         
         toggleSideMenuView()
     }
+    
     @IBAction func backbuttonClicked(_ sender: Any) {
         
-        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main",bundle: nil)
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: Constants.Storybaord.MainStoryboard,bundle: nil)
         var destViewController : UIViewController
         // destViewController = mainStoryboard.instantiateViewController(withIdentifier: "dashboard")
         //sideMenuController()?.setContentViewController(destViewController)
-        let selectedLogin=UserDefaults.standard.string(forKey: "selectedLogin")
-        if (selectedLogin == "student"){
-            destViewController = mainStoryboard.instantiateViewController(withIdentifier: "dashboard")
+        let selectedLogin=UserDefaults.standard.string(forKey: Constants.ServerKey.selectedLogin)
+        
+        //if (selectedLogin == "S")
+        if (selectedLogin == "1") //Student
+        {
+            destViewController = mainStoryboard.instantiateViewController(withIdentifier: Constants.Storybaord.Identifier.dashboard)
             sideMenuController()?.setContentViewController(destViewController)
         }
-        else if(selectedLogin == "E"){
-            
-            destViewController = mainStoryboard.instantiateViewController(withIdentifier: "teacherdashboard")
+        //else if(selectedLogin == "E")
+        else if(selectedLogin == "2") //Teacher
+        {
+            destViewController = mainStoryboard.instantiateViewController(withIdentifier: Constants.Storybaord.Identifier.teacherDashboard)
             sideMenuController()?.setContentViewController(destViewController)
         }
-        else if(selectedLogin == "parent"){
-            
-            destViewController = mainStoryboard.instantiateViewController(withIdentifier: "parentdashboard")
+        //else if(selectedLogin == "G")
+        else if(selectedLogin == "3") //Parent
+        {
+            destViewController = mainStoryboard.instantiateViewController(withIdentifier: Constants.Storybaord.Identifier.parentDashboard)
             sideMenuController()?.setContentViewController(destViewController)
         }
+        
         hideSideMenuView()
     }
 }

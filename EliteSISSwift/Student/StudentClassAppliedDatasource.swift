@@ -2,8 +2,8 @@
 //  StudentClassAppliedDatasource.swift
 //  EliteSISSwift
 //
-//  Created by Kunal Das on 24/03/18.
-//  Copyright © 2018 Kunal Das. All rights reserved.
+//  Created by Vivek Garg on 24/03/18.
+//  Copyright © 2018 Vivek Garg. All rights reserved.
 //
 
 import UIKit
@@ -16,12 +16,12 @@ class StudentClassAppliedDatasource: NSObject, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.row {
         case 0:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "DropDownTableViewCell") as! DropDownTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Nib.ReusableIdentifier.dropDownTableViewCell) as! DropDownTableViewCell
             cell.selectionStyle = .none
             cell.lblTitle.text = "Class Applied"
             return cell
         case 1:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "textfieldTableCell") as! TextfieldTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Nib.ReusableIdentifier.textfieldTableCell) as! TextfieldTableViewCell
             cell.textField.text = "S|S|S|1718|0164"
             cell.textField.isUserInteractionEnabled = true
             cell.selectionStyle = .none
@@ -29,7 +29,7 @@ class StudentClassAppliedDatasource: NSObject, UITableViewDataSource {
             return cell
             
         case 2:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "textfieldTableCell") as! TextfieldTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Nib.ReusableIdentifier.textfieldTableCell) as! TextfieldTableViewCell
             cell.textField.text = "Nursery"
             cell.textField.isUserInteractionEnabled = true
             cell.selectionStyle = .none
@@ -37,7 +37,7 @@ class StudentClassAppliedDatasource: NSObject, UITableViewDataSource {
             return cell
             
         case 3:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "textfieldwithCalendarTableCell") as! TextFieldWithCalendarTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Nib.ReusableIdentifier.textfieldwithCalendarTableCell) as! TextFieldWithCalendarTableViewCell
             cell.textfield.text = "1-Jul-2017"
             cell.textfield.isUserInteractionEnabled = true
             cell.selectionStyle = .none

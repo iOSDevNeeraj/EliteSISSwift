@@ -3,7 +3,7 @@
 //  EliteSISSwift
 //
 //  Created by Reetesh Bajpai on 28/02/18.
-//  Copyright © 2018 Kunal Das. All rights reserved.
+//  Copyright © 2018 Vivek Garg. All rights reserved.
 //
 
 import UIKit
@@ -36,6 +36,7 @@ class PerformanceScoreViewController: UIViewController, UITableViewDelegate, UIT
         var scoreDataEng = ("English", "80", "100", "A")
         var scoreDataMaths = ("English", "85", "100", "A")
         var scoreDataArt = ("English", "85", "100", "A")
+        
         arrScoreData.append(scoreDataHindi)
         arrScoreData.append(scoreDataEng)
         arrScoreData.append(scoreDataMaths)
@@ -43,8 +44,8 @@ class PerformanceScoreViewController: UIViewController, UITableViewDelegate, UIT
          segmentedControlPerformanceScore.addTarget(self, action: #selector(segmentSelected(sender:)), for: .valueChanged)
          tblViewScore.sectionHeaderHeight = 55
         tblViewScore.sectionFooterHeight = 55
-        tblViewScore.register(UINib(nibName:"AssignmentHeaderReusableView", bundle: nil), forHeaderFooterViewReuseIdentifier: "AssignmentHeaderReusableView")
-        tblViewScore.register(UINib(nibName:"ScoreTableViewCell", bundle:nil), forCellReuseIdentifier: "ScoreTableViewCell")
+        tblViewScore.register(UINib(nibName:Constants.Nib.NibIdentifier.assignmentHeaderReusableView, bundle: nil), forHeaderFooterViewReuseIdentifier: Constants.Nib.ReusableIdentifier.assignmentHeaderReusableView)
+        tblViewScore.register(UINib(nibName:Constants.Nib.NibIdentifier.scoreTableViewCell, bundle:nil), forCellReuseIdentifier: Constants.Nib.ReusableIdentifier.scoreTableViewCell)
         tblViewScore.separatorStyle = .none
         tblViewScore.delegate = self
         tblViewScore.dataSource = self
@@ -84,12 +85,13 @@ class PerformanceScoreViewController: UIViewController, UITableViewDelegate, UIT
         self.onStudentCategoryInfoClick()
     }
     
-    func onStudentCategoryInfoClick(){
+    func onStudentCategoryInfoClick() {
         if dropDownClasses.isHidden{
             dropDownClasses.show()
             hideSideMenuView()
         }
-        else{
+        else
+        {
             dropDownClasses.hide()
         }
     }
@@ -102,7 +104,7 @@ class PerformanceScoreViewController: UIViewController, UITableViewDelegate, UIT
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let viewHeader = tableView.dequeueReusableHeaderFooterView(withIdentifier: "AssignmentHeaderReusableView") as! AssignmentHeaderReusableView
+        let viewHeader = tableView.dequeueReusableHeaderFooterView(withIdentifier: Constants.Nib.ReusableIdentifier.assignmentHeaderReusableView) as! AssignmentHeaderReusableView
         viewHeader.lblDescription.textAlignment = .left
         viewHeader.lblDescription.text = "Subject"
         viewHeader.lblIssueDate.text = "Obtained"
@@ -113,7 +115,7 @@ class PerformanceScoreViewController: UIViewController, UITableViewDelegate, UIT
     }
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        let viewFooter = tableView.dequeueReusableHeaderFooterView(withIdentifier: "AssignmentHeaderReusableView") as! AssignmentHeaderReusableView
+        let viewFooter = tableView.dequeueReusableHeaderFooterView(withIdentifier: Constants.Nib.ReusableIdentifier.assignmentHeaderReusableView) as! AssignmentHeaderReusableView
         viewFooter.lblDescription.textAlignment = .left
         viewFooter.lblDescription.text = "Total Marks"
         viewFooter.lblIssueDate.text = "327"
@@ -124,7 +126,7 @@ class PerformanceScoreViewController: UIViewController, UITableViewDelegate, UIT
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ScoreTableViewCell") as! ScoreTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Nib.ReusableIdentifier.scoreTableViewCell) as! ScoreTableViewCell
         cell.lblSubject.text = arrScoreData[indexPath.row].0
         cell.lblMarks.text = arrScoreData[indexPath.row].1
         cell.lblTotal.text = arrScoreData[indexPath.row].2
@@ -183,27 +185,33 @@ class PerformanceScoreViewController: UIViewController, UITableViewDelegate, UIT
         
         toggleSideMenuView()
     }
-    @IBAction func backbuttonClicked(_ sender: Any) {
-        
-        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main",bundle: nil)
+    @IBAction func backbuttonClicked(_ sender: Any)
+    {
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: Constants.Storybaord.MainStoryboard,bundle: nil)
         var destViewController : UIViewController
         // destViewController = mainStoryboard.instantiateViewController(withIdentifier: "dashboard")
         //sideMenuController()?.setContentViewController(destViewController)
-        let selectedLogin=UserDefaults.standard.string(forKey: "selectedLogin")
-        if (selectedLogin == "student"){
-            destViewController = mainStoryboard.instantiateViewController(withIdentifier: "dashboard")
+        let selectedLogin=UserDefaults.standard.string(forKey: Constants.ServerKey.selectedLogin)
+        
+        //if (selectedLogin == "S") //Student
+        if (selectedLogin == "1") //Student
+        {
+            destViewController = mainStoryboard.instantiateViewController(withIdentifier: Constants.Storybaord.Identifier.dashboard)
             sideMenuController()?.setContentViewController(destViewController)
         }
-        else if(selectedLogin == "E"){
-            
-            destViewController = mainStoryboard.instantiateViewController(withIdentifier: "teacherdashboard")
+        //else if(selectedLogin == "E") //Teacher
+        else if(selectedLogin == "2") //Teacher
+        {
+            destViewController = mainStoryboard.instantiateViewController(withIdentifier: Constants.Storybaord.Identifier.teacherDashboard)
             sideMenuController()?.setContentViewController(destViewController)
         }
-        else if(selectedLogin == "parent"){
-            
-            destViewController = mainStoryboard.instantiateViewController(withIdentifier: "parentdashboard")
+        //else if(selectedLogin == "G") //Parent
+        else if(selectedLogin == "3") //Parent
+        {
+            destViewController = mainStoryboard.instantiateViewController(withIdentifier: Constants.Storybaord.Identifier.parentDashboard)
             sideMenuController()?.setContentViewController(destViewController)
         }
+        
         hideSideMenuView()
     }
 }

@@ -2,15 +2,14 @@
 //  StudyProgressViewController.swift
 //  EliteSISSwift
 //
-//  Created by Kunal Das on 26/02/18.
-//  Copyright © 2018 Kunal Das. All rights reserved.
+//  Created by Vivek Garg on 26/02/18.
+//  Copyright © 2018 Vivek Garg. All rights reserved.
 //
 
 import UIKit
 import DropDown
 
 class StudyProgressViewController: UIViewController, UITableViewDelegate,UITableViewDataSource {
-    
     
     @IBOutlet weak var tblViewStudyProgress: UITableView!
     @IBOutlet weak var lblSelectedOption: UILabel!
@@ -27,18 +26,35 @@ class StudyProgressViewController: UIViewController, UITableViewDelegate,UITable
     @IBOutlet weak var viewOptions: UIView!
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
-        tblViewStudyProgress.register(UINib(nibName:"StudyProgressTableViewCell", bundle: nil), forCellReuseIdentifier: "StudyProgressTableViewCell")
+        tblViewStudyProgress.register(UINib(nibName:Constants.Nib.NibIdentifier.studyProgressTableViewCell, bundle: nil), forCellReuseIdentifier: Constants.Nib.ReusableIdentifier.studyProgressTableViewCell)
         tblViewStudyProgress.separatorStyle = .none
         
-        if UserDefaults.standard.string(forKey: "selectedLogin") == LoginUserType.TEACHER.rawValue{
-            pickerData = ["4th", "6th", "7th", "10th"]
+        let selectedLogin = UserDefaults.standard.string(forKey: Constants.ServerKey.selectedLogin)
+        if  selectedLogin == LoginUserType.STUDENT.rawValue
+        {
+            self.callForGetPerformanceListForStudents()
         }
-        else{
-            pickerData = ["FA1", "FA2", "SA1", "SA2", "Final"]
+        else if(selectedLogin == LoginUserType.TEACHER.rawValue) //Teacher
+        {
+            
         }
-
-
+        else if(selectedLogin == LoginUserType.PARENT.rawValue) //Parent
+        {
+            
+        }
+        
+                if UserDefaults.standard.string(forKey: Constants.ServerKey.selectedLogin) == LoginUserType.TEACHER.rawValue
+                {
+                    pickerData = ["4th", "6th", "7th", "10th"]
+                }
+                else
+                {
+                    pickerData = ["FA1", "FA2", "SA1", "SA2", "Final"] //Start from here ...
+                }
+        
+        //Dummy data:
         var dict1 = [String:String]()
         dict1["sub"] = "English"
         dict1["per"] = "88"
@@ -108,24 +124,75 @@ class StudyProgressViewController: UIViewController, UITableViewDelegate,UITable
         }
     }
     
+    //Get Performance List API: (For drop-down menu)
+    func callForGetPerformanceListForStudents()
+    {
+        ProgressLoader.shared.showLoader(withText: "Please wait...")
+        
+        guard let studentID = UserDefaults.standard.object(forKey: Constants.ServerKey.StudentProfileKey.StudentID) as? String else { return }
+        guard let sessionID = UserDefaults.standard.object(forKey: Constants.ServerKey.StudentProfileKey.SessionID) as? String else { return }
+        guard let sectionID = UserDefaults.standard.object(forKey: Constants.ServerKey.StudentProfileKey.SectionID) as? String else { return }
+        
+        
+        //Get Performance List API:
+        WebServices.shared.getPerformanceListForStudentLoginRole(StudentID: studentID, SessionID: sessionID, SectionID: sectionID, completion: { (response, error) in
+            
+            if error == nil, let responseDict = response
+            {
+                print("Get Performance List for Student Login Role: \(responseDict)")
+                
+                //Work from here to create an array of picker data and append the same in pickerData array.....
+                
+//                var arrayOfValues = responseDict["value"].arrayObject
+//
+//                //Add the data in the drop-down picker:
+//                for name in arrayOfValues!
+//                {
+//                   // var examName = arrayOfValues![name]
+//                    //pickerData.append(examName)
+//                }
+//
+//
+//                //MarksID:
+//                let MarksID = responseDict["value"][0][Constants.ServerKey.StudentGetPerformanceListKey.marksID].stringValue
+                //UserDefaults.standard.set(classSession, forKey: Constants.ServerKey.StudentProfileKey.SessionID)
+                
+                ProgressLoader.shared.hideLoader()
+            }
+            else
+            {
+                ProgressLoader.shared.hideLoader()
+                AlertManager.shared.showAlertWith(title: Constants.Alert.error, message: Constants.Alert.somethingWentWrongMsg)
+                debugPrint(error?.localizedDescription ?? "Getting user profile error")
+            }
+        })
+    }
+    
     @IBAction func btnCategoryClick(_ sender: Any) {
         self.onStudentCategoryInfoClick()
     }
     
-    func onStudentCategoryInfoClick(){
+    func onStudentCategoryInfoClick() {
+        
         if dropDownClasses.isHidden{
             dropDownClasses.show()
             hideSideMenuView()
         }
-        else{
+        else
+        {
             dropDownClasses.hide()
         }
     }
     
-    func onCategoryChange(withCategoryIndex row: Int){
+    func onCategoryChange(withCategoryIndex row: Int)
+    {
+        //Implement API for Get Study Progress API with that marksid for fetching respective subjects...
+        
         if row % 2 == 0 {
             arrValuesForTable = arrFA2
-        } else {
+        }
+        else
+        {
             arrValuesForTable = arrFA1
         }
         
@@ -141,7 +208,8 @@ class StudyProgressViewController: UIViewController, UITableViewDelegate,UITable
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "StudyProgressTableViewCell") as! StudyProgressTableViewCell
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Nib.ReusableIdentifier.studyProgressTableViewCell) as! StudyProgressTableViewCell
         cell.lblSubject.text = arrValuesForTable[indexPath.row]["sub"]
         cell.lblPercentage.text = "\(String(describing: arrValuesForTable[indexPath.row]["per"]!))%"
         
@@ -154,9 +222,10 @@ class StudyProgressViewController: UIViewController, UITableViewDelegate,UITable
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main",bundle: nil)
+        
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: Constants.Storybaord.MainStoryboard,bundle: nil)
         var destViewController : UIViewController
-        destViewController = mainStoryboard.instantiateViewController(withIdentifier: "ChapterStatusViewController")
+        destViewController = mainStoryboard.instantiateViewController(withIdentifier: Constants.Storybaord.Identifier.chapterStatusViewController)
         sideMenuController()?.setContentViewController(destViewController)
         hideSideMenuView()
     }
@@ -165,47 +234,44 @@ class StudyProgressViewController: UIViewController, UITableViewDelegate,UITable
         let maxCount = 100.0
         return 360 * (currentCount / maxCount)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
     @IBAction func showMenu(_ sender: Any) {
         
         toggleSideMenuView()
     }
+    
     @IBAction func backbuttonClicked(_ sender: Any) {
         
-        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main",bundle: nil)
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: Constants.Storybaord.MainStoryboard,bundle: nil)
         var destViewController : UIViewController
         // destViewController = mainStoryboard.instantiateViewController(withIdentifier: "dashboard")
         //sideMenuController()?.setContentViewController(destViewController)
-        let selectedLogin=UserDefaults.standard.string(forKey: "selectedLogin")
-        if (selectedLogin == "student"){
-            destViewController = mainStoryboard.instantiateViewController(withIdentifier: "dashboard")
+        let selectedLogin = UserDefaults.standard.string(forKey: Constants.ServerKey.selectedLogin)
+        
+        //if (selectedLogin == "S") //Student
+        if (selectedLogin == "1") //Student
+        {
+            destViewController = mainStoryboard.instantiateViewController(withIdentifier: Constants.Storybaord.Identifier.dashboard)
             sideMenuController()?.setContentViewController(destViewController)
         }
-        else if(selectedLogin == "E"){
-            
-            destViewController = mainStoryboard.instantiateViewController(withIdentifier: "teacherdashboard")
+            //else if(selectedLogin == "E") //Teacher
+        else if(selectedLogin == "2") //Teacher
+        {
+            destViewController = mainStoryboard.instantiateViewController(withIdentifier: Constants.Storybaord.Identifier.teacherDashboard)
             sideMenuController()?.setContentViewController(destViewController)
         }
-        else if(selectedLogin == "parent"){
-            
-            destViewController = mainStoryboard.instantiateViewController(withIdentifier: "parentdashboard")
+            //else if(selectedLogin == "G") //Parent
+        else if(selectedLogin == "3") //Parent
+        {
+            destViewController = mainStoryboard.instantiateViewController(withIdentifier: Constants.Storybaord.Identifier.parentDashboard)
             sideMenuController()?.setContentViewController(destViewController)
         }
+        
         hideSideMenuView()
     }
 }

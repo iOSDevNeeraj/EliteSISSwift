@@ -2,8 +2,8 @@
 //  ComplaintsListViewController.swift
 //  EliteSISSwift
 //
-//  Created by Kunal Das on 13/04/18.
-//  Copyright © 2018 Kunal Das. All rights reserved.
+//  Created by Vivek Garg on 13/04/18.
+//  Copyright © 2018 Vivek Garg. All rights reserved.
 //
 
 import UIKit
@@ -12,26 +12,27 @@ import SwiftyJSON
 import ALLoadingView
 
 class ComplaintsListViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
-
+    
     @IBOutlet weak var tblViewComplaints: UITableView!
     @IBOutlet weak var btnBack: UIButton!
     @IBOutlet weak var btnMenuIcon: UIButton!
     var arrTupleComplaints : [(String,String,String)]?
-     var arrComplaintList = [[String: Any]]()
+    var arrComplaintList = [[String: Any]]()
     let regid = UserDefaults.standard.string(forKey: "_sis_registration_value")!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        arrTupleComplaints = [("Mr. R.S. Sharma", "Sana", "Bullying of Paavini towards Sana"),("Mr .A.K. Shukla", "Pavaini", "Medical Attention"),("Mrs. Seema", "Ayush", "Followup after Lunch")]
+        //        arrTupleComplaints = [("Mr. R.S. Sharma", "Sana", "Bullying of Paavini towards Sana"),("Mr .A.K. Shukla", "Pavaini", "Medical Attention"),("Mrs. Seema", "Ayush", "Followup after Lunch")]
         
-        tblViewComplaints.register(UINib(nibName:"ComplaintsHeaderView", bundle: nil), forHeaderFooterViewReuseIdentifier: "ComplaintsHeaderView")
-        tblViewComplaints.register(UINib(nibName:"ComplaintsListTableViewCell", bundle:nil), forCellReuseIdentifier: "ComplaintsListTableViewCell")
+        tblViewComplaints.register(UINib(nibName: Constants.Nib.NibIdentifier.complaintsHeaderView, bundle: nil), forHeaderFooterViewReuseIdentifier: Constants.Nib.ReusableIdentifier.complaintsHeaderView)
+        tblViewComplaints.register(UINib(nibName: Constants.Nib.NibIdentifier.complaintsListTableViewCell, bundle:nil), forCellReuseIdentifier: Constants.Nib.ReusableIdentifier.complaintsListTableViewCell)
         tblViewComplaints.sectionHeaderHeight = 60
         tblViewComplaints.rowHeight = UITableViewAutomaticDimension
         tblViewComplaints.delegate = self
         tblViewComplaints.dataSource = self
         tblViewComplaints.separatorStyle = .none
-self .callForComplaintListData()
+        self .callForComplaintListData()
         // Do any additional setup after loading the view.
     }
     
@@ -41,14 +42,14 @@ self .callForComplaintListData()
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let viewHeader = tableView.dequeueReusableHeaderFooterView(withIdentifier: "ComplaintsHeaderView") as! ComplaintsHeaderView
+        let viewHeader = tableView.dequeueReusableHeaderFooterView(withIdentifier: Constants.Nib.ReusableIdentifier.complaintsHeaderView) as! ComplaintsHeaderView
         
         viewHeader.contentView.backgroundColor = UIColor.init(red: 44.0/255.0, green: 154.0/255.0, blue: 243.0/255.0, alpha: 1.0) //44 154 243
         return viewHeader
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ComplaintsListTableViewCell") as! ComplaintsListTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Nib.ReusableIdentifier.complaintsListTableViewCell) as! ComplaintsListTableViewCell
         cell.lblParent.text = self.arrComplaintList [indexPath.row]["Customer"] as? String
         let strFullStudentName = self.arrComplaintList [indexPath.row]["Student"] as? String //[self.arrComplaintList [indexPath.row]["Student"]].components(separatedBy: "|")
         let arrStudentNameArr = strFullStudentName?.components(separatedBy: "(")
@@ -62,10 +63,10 @@ self .callForComplaintListData()
         if strtocomp == 1 {
             let image = UIImage(named: "ic_done")
             cell.btnAction.setImage(image, for: .normal)
-            
-        }else{
+        }
+        else
+        {
             cell.btnAction.addTarget(self, action: #selector(ComplaintsListViewController.goToComplaintDetailVC(sender:)), for: .touchUpInside)
-            
         }
         
         cell.selectionStyle = .none
@@ -74,13 +75,13 @@ self .callForComplaintListData()
     }
     
     @objc func goToComplaintDetailVC(sender:UIButton) {
-       let vc = self.storyboard?.instantiateViewController(withIdentifier: "ComplaintDetailViewController") as! ComplaintDetailViewController
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: Constants.Storybaord.Identifier.complaintDetailViewController) as! ComplaintDetailViewController
         vc.strSubject = self.arrComplaintList [sender.tag]["Title"] as? String
         vc.strCaseId = self.arrComplaintList [sender.tag]["CaseId"] as? String
         vc.strCaseDesc = self.arrComplaintList [sender.tag]["Description"] as? String
         self.navigationController?.pushViewController(vc, animated: true)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -92,67 +93,64 @@ self .callForComplaintListData()
     }
     
     @IBAction func btnBackClicked(_ sender: UIButton) {
-        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main",bundle: nil)
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: Constants.Storybaord.MainStoryboard,bundle: nil)
         var destViewController : UIViewController
         // destViewController = mainStoryboard.instantiateViewController(withIdentifier: "dashboard")
         //sideMenuController()?.setContentViewController(destViewController)
-        let selectedLogin=UserDefaults.standard.string(forKey: "selectedLogin")
-        if (selectedLogin == "student"){
-            destViewController = mainStoryboard.instantiateViewController(withIdentifier: "dashboard")
+        let selectedLogin = UserDefaults.standard.string(forKey: Constants.ServerKey.selectedLogin)
+        
+        //if (selectedLogin == "S") //Student
+        if (selectedLogin == "1") //Student
+        {
+            destViewController = mainStoryboard.instantiateViewController(withIdentifier: Constants.Storybaord.Identifier.dashboard)
             sideMenuController()?.setContentViewController(destViewController)
         }
-        else if(selectedLogin == "E"){
-            
-            destViewController = mainStoryboard.instantiateViewController(withIdentifier: "teacherdashboard")
+        //else if(selectedLogin == "E") //Teacher
+        else if(selectedLogin == "2") //Teacher
+        {
+            destViewController = mainStoryboard.instantiateViewController(withIdentifier: Constants.Storybaord.Identifier.teacherDashboard)
             sideMenuController()?.setContentViewController(destViewController)
         }
-        else if(selectedLogin == "parent"){
-            
-            destViewController = mainStoryboard.instantiateViewController(withIdentifier: "parentdashboard")
+        //else if(selectedLogin == "G") //Parent
+        else if(selectedLogin == "3") //Parent
+        {
+            destViewController = mainStoryboard.instantiateViewController(withIdentifier: Constants.Storybaord.Identifier.parentDashboard)
             sideMenuController()?.setContentViewController(destViewController)
         }
         hideSideMenuView()
     }
     
-   
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-    func callForComplaintListData(){
+    func callForComplaintListData()
+    {
         self .showLoader()
         DispatchQueue.global().async {
             
-            let stringComplaintDataCall = "http://43.224.136.81:5015/SIS/Compliance/" + self.regid
-            print (stringComplaintDataCall)
+            // let stringComplaintDataCall = "http://43.224.136.81:5015/SIS/Compliance/" + self.regid
+            let stringComplaintDataCall = Constants.BASE_URL + Constants.API.compliance + self.regid
+            // print (stringComplaintDataCall)
+            print("Request URL: \(stringComplaintDataCall)")
             let encodedString = stringComplaintDataCall.addingPercentEncoding(withAllowedCharacters:NSCharacterSet.urlQueryAllowed)
             print(encodedString!)
             Alamofire.request(encodedString!).responseJSON { (responseData) -> Void in
-                if((responseData.result.value) != nil) {
+                
+                if((responseData.result.value) != nil)
+                {
                     self .hideLoader()
                     let swiftyJsonVar = JSON(responseData.result.value!)
                     //  self.arrHolidayList = swiftyJsonVar["value"]
                     print(swiftyJsonVar ["value"])
-//                    self.arrComplaintList = swiftyJsonVar.arrayObject as! [[String : Any]]
+                    //                    self.arrComplaintList = swiftyJsonVar.arrayObject as! [[String : Any]]
                     print(self.arrComplaintList [0])
                     DispatchQueue.main.async{
                         //put your code here
-                        
                         self.tblViewComplaints.reloadData()
                     }
-                    
-                    
-                }else{
+                }
+                else
+                {
                     self .hideLoader()
-                    let alert = UIAlertController(title: "Error Occured!", message: "Please try after some time", preferredStyle: UIAlertControllerStyle.alert)
-                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                    let alert = UIAlertController(title: Constants.Alert.errorOccured, message: Constants.Alert.tryAfterSomeTime, preferredStyle: UIAlertControllerStyle.alert)
+                    alert.addAction(UIAlertAction(title: Constants.ok, style: UIAlertActionStyle.default, handler: nil))
                     self.present(alert, animated: true, completion: nil)
                 }
             }

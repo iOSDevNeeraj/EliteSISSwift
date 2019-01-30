@@ -2,8 +2,8 @@
 //  LoginCredentialsTableViewCell.swift
 //  EliteSISSwift
 //
-//  Created by Kunal Das on 19/02/18.
-//  Copyright © 2018 Kunal Das. All rights reserved.
+//  Created by Vivek Garg on 19/02/18.
+//  Copyright © 2018 Vivek Garg. All rights reserved.
 //
 
 import UIKit
@@ -12,7 +12,9 @@ class LoginCredentialsTableViewCell: UITableViewCell, UITextFieldDelegate {
 
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var imgView: UIImageView!
+    
     override func awakeFromNib() {
+        
         super.awakeFromNib()
         // Initialization code
         textField.tintColor = UIColor.black
@@ -29,8 +31,9 @@ class LoginCredentialsTableViewCell: UITableViewCell, UITextFieldDelegate {
 
         // Configure the view for the selected state
     }
+    
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        let maxLength = 10
+        let maxLength = 20 //10 > 20 //Neeraj_Nov_02
         let currentString: NSString = textField.text! as NSString
         let newString: NSString =
             currentString.replacingCharacters(in: range, with: string) as NSString

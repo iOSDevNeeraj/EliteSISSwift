@@ -2,8 +2,8 @@
 //  AssignmentTableViewCell.swift
 //  EliteSISSwift
 //
-//  Created by Kunal Das on 24/02/18.
-//  Copyright © 2018 Kunal Das. All rights reserved.
+//  Created by Vivek Garg on 24/02/18.
+//  Copyright © 2018 Vivek Garg. All rights reserved.
 //
 
 import UIKit
@@ -16,9 +16,11 @@ class AssignmentTableViewCell: UITableViewCell {
     @IBOutlet weak var lblDescription: PaddingLabel!
     @IBOutlet weak var lblIssueDate: PaddingLabel!
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.lblDescription.numberOfLines = 0
+        self.lblIssueDate.numberOfLines = 0
+        self.lblSubmitDate.numberOfLines = 0
         // Initialization code
     }
 

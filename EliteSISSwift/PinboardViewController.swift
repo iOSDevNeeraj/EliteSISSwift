@@ -3,7 +3,7 @@
 //  EliteSISSwift
 //
 //  Created by Reetesh Bajpai on 16/03/18.
-//  Copyright © 2018 Kunal Das. All rights reserved.
+//  Copyright © 2018 Vivek Garg. All rights reserved.
 //
 
 import UIKit
@@ -21,11 +21,10 @@ class PinboardViewController: UIViewController,UICollectionViewDataSource, UICol
         //http://43.224.136.81:5015/SIS_Student/GetPinboardList
         collectionViewNotifications.dataSource = self
         collectionViewNotifications.delegate = self
-        collectionViewNotifications.register(UINib(nibName:"NotificationCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "NotificationCollectionViewCell")
+        collectionViewNotifications.register(UINib(nibName:Constants.Nib.NibIdentifier.notificationCollectionViewCell, bundle: nil), forCellWithReuseIdentifier: Constants.Nib.ReusableIdentifier.notificationCollectionViewCell)
         
         segmentedControlNotification.addTarget(self, action: #selector(changeCollectionViewCell(segmentedControl:)), for: .valueChanged)
         
-        // Do any additional setup after loading the view.
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -49,13 +48,12 @@ class PinboardViewController: UIViewController,UICollectionViewDataSource, UICol
         segmentedControlNotification.selectedSegmentIndex = visibleIndexPath.row
         
     }
-    
-    
-    
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "NotificationCollectionViewCell", for: indexPath) as! NotificationCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.Nib.ReusableIdentifier.notificationCollectionViewCell, for: indexPath) as! NotificationCollectionViewCell
         
         switch indexPath.row {
+            
         case 0:
             todayDatasource.configureData()
             cell.tblViewDetails.dataSource = todayDatasource
@@ -72,7 +70,6 @@ class PinboardViewController: UIViewController,UICollectionViewDataSource, UICol
             return cell
         }
         
-        
     }
     
     @objc func changeCollectionViewCell(segmentedControl:UISegmentedControl) {
@@ -84,43 +81,38 @@ class PinboardViewController: UIViewController,UICollectionViewDataSource, UICol
         // Dispose of any resources that can be recreated.
     }
     
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
     @IBAction func showMenu(_ sender: Any) {
         
         toggleSideMenuView()
     }
+    
     @IBAction func backbuttonClicked(_ sender: Any) {
         
-        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main",bundle: nil)
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: Constants.Storybaord.MainStoryboard,bundle: nil)
         var destViewController : UIViewController
-        print(UserDefaults.standard.string(forKey: "selectedLogin")!)
+        print(UserDefaults.standard.string(forKey: Constants.ServerKey.selectedLogin)!)
         //UserDefaults.standard.string(forKey: "selectedLogin")
-        let selectedLogin=UserDefaults.standard.string(forKey: "selectedLogin")
-        if (selectedLogin == "student"){
-            destViewController = mainStoryboard.instantiateViewController(withIdentifier: "dashboard")
-            sideMenuController()?.setContentViewController(destViewController)
-            
-        }
-        else if(selectedLogin == "E"){
-            
-            destViewController = mainStoryboard.instantiateViewController(withIdentifier: "teacherdashboard")
+        let selectedLogin=UserDefaults.standard.string(forKey: Constants.ServerKey.selectedLogin)
+        
+        //if (selectedLogin == "S") //Student
+        if (selectedLogin == "1") //Student
+        {
+            destViewController = mainStoryboard.instantiateViewController(withIdentifier: Constants.Storybaord.Identifier.dashboard)
             sideMenuController()?.setContentViewController(destViewController)
         }
-        else if(selectedLogin == "parent"){
-            
-            destViewController = mainStoryboard.instantiateViewController(withIdentifier: "parentdashboard")
+        //else if(selectedLogin == "E") //Teacher
+        else if(selectedLogin == "2") //Teacher
+        {
+            destViewController = mainStoryboard.instantiateViewController(withIdentifier: Constants.Storybaord.Identifier.teacherDashboard)
             sideMenuController()?.setContentViewController(destViewController)
         }
-        //parentdashboard
+        //else if(selectedLogin == "P") //Parent
+        else if(selectedLogin == "3") //Parent
+        {
+            destViewController = mainStoryboard.instantiateViewController(withIdentifier: Constants.Storybaord.Identifier.parentDashboard)
+            sideMenuController()?.setContentViewController(destViewController)
+        }
+        
         hideSideMenuView()
     }
 }

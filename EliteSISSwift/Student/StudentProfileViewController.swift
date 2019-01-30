@@ -2,8 +2,8 @@
 //  StudentProfileViewController.swift
 //  EliteSISSwift
 //
-//  Created by Kunal Das on 23/03/18.
-//  Copyright © 2018 Kunal Das. All rights reserved.
+//  Created by Vivek Garg on 23/03/18.
+//  Copyright © 2018 Vivek Garg. All rights reserved.
 //
 
 import UIKit
@@ -20,6 +20,7 @@ class StudentProfileViewController: UIViewController, UITableViewDelegate {
     @IBOutlet weak var pickerheightConstant: NSLayoutConstraint?
     @IBOutlet weak var tblViewInfo: UITableView!
     var pickerData: [String] = [String]()
+    
     var studentDetail:StudentAttendanceViewModel!
     var generalDatasource = StudentGeneralInfoDatasource()
     var contactDatasource = StudentContactDatasource()
@@ -29,16 +30,15 @@ class StudentProfileViewController: UIViewController, UITableViewDelegate {
     var identityCardDatasource = StudentIdentityCardDatasource()
     var dropDownClasses: DropDown!
     @IBOutlet weak var stackViewProfileChangeOptions: UIStackView!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tblViewInfo.separatorStyle = .none
-        tblViewInfo.register(UINib(nibName: "TextfieldTableViewCell", bundle:nil), forCellReuseIdentifier: "textfieldTableCell")
-        tblViewInfo.register(UINib(nibName: "TextFieldWithCalendarTableViewCell", bundle:nil), forCellReuseIdentifier: "textfieldwithCalendarTableCell")
-        tblViewInfo.register(UINib(nibName: "DropDownTableViewCell", bundle:nil), forCellReuseIdentifier: "DropDownTableViewCell")
-        tblViewInfo.register(UINib(nibName: "DateSelectionTableViewCell", bundle:nil), forCellReuseIdentifier: "DateSelectionTableViewCell")
-
+        tblViewInfo.register(UINib(nibName: Constants.Nib.NibIdentifier.textfieldTableViewCell, bundle:nil), forCellReuseIdentifier: Constants.Nib.ReusableIdentifier.textfieldTableCell)
+        tblViewInfo.register(UINib(nibName: Constants.Nib.NibIdentifier.textFieldWithCalendarTableViewCell, bundle:nil), forCellReuseIdentifier: Constants.Nib.ReusableIdentifier.textfieldwithCalendarTableCell)
+        tblViewInfo.register(UINib(nibName: Constants.Nib.NibIdentifier.dropDownTableViewCell, bundle:nil), forCellReuseIdentifier: Constants.Nib.ReusableIdentifier.dropDownTableViewCell)
+        tblViewInfo.register(UINib(nibName: Constants.Nib.NibIdentifier.dateSelectionTableViewCell, bundle:nil), forCellReuseIdentifier: Constants.Nib.ReusableIdentifier.dateSelectionTableViewCell)
         
         pickerData = ["General Info", "Contact Info", "Class Applied", "Qualification Detail", "Address Detail", "Identity Card Details"]
         
@@ -77,7 +77,7 @@ class StudentProfileViewController: UIViewController, UITableViewDelegate {
         }
     }
     
-    func configDropDown(){
+    func configDropDown() {
         dropDownClasses = DropDown()
         
         // The view to which the drop down will appear on
@@ -92,17 +92,20 @@ class StudentProfileViewController: UIViewController, UITableViewDelegate {
         }
     }
     
-    func onStudentCategoryInfoClick(){
+    func onStudentCategoryInfoClick()
+    {
         if dropDownClasses.isHidden{
             dropDownClasses.show()
             hideSideMenuView()
         }
-        else{
+        else
+        {
             dropDownClasses.hide()
         }
     }
     
-    func onInfoCategoryChange(withCategoryIndex row: Int){
+    func onInfoCategoryChange(withCategoryIndex row: Int)
+    {
         if row == 0 {
             if studentDetail != nil {
                 generalDatasource.studentName = studentDetail.name
@@ -152,9 +155,8 @@ class StudentProfileViewController: UIViewController, UITableViewDelegate {
         if kbHeight == 0 {
             tblViewBottomConstraint.constant = 10
         }
-        
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -165,37 +167,45 @@ class StudentProfileViewController: UIViewController, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == 0{
+        if indexPath.row == 0
+        {
             // show or hide info category dropdown
             self.onStudentCategoryInfoClick()
         }
     }
     
-    @IBAction func showMenu(_ sender: Any) {
-        
+    @IBAction func showMenu(_ sender: Any)
+    {
         toggleSideMenuView()
     }
+    
     @IBAction func backbuttonClicked(_ sender: Any) {
         
-        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main",bundle: nil)
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: Constants.Storybaord.MainStoryboard,bundle: nil)
         var destViewController : UIViewController
         // destViewController = mainStoryboard.instantiateViewController(withIdentifier: "dashboard")
         //sideMenuController()?.setContentViewController(destViewController)
-        let selectedLogin=UserDefaults.standard.string(forKey: "selectedLogin")
-        if (selectedLogin == "student"){
-            destViewController = mainStoryboard.instantiateViewController(withIdentifier: "dashboard")
+        let selectedLogin = UserDefaults.standard.string(forKey: Constants.ServerKey.selectedLogin)
+        
+        //if (selectedLogin == "S") //Student
+        if (selectedLogin == "1") //Student
+        {
+            destViewController = mainStoryboard.instantiateViewController(withIdentifier: Constants.Storybaord.Identifier.dashboard)
             sideMenuController()?.setContentViewController(destViewController)
         }
-        else if(selectedLogin == "E"){
-            
-            destViewController = mainStoryboard.instantiateViewController(withIdentifier: "teacherdashboard")
+        //else if(selectedLogin == "E") //Teacher
+        else if(selectedLogin == "2") //Teacher
+        {
+            destViewController = mainStoryboard.instantiateViewController(withIdentifier: Constants.Storybaord.Identifier.teacherDashboard)
             sideMenuController()?.setContentViewController(destViewController)
         }
-        else if(selectedLogin == "parent"){
-            
-            destViewController = mainStoryboard.instantiateViewController(withIdentifier: "parentdashboard")
+        //else if(selectedLogin == "G") //Parent
+        else if(selectedLogin == "3") //Parent
+        {
+            destViewController = mainStoryboard.instantiateViewController(withIdentifier: Constants.Storybaord.Identifier.parentDashboard)
             sideMenuController()?.setContentViewController(destViewController)
         }
+        
         hideSideMenuView()
     }
     
@@ -210,11 +220,19 @@ class StudentProfileViewController: UIViewController, UITableViewDelegate {
     @IBAction func btnOpenGalleryClick(_ sender: Any) {
         self.openGallery(vc: self)
     }
+    
+    @IBAction func saveBtnClicked(_ sender: Any)
+    {
+        //Implement APIs here.
+        
+    }
+    
 }
 
-extension StudentProfileViewController: GeneralInfoDelegate, DatePickerProtocol{
-    func showDatePicker(){
-        let vcPicker = self.storyboard?.instantiateViewController(withIdentifier: "DatePickerViewController") as! DatePickerViewController
+extension StudentProfileViewController: GeneralInfoDelegate, DatePickerProtocol {
+    func showDatePicker()
+    {
+        let vcPicker = self.storyboard?.instantiateViewController(withIdentifier: Constants.Storybaord.Identifier.datePickerViewController) as! DatePickerViewController
         vcPicker.modalPresentationStyle = .overCurrentContext
         vcPicker.delegate = self
         self.present(vcPicker, animated: true, completion: nil)
@@ -232,14 +250,15 @@ extension StudentProfileViewController: GeneralInfoDelegate, DatePickerProtocol{
         
     }
     
-    func setSelectedDate(date: String){
+    func setSelectedDate(date: String)
+    {
         let cell = tblViewInfo.cellForRow(at: IndexPath(row: 2, section: 0)) as! DateSelectionTableViewCell
         cell.lblDate.text = date
     }
 }
 
-extension StudentProfileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
-    
+extension StudentProfileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate
+{
     func openGallery(vc: UIViewController){
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self

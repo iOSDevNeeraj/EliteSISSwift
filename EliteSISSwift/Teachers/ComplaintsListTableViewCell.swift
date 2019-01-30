@@ -2,8 +2,8 @@
 //  ComplaintsListTableViewCell.swift
 //  EliteSISSwift
 //
-//  Created by Kunal Das on 14/04/18.
-//  Copyright © 2018 Kunal Das. All rights reserved.
+//  Created by Vivek Garg on 14/04/18.
+//  Copyright © 2018 Vivek Garg. All rights reserved.
 //
 
 import UIKit
@@ -17,6 +17,7 @@ class ComplaintsListTableViewCell: UITableViewCell {
     @IBOutlet weak var lblSubject: UILabel!
     
     @IBOutlet weak var btnAction: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

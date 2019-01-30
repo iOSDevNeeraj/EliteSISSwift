@@ -2,15 +2,15 @@
 //  HealthReportViewController.swift
 //  EliteSISSwift
 //
-//  Created by Kunal Das on 03/03/18.
-//  Copyright © 2018 Kunal Das. All rights reserved.
+//  Created by Vivek Garg on 03/03/18.
+//  Copyright © 2018 Vivek Garg. All rights reserved.
 //
 
 import UIKit
 
 
 class HealthReportViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+    
     @IBOutlet weak var lblHeading: UILabel!
     @IBOutlet weak var lblStudentName: UILabel!
     @IBOutlet weak var lblBloodGroup: UILabel!
@@ -20,6 +20,7 @@ class HealthReportViewController: UIViewController, UITableViewDelegate, UITable
     @IBOutlet weak var lblHeight: UILabel!
     @IBOutlet weak var lblRecommendations: UILabel!
     @IBOutlet weak var tblViewDetails: UITableView!
+    
     var arrProperties = [String]()
     var arrValues = [String]()
     
@@ -27,7 +28,7 @@ class HealthReportViewController: UIViewController, UITableViewDelegate, UITable
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tblViewDetails.register(UINib(nibName:"ChapterStatusTableViewCell", bundle:nil), forCellReuseIdentifier: "ChapterStatusTableViewCell")
+        tblViewDetails.register(UINib(nibName:Constants.Nib.NibIdentifier.chapterStatusTableViewCell, bundle:nil), forCellReuseIdentifier: Constants.Nib.ReusableIdentifier.chapterStatusTableViewCell)
         tblViewDetails.separatorStyle = .none
         tblViewDetails.rowHeight = 50
         
@@ -37,8 +38,7 @@ class HealthReportViewController: UIViewController, UITableViewDelegate, UITable
         
         tblViewDetails.dataSource = self
         tblViewDetails.delegate = self
-
-        // Do any additional setup after loading the view.
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -46,7 +46,8 @@ class HealthReportViewController: UIViewController, UITableViewDelegate, UITable
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ChapterStatusTableViewCell") as! ChapterStatusTableViewCell
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Nib.ReusableIdentifier.chapterStatusTableViewCell) as! ChapterStatusTableViewCell
         cell.lblChapter.text = arrProperties[indexPath.row]
         cell.lblStatus.text = arrValues[indexPath.row]
         cell.selectionStyle = .none
@@ -54,47 +55,43 @@ class HealthReportViewController: UIViewController, UITableViewDelegate, UITable
         cell.lblChapter.font = UIFont.boldSystemFont(ofSize: 16.0)
         return cell
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
     @IBAction func showMenu(_ sender: Any) {
         
         toggleSideMenuView()
     }
     @IBAction func backbuttonClicked(_ sender: Any) {
         
-        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main",bundle: nil)
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: Constants.Storybaord.MainStoryboard,bundle: nil)
         var destViewController : UIViewController
         // destViewController = mainStoryboard.instantiateViewController(withIdentifier: "dashboard")
         //sideMenuController()?.setContentViewController(destViewController)
-        let selectedLogin=UserDefaults.standard.string(forKey: "selectedLogin")
-        if (selectedLogin == "student"){
-            destViewController = mainStoryboard.instantiateViewController(withIdentifier: "dashboard")
+        let selectedLogin=UserDefaults.standard.string(forKey: Constants.ServerKey.selectedLogin)
+        
+        //if (selectedLogin == "S") //Student
+        if (selectedLogin == "1") //Student
+        {
+            destViewController = mainStoryboard.instantiateViewController(withIdentifier: Constants.Storybaord.Identifier.dashboard)
             sideMenuController()?.setContentViewController(destViewController)
         }
-        else if(selectedLogin == "E"){
-            
-            destViewController = mainStoryboard.instantiateViewController(withIdentifier: "teacherdashboard")
+        //else if(selectedLogin == "E") //Teacher
+        else if(selectedLogin == "2") //Teacher
+        {
+            destViewController = mainStoryboard.instantiateViewController(withIdentifier: Constants.Storybaord.Identifier.teacherDashboard)
             sideMenuController()?.setContentViewController(destViewController)
         }
-        else if(selectedLogin == "parent"){
-            
-            destViewController = mainStoryboard.instantiateViewController(withIdentifier: "parentdashboard")
+        //else if(selectedLogin == "G") //Parent
+        else if(selectedLogin == "3") //Parent
+        {
+            destViewController = mainStoryboard.instantiateViewController(withIdentifier: Constants.Storybaord.Identifier.parentDashboard)
             sideMenuController()?.setContentViewController(destViewController)
         }
+        
         hideSideMenuView()
     }
 }

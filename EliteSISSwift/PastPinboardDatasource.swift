@@ -3,7 +3,7 @@
 //  EliteSISSwift
 //
 //  Created by Reetesh Bajpai on 16/03/18.
-//  Copyright © 2018 Kunal Das. All rights reserved.
+//  Copyright © 2018 Vivek Garg. All rights reserved.
 //
 
 import UIKit
@@ -38,7 +38,8 @@ class PastPinboardDatasource:NSObject, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "NotificationTableViewCell") as! NotificationTableViewCell
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Nib.ReusableIdentifier.notificationTableViewCell) as! NotificationTableViewCell
         cell.selectionStyle = .none
         cell.lblClass.text = arrMissedClass[indexPath.row]
         cell.lblClass.font = UIFont.boldSystemFont(ofSize: 18)

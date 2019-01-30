@@ -3,20 +3,24 @@
 //  EliteSISSwift
 //
 //  Created by Reetesh Bajpai on 01/03/18.
-//  Copyright © 2018 Kunal Das. All rights reserved.
+//  Copyright © 2018 Vivek Garg. All rights reserved.
 //
 
 import UIKit
 import DropDownMenuKit
 import WRCalendarView
-class TimetableViewController: UIViewController,FSCalendarDataSource, FSCalendarDelegate,FSCalendarDelegateAppearance,UITableViewDelegate, UITableViewDataSource {
 
+
+class TimetableViewController: UIViewController,FSCalendarDataSource, FSCalendarDelegate,FSCalendarDelegateAppearance,UITableViewDelegate, UITableViewDataSource {
+    
     @IBOutlet weak var MonthViewTimetable: UIView!
     @IBOutlet weak var weekView: WRWeekView!
     @IBOutlet weak var segmentDayWeekMonth: UISegmentedControl!
     
     var titleView: DropDownTitleView!
     var navigationBarMenu: DropDownMenu!
+    
+    
     @IBOutlet
     weak var calendar: FSCalendar!
     fileprivate let gregorian: Calendar = Calendar(identifier: .gregorian)
@@ -48,7 +52,7 @@ class TimetableViewController: UIViewController,FSCalendarDataSource, FSCalendar
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         
         
@@ -64,16 +68,16 @@ class TimetableViewController: UIViewController,FSCalendarDataSource, FSCalendar
         
         //add events
         weekView.addEvent(event: WREvent.make(date: Date(), chunk: 1.hours, title: "Lunch"))
-//        weekView.addEvent(event: WREvent.make(date: Date(), chunk: 1.hours, title: ""))
-//        weekView.addEvent(event: WREvent.make(date: Date().add(90.minutes), chunk: 1.hours, title: "#3"))
-//        weekView.addEvent(event: WREvent.make(date: Date().add(110.minutes), chunk: 1.hours, title: "#4"))
+        //        weekView.addEvent(event: WREvent.make(date: Date(), chunk: 1.hours, title: ""))
+        //        weekView.addEvent(event: WREvent.make(date: Date().add(90.minutes), chunk: 1.hours, title: "#3"))
+        //        weekView.addEvent(event: WREvent.make(date: Date().add(110.minutes), chunk: 1.hours, title: "#4"))
         
         weekView.addEvent(event: WREvent.make(date: Date().add(1.days), chunk: 1.hours, title: "Lunch"))
-         weekView.addEvent(event: WREvent.make(date: Date().add(2.days), chunk: 1.hours, title: "Lunch"))
-         weekView.addEvent(event: WREvent.make(date: Date().add(3.days), chunk: 1.hours, title: "Lunch"))
-         weekView.addEvent(event: WREvent.make(date: Date().add(4.days), chunk: 1.hours, title: "Lunch"))
-         weekView.addEvent(event: WREvent.make(date: Date().add(5.days), chunk: 1.hours, title: "Lunch"))
-         weekView.addEvent(event: WREvent.make(date: Date().add(6.days), chunk: 1.hours, title: "Lunch"))
+        weekView.addEvent(event: WREvent.make(date: Date().add(2.days), chunk: 1.hours, title: "Lunch"))
+        weekView.addEvent(event: WREvent.make(date: Date().add(3.days), chunk: 1.hours, title: "Lunch"))
+        weekView.addEvent(event: WREvent.make(date: Date().add(4.days), chunk: 1.hours, title: "Lunch"))
+        weekView.addEvent(event: WREvent.make(date: Date().add(5.days), chunk: 1.hours, title: "Lunch"))
+        weekView.addEvent(event: WREvent.make(date: Date().add(6.days), chunk: 1.hours, title: "Lunch"))
         
         calendar.dataSource = self
         calendar.delegate = self
@@ -177,23 +181,23 @@ class TimetableViewController: UIViewController,FSCalendarDataSource, FSCalendar
         }
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
     @objc func moveToToday() {
         weekView.setCalendarDate(Date(), animated: true)
     }
@@ -248,8 +252,8 @@ class TimetableViewController: UIViewController,FSCalendarDataSource, FSCalendar
         
         // If we set the container to the controller view, the value must be set
         // on the hidden content offset (not the visible one)
-//        navigationBarMenu.visibleContentOffset =
-//            navigationController!.navigationBar.frame.size.height + statusBarHeight()
+        //        navigationBarMenu.visibleContentOffset =
+        //            navigationController!.navigationBar.frame.size.height + statusBarHeight()
         
         // For a simple gray overlay in background
         navigationBarMenu.backgroundView = UIView(frame: navigationBarMenu.bounds)
@@ -266,8 +270,8 @@ class TimetableViewController: UIViewController,FSCalendarDataSource, FSCalendar
     }
     
     func updateMenuContentOffsets() {
-//        navigationBarMenu.visibleContentOffset =
-//            navigationController!.navigationBar.frame.size.height + statusBarHeight()
+        //        navigationBarMenu.visibleContentOffset =
+        //            navigationController!.navigationBar.frame.size.height + statusBarHeight()
     }
     
     @objc func didToggleNavigationBarMenu(_ sender: DropDownTitleView) {
@@ -307,48 +311,53 @@ class TimetableViewController: UIViewController,FSCalendarDataSource, FSCalendar
     }
     
     @IBAction func segmentselected(_ sender: Any) {
-   
+        
         switch segmentDayWeekMonth.selectedSegmentIndex
         {
         case 0:
-         weekView.calendarType = .day
-         MonthViewTimetable.isHidden = true;
+            weekView.calendarType = .day
+            MonthViewTimetable.isHidden = true;
         case 1:
-          weekView.calendarType = .week
+            weekView.calendarType = .week
             MonthViewTimetable.isHidden = true;
         case 2:
-           // weekView.calendarType = .week
+            // weekView.calendarType = .week
             MonthViewTimetable.isHidden = false;
         default:
             break
-        }
-        
-        
+        }        
     }
-   
+    
     @IBAction func showMenu(_ sender: Any) {
-        
         toggleSideMenuView()
     }
+    
     @IBAction func backbuttonClicked(_ sender: Any) {
         
-        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main",bundle: nil)
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: Constants.Storybaord.MainStoryboard,bundle: nil)
         var destViewController : UIViewController
         // destViewController = mainStoryboard.instantiateViewController(withIdentifier: "dashboard")
         //sideMenuController()?.setContentViewController(destViewController)
-        let selectedLogin=UserDefaults.standard.string(forKey: "selectedLogin")
-        if (selectedLogin == "student"){
-            destViewController = mainStoryboard.instantiateViewController(withIdentifier: "dashboard")
+        let selectedLogin = UserDefaults.standard.string(forKey: Constants.ServerKey.selectedLogin)
+        
+        //if (selectedLogin == "student")
+        //if (selectedLogin == "S")
+        if (selectedLogin == "1") //Student
+        {
+            destViewController = mainStoryboard.instantiateViewController(withIdentifier: Constants.Storybaord.Identifier.dashboard)
             sideMenuController()?.setContentViewController(destViewController)
         }
-        else if(selectedLogin == "E"){
-            
-            destViewController = mainStoryboard.instantiateViewController(withIdentifier: "teacherdashboard")
+        //else if(selectedLogin == "E")
+        else if(selectedLogin == "2") //Teacher
+        {
+            destViewController = mainStoryboard.instantiateViewController(withIdentifier: Constants.Storybaord.Identifier.teacherDashboard)
             sideMenuController()?.setContentViewController(destViewController)
         }
-        else if(selectedLogin == "parent"){
-            
-            destViewController = mainStoryboard.instantiateViewController(withIdentifier: "parentdashboard")
+        //else if(selectedLogin == "parent")
+        //else if(selectedLogin == "G")
+        else if(selectedLogin == "3") //Parent
+        {
+            destViewController = mainStoryboard.instantiateViewController(withIdentifier: Constants.Storybaord.Identifier.parentDashboard)
             sideMenuController()?.setContentViewController(destViewController)
         }
         hideSideMenuView()
@@ -443,90 +452,86 @@ extension TimetableViewController: WRWeekViewDelegate {
     //        }
     //        return 1.0
     //    }
+    
     func calendar(calendar: FSCalendar!, didSelectDate date: NSDate!) {
         
     }
+    
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
         
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy/MM/dd"
         print("did select date \(formatter.string(from: date))")
         
-        
         let myStringafd = formatter.string(from: date)
         
         print(myStringafd)
-       //
+        //
         
-        if (selectedRow == "Assignment" ){
-        
-            let   dict = ["2018/05/14": "Counting 1 to 10", "2018/05/16": "Counting 10 to 50", "2018/05/17":"Counting 50 to 100", "2018/05/18": "Write A-Z",  "2018/05/21": "Write a-z", "2018/05/22": "Learn Hindi letters" ]
+        if (selectedRow == "Assignment" )
+        {
+            let   dict = ["2018/05/14": "Counting 1 to 10", "2018/05/16": "Counting 10 to 50", "2018/05/17":"Counting 50 to 100", "2018/05/18": "Write A-Z",  "2018/05/21": "Write a-z", "2018/05/22": "Learn Hindi letters"]
             //var dict = ["key1": "value1", "key2": "value2"]
-            if dict.keys.contains(myStringafd) {
+            if dict.keys.contains(myStringafd)
+            {
                 // contains key
-                
                 let alert = UIAlertController(title: "Assignment", message: dict[myStringafd], preferredStyle: .alert)
                 let dismiss = UIAlertAction(title: "OK", style: .cancel, handler: nil)
                 alert.addAction(dismiss)
                 self.present(alert, animated: true, completion: nil)
-                
-            } else {
+            }
+            else
+            {
                 print("No, it doesn't")
             }
-
-            
-        
         }
-       else if (selectedRow == "Events" ){
-            let   dict =   ["2018/05/01": "Parents teacher meeting", "2018/05/03": "Sports Day","2018/05/13": "Exhibition", "2018/05/05": "Science day", "2018/05/07": "Founders day", "2018/05/09": "Orientation"]
-            if dict.keys.contains(myStringafd) {
+        else if (selectedRow == "Events" )
+        {
+            let   dict = ["2018/05/01": "Parents teacher meeting", "2018/05/03": "Sports Day","2018/05/13": "Exhibition", "2018/05/05": "Science day", "2018/05/07": "Founders day", "2018/05/09": "Orientation"]
+            if dict.keys.contains(myStringafd)
+            {
                 // contains key
-                
                 let alert = UIAlertController(title: "Event", message: dict[myStringafd], preferredStyle: .alert)
                 let dismiss = UIAlertAction(title: "OK", style: .cancel, handler: nil)
                 alert.addAction(dismiss)
                 self.present(alert, animated: true, completion: nil)
-                
-            } else {
+            }
+            else
+            {
                 print("No, it doesn't")
             }
-            
         }
-        else if (selectedRow == "Games" ){
+        else if (selectedRow == "Games" )
+        {
             let   dict =   [ "2018/05/02" : "Cricket",  "2018/05/06": "Badminton", "2018/05/08" : "Volleyball", "2018/05/10": "Football" ]
-            if dict.keys.contains(myStringafd) {
+            if dict.keys.contains(myStringafd)
+            {
                 // contains key
-                
                 let alert = UIAlertController(title: "Games", message: dict[myStringafd], preferredStyle: .alert)
                 let dismiss = UIAlertAction(title: "OK", style: .cancel, handler: nil)
                 alert.addAction(dismiss)
                 self.present(alert, animated: true, completion: nil)
-                
-            } else {
+            }
+            else
+            {
                 print("No, it doesn't")
             }
-            
         }
-        else if (selectedRow == "Exams" ){
+        else if (selectedRow == "Exams" )
+        {
             let   dict =   ["2018/05/23" : "Maths", "2018/05/24" :"Science", "2018/05/25" : "Hindi", "2018/05/26": "English", "2018/05/28":"Sanskrit" ]
-            if dict.keys.contains(myStringafd) {
+            if dict.keys.contains(myStringafd)
+            {
                 // contains key
-                
                 let alert = UIAlertController(title: "Exams", message: dict[myStringafd], preferredStyle: .alert)
                 let dismiss = UIAlertAction(title: "OK", style: .cancel, handler: nil)
                 alert.addAction(dismiss)
                 self.present(alert, animated: true, completion: nil)
-                
-            } else {
+            }
+            else
+            {
                 print("No, it doesn't")
             }
-            
         }
-        
-        
-    
     }
-    
-    
-    
 }

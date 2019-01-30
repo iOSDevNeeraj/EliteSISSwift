@@ -3,17 +3,18 @@
 //  EliteSISSwift
 //
 //  Created by Daffolap-51 on 07/04/18.
-//  Copyright © 2018 Kunal Das. All rights reserved.
+//  Copyright © 2018 Vivek Garg. All rights reserved.
 //
 
 import Foundation
 
 struct StudentAttendanceViewModel {
+    
     var name: String = ""
     var isPresent: Bool = false
     var imgName: String = ""
     
-    func getDummyData()->[String : [StudentAttendanceViewModel]]{
+    func getDummyData()->[String : [StudentAttendanceViewModel]] {
         var dataSource: [String: [StudentAttendanceViewModel]] = [:]
         
         dataSource["4th"] = [

@@ -3,7 +3,7 @@
 //  EliteSISSwift
 //
 //  Created by Daffolap-51 on 19/05/18.
-//  Copyright © 2018 Kunal Das. All rights reserved.
+//  Copyright © 2018 Vivek Garg. All rights reserved.
 //
 
 import Foundation
@@ -13,7 +13,7 @@ enum ASSIGNMENT_STATUS{
     case NOT_COMPLETED
 }
 
-struct TeacherAssginementResponseModel{
+struct TeacherAssginementResponseModel {
     var description: String!
     var issueDate: String!
     var endDate: String!

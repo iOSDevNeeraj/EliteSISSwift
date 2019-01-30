@@ -2,8 +2,8 @@
 //  IdentityCardDatasource.swift
 //  EliteSISSwift
 //
-//  Created by Kunal Das on 22/03/18.
-//  Copyright © 2018 Kunal Das. All rights reserved.
+//  Created by Vivek Garg on 22/03/18.
+//  Copyright © 2018 Vivek Garg. All rights reserved.
 //
 
 import UIKit
@@ -25,62 +25,62 @@ class IdentityCardDatasource: NSObject, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.row {
         case 0:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "DropDownTableViewCell") as! DropDownTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Nib.ReusableIdentifier.dropDownTableViewCell) as! DropDownTableViewCell
             cell.selectionStyle = .none
             cell.lblTitle.text = "Identity Card Details"
             return cell
             
         case 1:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "textfieldTableCell") as! TextfieldTableViewCell
-            cell.textField.placeholder = "Enter the card type"
+            let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Nib.ReusableIdentifier.textfieldTableCell) as! TextfieldTableViewCell
+            cell.textField.placeholder = Constants.PlaceholderText.cardTypePlaceholder
             cell.selectionStyle = .none
             cell.backgroundColor = UIColor.clear
             cell.isUserInteractionEnabled = isDetailEditable
             return cell
             
         case 2:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "textfieldTableCell") as! TextfieldTableViewCell
-            cell.textField.placeholder = "Enter the card number"
+            let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Nib.ReusableIdentifier.textfieldTableCell) as! TextfieldTableViewCell
+            cell.textField.placeholder = Constants.PlaceholderText.cardNumberPlaceholder
             cell.selectionStyle = .none
             cell.backgroundColor = UIColor.clear
             cell.isUserInteractionEnabled = isDetailEditable
             return cell
             
         case 3:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "textfieldwithCalendarTableCell") as! TextFieldWithCalendarTableViewCell
-            cell.textfield.placeholder = "Enter the issued data"
+            let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Nib.ReusableIdentifier.textfieldwithCalendarTableCell) as! TextFieldWithCalendarTableViewCell
+            cell.textfield.placeholder = Constants.PlaceholderText.issuedDatePlaceholder
             cell.selectionStyle = .none
             cell.backgroundColor = UIColor.clear
             cell.isUserInteractionEnabled = isDetailEditable
             return cell
             
         case 4:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "textfieldwithCalendarTableCell") as! TextFieldWithCalendarTableViewCell
-            cell.textfield.placeholder = "Enter the expiry date"
+            let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Nib.ReusableIdentifier.textfieldwithCalendarTableCell) as! TextFieldWithCalendarTableViewCell
+            cell.textfield.placeholder = Constants.PlaceholderText.expiryDatePlaceholder
             cell.selectionStyle = .none
             cell.backgroundColor = UIColor.clear
             cell.isUserInteractionEnabled = isDetailEditable
             return cell
             
         case 5:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "textfieldTableCell") as! TextfieldTableViewCell
-            cell.textField.placeholder = "Enter the licensing authority"
+            let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Nib.ReusableIdentifier.textfieldTableCell) as! TextfieldTableViewCell
+            cell.textField.placeholder = Constants.PlaceholderText.licensePlaceholder
             cell.selectionStyle = .none
             cell.backgroundColor = UIColor.clear
             cell.isUserInteractionEnabled = isDetailEditable
             return cell
             
         case 6:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "textfieldTableCell") as! TextfieldTableViewCell
-            cell.textField.placeholder = "Enter the card description"
+            let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Nib.ReusableIdentifier.textfieldTableCell) as! TextfieldTableViewCell
+            cell.textField.placeholder = Constants.PlaceholderText.cardDescriptionPlaceholder
             cell.selectionStyle = .none
             cell.backgroundColor = UIColor.clear
             cell.isUserInteractionEnabled = isDetailEditable
             return cell
             
         case 7:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "textfieldTableCell") as! TextfieldTableViewCell
-            cell.textField.placeholder = "Enter the id for"
+            let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Nib.ReusableIdentifier.textfieldTableCell) as! TextfieldTableViewCell
+            cell.textField.placeholder = Constants.PlaceholderText.iDPlaceholder
             cell.selectionStyle = .none
             cell.backgroundColor = UIColor.clear
             cell.isUserInteractionEnabled = isDetailEditable

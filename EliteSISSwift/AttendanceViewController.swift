@@ -3,7 +3,7 @@
 //  EliteSISSwift
 //
 //  Created by Reetesh Bajpai on 28/02/18.
-//  Copyright © 2018 Kunal Das. All rights reserved.
+//  Copyright © 2018 Vivek Garg. All rights reserved.
 //
 
 
@@ -215,28 +215,31 @@ class AttendanceViewController: UIViewController,FSCalendarDataSource, FSCalenda
     }
     
     @objc func showStudyProgress() {
-        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main",bundle: nil)
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: Constants.Storybaord.MainStoryboard,bundle: nil)
         var destViewController : UIViewController
-        destViewController = mainStoryboard.instantiateViewController(withIdentifier: "StudyProgressViewController")
+        destViewController = mainStoryboard.instantiateViewController(withIdentifier: Constants.Storybaord.Identifier.studyProgressViewController)
         sideMenuController()?.setContentViewController(destViewController)
         hideSideMenuView()
     }
     @IBAction func backbuttonClicked(_ sender: Any) {
         
-        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main",bundle: nil)
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: Constants.Storybaord.MainStoryboard,bundle: nil)
         var destViewController : UIViewController
         //        destViewController = mainStoryboard.instantiateViewController(withIdentifier: "dashboard")
         //        sideMenuController()?.setContentViewController(destViewController)
         
-        let selectedLogin=UserDefaults.standard.string(forKey: "selectedLogin")
-        if (selectedLogin == "student"){
-            destViewController = mainStoryboard.instantiateViewController(withIdentifier: "dashboard")
+        let selectedLogin=UserDefaults.standard.string(forKey: Constants.ServerKey.selectedLogin)
+        
+        //if (selectedLogin == "S") //Student
+        if (selectedLogin == "1") //Student
+        {
+            destViewController = mainStoryboard.instantiateViewController(withIdentifier: Constants.Storybaord.Identifier.dashboard)
             sideMenuController()?.setContentViewController(destViewController)
-            
         }
-        else if(selectedLogin == "E"){
-            
-            destViewController = mainStoryboard.instantiateViewController(withIdentifier: "teacherdashboard")
+        //else if(selectedLogin == "E") //Teacher
+        else if(selectedLogin == "2") //Teacher
+        {
+            destViewController = mainStoryboard.instantiateViewController(withIdentifier: Constants.Storybaord.Identifier.teacherDashboard)
             sideMenuController()?.setContentViewController(destViewController)
         }
         hideSideMenuView()

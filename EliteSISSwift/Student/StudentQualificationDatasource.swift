@@ -2,8 +2,8 @@
 //  StudentQualificationDatasource.swift
 //  EliteSISSwift
 //
-//  Created by Kunal Das on 24/03/18.
-//  Copyright © 2018 Kunal Das. All rights reserved.
+//  Created by Vivek Garg on 24/03/18.
+//  Copyright © 2018 Vivek Garg. All rights reserved.
 //
 
 import UIKit
@@ -16,29 +16,29 @@ class StudentQualificationDatasource: NSObject, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.row {
         case 0:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "DropDownTableViewCell") as! DropDownTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Nib.ReusableIdentifier.dropDownTableViewCell) as! DropDownTableViewCell
             cell.selectionStyle = .none
             cell.lblTitle.text = "Qualification Detail"
             return cell
         case 1:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "textfieldTableCell") as! TextfieldTableViewCell
-            cell.textField.placeholder = "Enter your Qualification"
+            let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Nib.ReusableIdentifier.textfieldTableCell) as! TextfieldTableViewCell
+            cell.textField.placeholder = Constants.PlaceholderText.qualificationPlaceholder
             cell.textField.isUserInteractionEnabled = true
             cell.selectionStyle = .none
             cell.backgroundColor = UIColor.clear
             return cell
             
         case 2:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "textfieldTableCell") as! TextfieldTableViewCell
-            cell.textField.placeholder = "Enter the year"
+            let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Nib.ReusableIdentifier.textfieldTableCell) as! TextfieldTableViewCell
+            cell.textField.placeholder = Constants.PlaceholderText.yearPlaceholder
             cell.textField.isUserInteractionEnabled = true
             cell.selectionStyle = .none
             cell.backgroundColor = UIColor.clear
             return cell
             
         case 3:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "textfieldTableCell") as! TextfieldTableViewCell
-            cell.textField.placeholder = "Enter the CGPA/Percentage"
+            let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Nib.ReusableIdentifier.textfieldTableCell) as! TextfieldTableViewCell
+            cell.textField.placeholder = Constants.PlaceholderText.percentagePlaceholder
             cell.textField.isUserInteractionEnabled = true
             cell.selectionStyle = .none
             cell.backgroundColor = UIColor.clear

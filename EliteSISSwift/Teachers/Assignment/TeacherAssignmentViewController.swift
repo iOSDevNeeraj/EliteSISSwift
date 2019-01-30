@@ -3,12 +3,12 @@
 //  EliteSISSwift
 //
 //  Created by PeakGeek on 05/04/18.
-//  Copyright © 2018 Kunal Das. All rights reserved.
+//  Copyright © 2018 Vivek Garg. All rights reserved.
 //
 
 import UIKit
 
-enum TEACHER_ASSIGNMENT_TYPE{
+enum TEACHER_ASSIGNMENT_TYPE {
     case ALL
     case DUE
     case SUBMITTED
@@ -43,14 +43,15 @@ class TeacherAssignmentViewController: UIViewController {
 }
 
 // MARK: - Table View Setup
-extension TeacherAssignmentViewController: UITableViewDelegate, UITableViewDataSource{
-    func configTableView(){
+extension TeacherAssignmentViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func configTableView() {
         self.tblViewAssignment.delegate = self
         self.tblViewAssignment.dataSource = self
         self.tblViewAssignment.separatorStyle = .none
         
-        self.tblViewAssignment.register(UINib(nibName: "TeacherAssignmentDetailTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: "TeacherAssignmentDetailTableViewCell")
-        self.tblViewAssignment.register(UINib(nibName: "TeacherAssignmentHeaderFooterView", bundle: Bundle.main), forHeaderFooterViewReuseIdentifier: "TeacherAssignmentHeaderFooterView")
+        self.tblViewAssignment.register(UINib(nibName: Constants.Nib.NibIdentifier.teacherAssignmentDetailTableViewCell, bundle: Bundle.main), forCellReuseIdentifier: Constants.Nib.ReusableIdentifier.teacherAssignmentDetailTableViewCell)
+        self.tblViewAssignment.register(UINib(nibName: Constants.Nib.NibIdentifier.teacherAssignmentHeaderFooterView, bundle: Bundle.main), forHeaderFooterViewReuseIdentifier: Constants.Nib.ReusableIdentifier.teacherAssignmentHeaderFooterView)
         
         self.tblViewAssignment.reloadData()
     }
@@ -69,13 +70,15 @@ extension TeacherAssignmentViewController: UITableViewDelegate, UITableViewDataS
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "TeacherAssignmentHeaderFooterView") as! TeacherAssignmentHeaderFooterView
+        
+        let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: Constants.Nib.ReusableIdentifier.teacherAssignmentHeaderFooterView) as! TeacherAssignmentHeaderFooterView
         headerView.config(assignmentType: assignmentType)
         return headerView
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TeacherAssignmentDetailTableViewCell") as! TeacherAssignmentDetailTableViewCell
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Nib.ReusableIdentifier.teacherAssignmentDetailTableViewCell) as! TeacherAssignmentDetailTableViewCell
         cell.selectionStyle = .none
         cell.config(assignmentType: assignmentType, dataSource: self.dataSource[indexPath.row])
         return cell

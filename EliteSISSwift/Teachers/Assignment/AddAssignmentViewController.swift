@@ -3,7 +3,7 @@
 //  EliteSISSwift
 //
 //  Created by PeakGeek on 17/05/18.
-//  Copyright © 2018 Kunal Das. All rights reserved.
+//  Copyright © 2018 Vivek Garg. All rights reserved.
 //
 
 import UIKit
@@ -20,7 +20,7 @@ class AddAssignmentViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         self.initView()
     }
@@ -33,61 +33,67 @@ class AddAssignmentViewController: UIViewController {
         self.txtViewDesciption.textColor = UIColor.lightGray
         self.txtViewDesciption.text = "Enter Description"
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    func validateInput()->(isValid: Bool, errorMsg: String?){
-       
+    
+    func validateInput()->(isValid: Bool, errorMsg: String?) {
+        
         guard self.txtFieldSubject.text != nil && !self.txtFieldSubject.text!.isEmpty else{return(false, "Please enter subject")}
         
-        guard self.txtFieldTitle.text != nil && !self.txtFieldTitle.text!.isEmpty else{return(false, "Please enter Title")}
+        guard self.txtFieldTitle.text != nil && !self.txtFieldTitle.text!.isEmpty else{return(false, "Please enter title")}
         
         guard self.txtFieldIssueDate.text != nil && !self.txtFieldIssueDate.text!.isEmpty else{return(false, "Please select issue date")}
         
         guard self.txtFieldLastDate.text != nil && !self.txtFieldLastDate.text!.isEmpty else{return(false, "Please select last date")}
         
         guard self.txtViewDesciption.text != nil && !self.txtViewDesciption.text!.isEmpty && !(self.txtViewDesciption.text! == "Enter Description") else{return(false, "Please enter description")}
-
+        
         
         return (true, nil)
     }
     
-    func showAlertWithTitle(title: String?, message: String){
+    func showAlertWithTitle(title: String?, message: String) {
+        
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
         self.present(alertController, animated: true, completion: nil)
     }
     
     @IBAction func onSaveClick(_ sender: Any) {
+        
         let validation = validateInput()
         
         if validation.isValid{
             self.showAlertWithTitle(title: nil, message: "Assignment Uploaded Successfully!")
         }
-        else{
+        else
+        {
             self.showAlertWithTitle(title: nil, message: validation.errorMsg!)
         }
     }
     
     @IBAction func onIssueDateClick(_ sender: Any) {
+        
         self.isSelectingIssueDate = true
         self.showDatePicker()
     }
     
     @IBAction func onLastDateClick(_ sender: Any) {
+        
         self.isSelectingIssueDate = false
         self.showDatePicker()
     }
     
     @IBAction func onUploadClick(_ sender: Any) {
-       // let documentController = UIDocumentPickerViewController(documentTypes: ["public.text"], in: .import)
+        
+        // let documentController = UIDocumentPickerViewController(documentTypes: ["public.text"], in: .import)
         let documentController = UIDocumentPickerViewController(documentTypes: ["public.item"], in: .import)
-
-//        let documentController = UIDocumentPickerViewController(documentTypes: ["com.apple.iwork.pages.pages", "com.apple.iwork.numbers.numbers", "com.apple.iwork.keynote.key","public.image", "com.apple.application", "public.item","public.data", "public.content", "public.audiovisual-content", "public.movie", "public.audiovisual-content", "public.video", "public.audio", "public.text", "public.data", "public.zip-archive", "com.pkware.zip-archive", "public.composite-content", "public.text"], in: .import)
-
+        
+        //        let documentController = UIDocumentPickerViewController(documentTypes: ["com.apple.iwork.pages.pages", "com.apple.iwork.numbers.numbers", "com.apple.iwork.keynote.key","public.image", "com.apple.application", "public.item","public.data", "public.content", "public.audiovisual-content", "public.movie", "public.audiovisual-content", "public.video", "public.audio", "public.text", "public.data", "public.zip-archive", "com.pkware.zip-archive", "public.composite-content", "public.text"], in: .import)
+        
         documentController.delegate = self
         documentController.modalPresentationStyle = .formSheet
         self.present(documentController, animated: true, completion: nil)
@@ -104,8 +110,8 @@ class AddAssignmentViewController: UIViewController {
 
 extension AddAssignmentViewController: DatePickerProtocol{
     
-    func showDatePicker(){
-        let vcPicker = self.storyboard?.instantiateViewController(withIdentifier: "DatePickerViewController") as! DatePickerViewController
+    func showDatePicker() {
+        let vcPicker = self.storyboard?.instantiateViewController(withIdentifier: Constants.Storybaord.Identifier.datePickerViewController) as! DatePickerViewController
         vcPicker.modalPresentationStyle = .overCurrentContext
         vcPicker.delegate = self
         self.present(vcPicker, animated: true, completion: nil)
@@ -122,7 +128,8 @@ extension AddAssignmentViewController: DatePickerProtocol{
     func datePickerCancel() {
     }
     
-    func setSelectedDate(date: String){
+    func setSelectedDate(date: String) {
+        
         if isSelectingIssueDate{
             self.txtFieldIssueDate.text = date
         }
@@ -132,14 +139,16 @@ extension AddAssignmentViewController: DatePickerProtocol{
     }
 }
 
-extension AddAssignmentViewController: UIDocumentPickerDelegate{
+extension AddAssignmentViewController: UIDocumentPickerDelegate {
+    
     public func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]){
         let name = urls.first?.lastPathComponent
         self.lblAssignmentName.text = name
     }
 }
 
-extension AddAssignmentViewController: UITextViewDelegate{
+extension AddAssignmentViewController: UITextViewDelegate {
+    
     func textViewDidBeginEditing(_ textView: UITextView) {
         if textView.textColor == UIColor.lightGray {
             textView.text = nil

@@ -2,8 +2,8 @@
 //  ClassAppliedDatasource.swift
 //  EliteSISSwift
 //
-//  Created by Kunal Das on 22/03/18.
-//  Copyright © 2018 Kunal Das. All rights reserved.
+//  Created by Vivek Garg on 22/03/18.
+//  Copyright © 2018 Vivek Garg. All rights reserved.
 //
 
 import UIKit
@@ -24,13 +24,13 @@ class ClassAppliedDatasource: NSObject, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.row {
         case 0:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "DropDownTableViewCell") as! DropDownTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Nib.ReusableIdentifier.dropDownTableViewCell) as! DropDownTableViewCell
             cell.selectionStyle = .none
             cell.lblTitle.text = "Class Applied"
             return cell
             
         case 1:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "textfieldTableCell") as! TextfieldTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Nib.ReusableIdentifier.textfieldTableCell) as! TextfieldTableViewCell
             cell.textField.text = "1001"
             cell.selectionStyle = .none
             cell.backgroundColor = UIColor.clear
@@ -38,7 +38,7 @@ class ClassAppliedDatasource: NSObject, UITableViewDataSource {
             return cell
             
         case 2:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "textfieldTableCell") as! TextfieldTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Nib.ReusableIdentifier.textfieldTableCell) as! TextfieldTableViewCell
             cell.textField.text = "M.Sc"
             cell.selectionStyle = .none
             cell.backgroundColor = UIColor.clear
@@ -46,7 +46,7 @@ class ClassAppliedDatasource: NSObject, UITableViewDataSource {
             return cell
             
         case 3:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "textfieldwithCalendarTableCell") as! TextFieldWithCalendarTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Nib.ReusableIdentifier.textfieldwithCalendarTableCell) as! TextFieldWithCalendarTableViewCell
             cell.textfield.placeholder = "1-Jul-2017"
             cell.selectionStyle = .none
             cell.backgroundColor = UIColor.clear

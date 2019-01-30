@@ -3,7 +3,7 @@
 //  EliteSISSwift
 //
 //  Created by PeakGeek on 07/04/18.
-//  Copyright © 2018 Kunal Das. All rights reserved.
+//  Copyright © 2018 Vivek Garg. All rights reserved.
 //
 
 import UIKit
@@ -23,24 +23,25 @@ class StudentProfileListingViewController: UIViewController {
     @IBOutlet weak var viewClassSelection: UIView!
     @IBOutlet weak var lblSelectedClass: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
+    
     var selectedClass = "4th"
     var screenActionType: StudentProfileActionType = StudentProfileActionType.PROFILE
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         self.configDropDown()
         self.configCollectionView()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    func configDropDown(){
+    func configDropDown()
+    {
         dropDownStudents = DropDown()
         
         // The view to which the drop down will appear on
@@ -54,18 +55,20 @@ class StudentProfileListingViewController: UIViewController {
         }
     }
     
-    func showStudentsClass(classSelected: String){
+    func showStudentsClass(classSelected: String) {
         self.lblSelectedClass.text = classSelected
         self.selectedClass = classSelected
         self.collectionView.reloadData()
     }
     
     @IBAction func btnSelectClassClick(_ sender: Any) {
-        if dropDownStudents.isHidden{
+        if dropDownStudents.isHidden
+        {
             dropDownStudents.show()
             hideSideMenuView()
         }
-        else{
+        else
+        {
             dropDownStudents.hide()
         }
     }
@@ -75,47 +78,57 @@ class StudentProfileListingViewController: UIViewController {
     }
     
     @IBAction func btnBackClick(_ sender: Any) {
+        
         //self.navigationController?.popViewController(animated: true)
-        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main",bundle: nil)
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: Constants.Storybaord.MainStoryboard,bundle: nil)
         var destViewController : UIViewController
         // destViewController = mainStoryboard.instantiateViewController(withIdentifier: "dashboard")
         //sideMenuController()?.setContentViewController(destViewController)
-        let selectedLogin=UserDefaults.standard.string(forKey: "selectedLogin")
-        if (selectedLogin == "student"){
-            destViewController = mainStoryboard.instantiateViewController(withIdentifier: "dashboard")
+        
+        let selectedLogin = UserDefaults.standard.string(forKey: Constants.ServerKey.selectedLogin)
+        
+        //if (selectedLogin == "S")
+        if (selectedLogin == "1") //Student
+        {
+            destViewController = mainStoryboard.instantiateViewController(withIdentifier: Constants.Storybaord.Identifier.dashboard)
             sideMenuController()?.setContentViewController(destViewController)
         }
-        else if(selectedLogin == "E"){
-            
-            destViewController = mainStoryboard.instantiateViewController(withIdentifier: "teacherdashboard")
+        //else if(selectedLogin == "E")
+        else if(selectedLogin == "2") //Teacher
+        {
+            destViewController = mainStoryboard.instantiateViewController(withIdentifier: Constants.Storybaord.Identifier.teacherDashboard)
             sideMenuController()?.setContentViewController(destViewController)
         }
-        else if(selectedLogin == "parent"){
-            
-            destViewController = mainStoryboard.instantiateViewController(withIdentifier: "parentdashboard")
+        //else if(selectedLogin == "G")
+        else if(selectedLogin == "3") //Parent
+        {
+            destViewController = mainStoryboard.instantiateViewController(withIdentifier: Constants.Storybaord.Identifier.parentDashboard)
             sideMenuController()?.setContentViewController(destViewController)
         }
+        
         hideSideMenuView()
     }
     
-    func studentSelected(student: StudentAttendanceViewModel, row: Int){
-        switch screenActionType{
-            case .PROFILE:
-                self.moveToStudentProfile(student: student)
-            case .DISCUSSION:
-                self.moveToDiscussion(student: student, row: row)
-            case .DASHBOARD:
-                self.moveToStudentDashboard(student: student)
+    func studentSelected(student: StudentAttendanceViewModel, row: Int) {
+        
+        switch screenActionType {
+        case .PROFILE:
+            self.moveToStudentProfile(student: student)
+        case .DISCUSSION:
+            self.moveToDiscussion(student: student, row: row)
+        case .DASHBOARD:
+            self.moveToStudentDashboard(student: student)
         }
     }
     
-    func moveToStudentProfile(student: StudentAttendanceViewModel){
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "StudentProfileViewController") as! StudentProfileViewController
+    func moveToStudentProfile(student: StudentAttendanceViewModel) {
+        
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: Constants.Storybaord.Identifier.studentProfileViewController) as! StudentProfileViewController
         vc.studentDetail = student
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
-    func moveToDiscussion(student: StudentAttendanceViewModel, row: Int){
+    func moveToDiscussion(student: StudentAttendanceViewModel, row: Int) {
         //Show Selection Screen
         let alertController = UIAlertController(title: "", message: "Select", preferredStyle: .actionSheet)
         
@@ -132,29 +145,30 @@ class StudentProfileListingViewController: UIViewController {
         }
         
         let actionCancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-       
+        
         alertController.addAction(actionStudent)
         alertController.addAction(actionFather)
         alertController.addAction(actionMother)
         alertController.addAction(actionCancel)
         
-        if let popoverPresentationController = alertController.popoverPresentationController{
+        if let popoverPresentationController = alertController.popoverPresentationController {
             popoverPresentationController.sourceView = collectionView.cellForItem(at: IndexPath(row: row, section: 0))
             popoverPresentationController.sourceRect = (collectionView.cellForItem(at: IndexPath(row: row, section: 0))?.bounds)!
         }
-
+        
         self.present(alertController, animated: true, completion: nil)
     }
     
-    func moveToChatScreenWithData(data: StudentAttendanceViewModel, nameString:String){
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "TeacherChatViewController") as! TeacherChatViewController
+    func moveToChatScreenWithData(data: StudentAttendanceViewModel, nameString:String) {
+        
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: Constants.Storybaord.Identifier.teacherChatViewController) as! TeacherChatViewController
         vc.nameString = nameString
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
-    
-    func moveToStudentDashboard(student: StudentAttendanceViewModel){
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "dashboard") as! DashboardViewController
+    func moveToStudentDashboard(student: StudentAttendanceViewModel) {
+        
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: Constants.Storybaord.Identifier.dashboard) as! DashboardViewController
         vc.studentName = student.name
         self.navigationController?.pushViewController(vc, animated: true)
     }
@@ -162,12 +176,13 @@ class StudentProfileListingViewController: UIViewController {
 }
 
 // MARK: - Collection View Setup
-extension StudentProfileListingViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
-    func configCollectionView(){
+extension StudentProfileListingViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func configCollectionView() {
+        
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
         
-        self.collectionView.register(UINib(nibName: "StudentCollectionViewCell", bundle: Bundle.main), forCellWithReuseIdentifier: "StudentCollectionViewCell")
+        self.collectionView.register(UINib(nibName: Constants.Nib.NibIdentifier.studentCollectionViewCell, bundle: Bundle.main), forCellWithReuseIdentifier: Constants.Nib.ReusableIdentifier.studentCollectionViewCell)
         self.collectionView.reloadData()
     }
     
@@ -194,13 +209,15 @@ extension StudentProfileListingViewController: UICollectionViewDelegate, UIColle
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StudentCollectionViewCell", for: indexPath) as! StudentCollectionViewCell
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.Nib.ReusableIdentifier.studentCollectionViewCell, for: indexPath) as! StudentCollectionViewCell
         cell.Config(data: self.dataSourceStudentAttendance[selectedClass]![indexPath.row])
-       
+        
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
         let selectedStudent = self.dataSourceStudentAttendance[selectedClass]![indexPath.row]
         self.studentSelected(student: selectedStudent, row: indexPath.row)
     }

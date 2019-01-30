@@ -3,7 +3,7 @@
 //  EliteSISSwift
 //
 //  Created by PeakGeek on 05/04/18.
-//  Copyright © 2018 Kunal Das. All rights reserved.
+//  Copyright © 2018 Vivek Garg. All rights reserved.
 //
 
 import UIKit
@@ -19,7 +19,7 @@ class AssignmentContainerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         self.btnAddAssignment.layer.cornerRadius = 25.0
         self.btnAddAssignment.clipsToBounds = true
@@ -59,7 +59,7 @@ class AssignmentContainerViewController: UIViewController {
         carbonTabSwipeNavigation.carbonSegmentedControl!.setWidth(width, forSegmentAt: 0)
         carbonTabSwipeNavigation.carbonSegmentedControl!.setWidth(width, forSegmentAt: 1)
         carbonTabSwipeNavigation.carbonSegmentedControl!.setWidth(width, forSegmentAt: 2)
-
+        
         carbonTabSwipeNavigation.toolbar.isTranslucent = false
         carbonTabSwipeNavigation.setIndicatorColor(UIColor.orange)
         carbonTabSwipeNavigation.view.backgroundColor = UIColor.clear
@@ -72,35 +72,41 @@ class AssignmentContainerViewController: UIViewController {
         carbonTabSwipeNavigation.setTabExtraWidth(0)
         
     }
-
+    
     @IBAction func btnBackClick(_ sender: Any) {
-      //  self.navigationController?.popViewController(animated: true)
-        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main",bundle: nil)
+        
+        //  self.navigationController?.popViewController(animated: true)
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: Constants.Storybaord.MainStoryboard,bundle: nil)
         var destViewController : UIViewController
         // destViewController = mainStoryboard.instantiateViewController(withIdentifier: "dashboard")
         //sideMenuController()?.setContentViewController(destViewController)
-        let selectedLogin=UserDefaults.standard.string(forKey: "selectedLogin")
-        if (selectedLogin == "student"){
-            destViewController = mainStoryboard.instantiateViewController(withIdentifier: "dashboard")
+        let selectedLogin = UserDefaults.standard.string(forKey: Constants.ServerKey.selectedLogin)
+        
+        //if (selectedLogin == "S")
+        if (selectedLogin == "1") //Student
+        {
+            destViewController = mainStoryboard.instantiateViewController(withIdentifier: Constants.Storybaord.Identifier.dashboard)
             sideMenuController()?.setContentViewController(destViewController)
         }
-        else if(selectedLogin == "E"){
-            
-            destViewController = mainStoryboard.instantiateViewController(withIdentifier: "teacherdashboard")
+        //else if(selectedLogin == "E")
+        else if(selectedLogin == "2") //Teacher
+        {
+            destViewController = mainStoryboard.instantiateViewController(withIdentifier: Constants.Storybaord.Identifier.teacherDashboard)
             sideMenuController()?.setContentViewController(destViewController)
         }
-        else if(selectedLogin == "parent"){
-            
-            destViewController = mainStoryboard.instantiateViewController(withIdentifier: "parentdashboard")
+        //else if(selectedLogin == "G")
+        else if(selectedLogin == "3") //Parent
+        {
+            destViewController = mainStoryboard.instantiateViewController(withIdentifier: Constants.Storybaord.Identifier.parentDashboard)
             sideMenuController()?.setContentViewController(destViewController)
         }
+        
         hideSideMenuView()
     }
     
     @IBAction func btnToggleMenuClick(_ sender: Any) {
-       toggleSideMenuView()
+        toggleSideMenuView()
     }
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -108,43 +114,38 @@ class AssignmentContainerViewController: UIViewController {
     }
     
     @IBAction func btnAddAssignmentClick(_ sender: Any) {
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "AddAssignmentViewController") as! AddAssignmentViewController
+        
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: Constants.Storybaord.Identifier.addAssignmentViewController) as! AddAssignmentViewController
         self.navigationController?.pushViewController(vc, animated: true)
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 }
 
-
-extension AssignmentContainerViewController: CarbonTabSwipeNavigationDelegate{
+extension AssignmentContainerViewController: CarbonTabSwipeNavigationDelegate {
+    
     func carbonTabSwipeNavigation(_ carbonTabSwipeNavigation: CarbonTabSwipeNavigation, viewControllerAt index: UInt) -> UIViewController {
+        
         switch Int(index) {
+            
         case TEACHER_ASSIGNMENT_TYPE.ALL.hashValue:
-            let assignmentVC = self.storyboard?.instantiateViewController(withIdentifier: "TeacherAssignmentViewController") as! TeacherAssignmentViewController
+            let assignmentVC = self.storyboard?.instantiateViewController(withIdentifier: Constants.Storybaord.Identifier.teacherAssignmentViewController) as! TeacherAssignmentViewController
             assignmentVC.classType = self.classType
             assignmentVC.assignmentType = .ALL
             return assignmentVC
         case TEACHER_ASSIGNMENT_TYPE.DUE.hashValue:
-            let assignmentVC = self.storyboard?.instantiateViewController(withIdentifier: "TeacherAssignmentViewController") as! TeacherAssignmentViewController
+            let assignmentVC = self.storyboard?.instantiateViewController(withIdentifier: Constants.Storybaord.Identifier.teacherAssignmentViewController) as! TeacherAssignmentViewController
             assignmentVC.classType = self.classType
             assignmentVC.assignmentType = .DUE
             return assignmentVC
         case TEACHER_ASSIGNMENT_TYPE.SUBMITTED.hashValue:
-            let assignmentVC = self.storyboard?.instantiateViewController(withIdentifier: "TeacherAssignmentViewController") as! TeacherAssignmentViewController
+            let assignmentVC = self.storyboard?.instantiateViewController(withIdentifier: Constants.Storybaord.Identifier.teacherAssignmentViewController) as! TeacherAssignmentViewController
             assignmentVC.classType = self.classType
             assignmentVC.assignmentType = .SUBMITTED
             return assignmentVC
+            
         default:
             return UIViewController()
         }
     }
+    
 }
 

@@ -2,13 +2,14 @@
 //  ContactInfoDatasource.swift
 //  EliteSISSwift
 //
-//  Created by Kunal Das on 22/03/18.
-//  Copyright © 2018 Kunal Das. All rights reserved.
+//  Created by Vivek Garg on 22/03/18.
+//  Copyright © 2018 Vivek Garg. All rights reserved.
 //
 
 import UIKit
 
 class ContactInfoDatasource: NSObject, UITableViewDataSource {
+    
     var profileData = [String: String]()
     var isDetailEditable = true
     
@@ -26,29 +27,31 @@ class ContactInfoDatasource: NSObject, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         switch indexPath.row {
+            
         case 0:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "DropDownTableViewCell") as! DropDownTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Nib.ReusableIdentifier.dropDownTableViewCell) as! DropDownTableViewCell
             cell.selectionStyle = .none
             cell.lblTitle.text = "Contact Info"
             return cell
+            
         case 1:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "textfieldTableCell") as! TextfieldTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Nib.ReusableIdentifier.textfieldTableCell) as! TextfieldTableViewCell
             //
             cell.textField.text = profileData["PrimaryMobileNumber"]
             cell.selectionStyle = .none
             cell.backgroundColor = UIColor.clear
             cell.isUserInteractionEnabled = isDetailEditable
-
+            
             return cell
             
         case 2:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "textfieldTableCell") as! TextfieldTableViewCell
-            cell.textField.placeholder = "Enter your email address"
+            let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Nib.ReusableIdentifier.textfieldTableCell) as! TextfieldTableViewCell
+            cell.textField.placeholder = Constants.PlaceholderText.emailPlaceholder
             cell.textField.text = profileData["PrimaryEmailAddress"]
             cell.selectionStyle = .none
             cell.backgroundColor = UIColor.clear
             cell.isUserInteractionEnabled = isDetailEditable
-
+            
             return cell
             
         default:
@@ -56,9 +59,9 @@ class ContactInfoDatasource: NSObject, UITableViewDataSource {
         }
         
         //
-//        cell.textField.placeholder = "Female"
-//        cell.selectionStyle = .none
-//        cell.backgroundColor = UIColor.clear
-//        return cell
+        //        cell.textField.placeholder = "Female"
+        //        cell.selectionStyle = .none
+        //        cell.backgroundColor = UIColor.clear
+        //        return cell
     }
 }

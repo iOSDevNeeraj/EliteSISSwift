@@ -3,7 +3,7 @@
 //  EliteSISSwift
 //
 //  Created by Reetesh Bajpai on 03/04/18.
-//  Copyright © 2018 Kunal Das. All rights reserved.
+//  Copyright © 2018 Vivek Garg. All rights reserved.
 //
 
 import UIKit
@@ -13,6 +13,7 @@ class FeeDefaulterTableViewCell: UITableViewCell {
     @IBOutlet weak var lblFeeClass: UILabel!
     @IBOutlet weak var lblFeeDueAmount: UILabel!
     @IBOutlet weak var lblFeeDueDate: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

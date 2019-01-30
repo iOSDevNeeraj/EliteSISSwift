@@ -2,8 +2,8 @@
 //  AllDatasource.swift
 //  EliteSISSwift
 //
-//  Created by Kunal Das on 06/03/18.
-//  Copyright © 2018 Kunal Das. All rights reserved.
+//  Created by Vivek Garg on 06/03/18.
+//  Copyright © 2018 Vivek Garg. All rights reserved.
 //
 
 import UIKit
@@ -28,7 +28,6 @@ class AllDatasource: NSObject, UITableViewDataSource {
         arrDate.append("26-Jan-2018")
         arrDate.append("26-Jan-2018")
         
-        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -36,7 +35,8 @@ class AllDatasource: NSObject, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "NotificationTableViewCell") as! NotificationTableViewCell
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.Nib.ReusableIdentifier.notificationTableViewCell) as! NotificationTableViewCell
         cell.selectionStyle = .none
         cell.lblClass.text = arrAllClass[indexPath.row]
         cell.lblClass.font = UIFont.boldSystemFont(ofSize: 18)
